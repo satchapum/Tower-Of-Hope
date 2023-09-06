@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+
 public class CheckOtherCollider : MonoBehaviour
 {
-    [SerializeField] bool isOnTriggerEnter2D;
-    [SerializeField] string currentItemType;
+    [SerializeField] public bool isOnTriggerEnter2D;
+    [SerializeField] public string currentItemType;
+    [SerializeField] List<GetGameObjectType> gameObjectType;
+    [SerializeField] List<KeyCode_F_Action> keyCode_F_Actions;
     private void Start()
     {
         SetToBackGround();
@@ -13,36 +17,14 @@ public class CheckOtherCollider : MonoBehaviour
     {
         if (isOnTriggerEnter2D == true)
         {
-            //ใช้สำหรับการกดปุ่มและสั่งให้ทำคำสั่งโดยยึดตัว Type ของที่ชน
-            if (Input.GetKeyDown(KeyCode.F) && currentItemType == TagManager.Instance.chestTag)//ระบุประเภทของเวลาใช้เพื่อให้ไม่ชนกัน
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                if (ChestManager.Instance.itemLists[ChestManager.Instance.GetRandomItem()].name == "Key")
+                int firstNumberOfAction = 0;
+                for (int numberOfAction = firstNumberOfAction; numberOfAction < gameObjectType.Count; numberOfAction++)
                 {
-                    GameManager.Instance.isGetKey = true;
-                    Debug.Log("getKey Alr");
-                }
-                else
-                {
-                    //ต้องทำระบบเพิ่มความน่าจะเป็นหากเปิดได้ของชิ้นอื่น
-                    Debug.Log("getSalt");
+                    keyCode_F_Actions[numberOfAction].F_Action(currentItemType);
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.F) && currentItemType == TagManager.Instance.doorTag)
-            {
-                if (GameManager.Instance.isGetKey == true)
-                {
-                    Debug.Log("Load New Scene Floor");
-                }
-                else
-                {
-                    Debug.Log("No key");
-                }
-            }
-            //อาจเพิ่มของประเภทการเก็บของได้การไปด่านต่อไปได้
-            /*else if (Input.GetKeyDown(KeyCode.F) && currentItemType == "   ")
-            {
-
-            }*/
         }
     }
     void SetToBackGround()
@@ -52,21 +34,11 @@ public class CheckOtherCollider : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag(TagManager.Instance.chestTag))
+        int firstNumberOfItem = 0;
+        for (int numberOfItem = firstNumberOfItem; numberOfItem < gameObjectType.Count; numberOfItem++)
         {
-            isOnTriggerEnter2D = true;
-            currentItemType = TagManager.Instance.chestTag;
+            gameObjectType[numberOfItem].SetType(collider);
         }
-        else if (collider.CompareTag(TagManager.Instance.doorTag))
-        {
-            isOnTriggerEnter2D = true;
-            currentItemType = TagManager.Instance.doorTag;
-        }
-        //ใช้เพิ่มตัวของที่ชนเข้ามารับประเภทของของชิ้นนั้น
-        /*else if ()
-        {
-
-        }*/
     }
     void OnTriggerExit2D(Collider2D collision)
     {

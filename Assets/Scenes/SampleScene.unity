@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 445785683}
   - component: {fileID: 445785686}
   - component: {fileID: 445785685}
+  - component: {fileID: 445785687}
+  - component: {fileID: 445785688}
   m_Layer: 0
   m_Name: ChestMockup
   m_TagString: Chest
@@ -281,6 +283,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &445785687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445785682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dac3bd1d7000754bbc120eba0cdf9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestPrefab: {fileID: 445785682}
+  checkOtherCollider: {fileID: 606519719}
+--- !u!114 &445785688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445785682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27751bef0fdcba4da8d708e904df813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestPrefab: {fileID: 445785682}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +494,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOnTriggerEnter2D: 0
   currentItemType: 
+  gameObjectType:
+  - {fileID: 445785687}
+  - {fileID: 735578369}
+  keyCode_F_Actions:
+  - {fileID: 445785688}
+  - {fileID: 735578370}
 --- !u!58 &606519721
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -594,6 +629,8 @@ GameObject:
   - component: {fileID: 735578366}
   - component: {fileID: 735578364}
   - component: {fileID: 735578368}
+  - component: {fileID: 735578369}
+  - component: {fileID: 735578370}
   m_Layer: 0
   m_Name: DoorMockup
   m_TagString: Door
@@ -740,6 +777,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &735578369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735578363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2f83ecf885ee348aa3b9d05b930580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorPrefab: {fileID: 735578363}
+  checkOtherCollider: {fileID: 606519719}
+--- !u!114 &735578370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735578363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc48c19b50aa152499caaef62110ee5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorPrefab: {fileID: 735578363}
 --- !u!1 &1347626420
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,10 +881,10 @@ MonoBehaviour:
   itemLists:
   - itemImage: {fileID: 0}
     name: Key
-    probabilityPercentage: 5
+    probabilityPercentage: 15
   - itemImage: {fileID: 0}
     name: Salt
-    probabilityPercentage: 100
+    probabilityPercentage: 90
 --- !u!4 &1592190404
 Transform:
   m_ObjectHideFlags: 0
