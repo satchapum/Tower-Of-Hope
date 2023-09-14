@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   name: Monster
-  probabilityPercentage: 40
+  probabilityPercentage: 70

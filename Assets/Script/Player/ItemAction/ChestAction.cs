@@ -5,13 +5,20 @@ using UnityEngine;
 public class ChestAction : KeyCode_F_Action
 {
     [SerializeField] List<Monster> monsterSpawn;
-
-    [SerializeField] GameObject chestPrefab;   
-
+    [SerializeField] GameObject chestPrefab;
+    [SerializeField] CheckOtherCollider checkOtherCollider;
+    [SerializeField] GetGameObjectType_Chest thisChest;
+    [SerializeField] KeyCode_F_Action thisChestAction;
+    
     [Header("item list")]
     [SerializeField] itemSO key;
     [SerializeField] itemSO monster;
     [SerializeField] itemSO salt;
+    void Start()
+    {
+        checkOtherCollider.gameObjectType.Add(thisChest);
+        checkOtherCollider.keyCode_F_Actions.Add(thisChestAction);
+    }
     public override void F_Action(string type)
     {
         int randomItemIndex = ChestManager.Instance.GetRandomItem();
@@ -35,7 +42,9 @@ public class ChestAction : KeyCode_F_Action
                 //ต้องทำระบบเพิ่มความน่าจะเป็นหากเปิดได้ของชิ้นอื่น
                 Debug.Log("getSalt");
             }
+            checkOtherCollider.gameObjectType.Remove(thisChest);
+            checkOtherCollider.keyCode_F_Actions.Remove(thisChestAction);
+            Destroy(chestPrefab);
         }
-        Destroy(chestPrefab);
     }
 }

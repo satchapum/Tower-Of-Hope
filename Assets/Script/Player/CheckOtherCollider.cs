@@ -7,14 +7,15 @@ public class CheckOtherCollider : MonoBehaviour
 {
     [SerializeField] public bool isOnTriggerEnter2D;
     [SerializeField] public string currentItemType;
-    [SerializeField] List<GetGameObjectType> gameObjectType;
-    [SerializeField] List<KeyCode_F_Action> keyCode_F_Actions;
+    public List<KeyCode_F_Action> keyCode_F_Actions;
+    public List<GetGameObjectType> gameObjectType;
     private void Start()
     {
         SetToBackGround();
     }
     void Update()
     {
+
         if (isOnTriggerEnter2D == true)
         {
             if (Input.GetKeyDown(KeyCode.F))
