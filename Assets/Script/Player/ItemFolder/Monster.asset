@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f5f652ff5dd1c3429871a409f52913f, type: 3}
-  m_Name: Key
+  m_Name: Monster
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  name: key
-  probabilityPercentage: 15
+  name: Monster
+  probabilityPercentage: 40

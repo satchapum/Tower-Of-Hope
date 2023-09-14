@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ChestAction : KeyCode_F_Action
 {
-    [SerializeField] GameObject chestPrefab;
+    [SerializeField] List<Monster> monsterSpawn;
+
+    [SerializeField] GameObject chestPrefab;   
 
     [Header("item list")]
     [SerializeField] itemSO key;
@@ -22,7 +24,11 @@ public class ChestAction : KeyCode_F_Action
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == monster)
             {
-
+                Debug.Log("Monster");
+                float minAmountOfMonsterIndex = 0;
+                float maxAmountOfMonsterIndex = monsterSpawn.Count;
+                float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
+                monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
             }
             else
             {
@@ -30,5 +36,6 @@ public class ChestAction : KeyCode_F_Action
                 Debug.Log("getSalt");
             }
         }
+        Destroy(chestPrefab);
     }
 }
