@@ -14,7 +14,7 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        movementDirection = new Vector2 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        movementDirection = new Vector2 (InputManager.Instance.HorizontalInput , InputManager.Instance.VerticalInput);
 
         if (movementDirection != Vector2.zero)
         {
