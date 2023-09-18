@@ -484,6 +484,7 @@ MonoBehaviour:
   Monster: {fileID: 184166015}
   isTargetPlayer: 0
   playerSetting: {fileID: 1967382439}
+  spriteRenderer: {fileID: 0}
   monsterSpeed: 30
 --- !u!114 &184166023
 MonoBehaviour:
@@ -1742,6 +1743,7 @@ MonoBehaviour:
   Monster: {fileID: 1099966007}
   isTargetPlayer: 0
   playerSetting: {fileID: 1967382439}
+  spriteRenderer: {fileID: 0}
   monsterSpeed: 30
 --- !u!114 &1099966014
 MonoBehaviour:
@@ -3779,8 +3781,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   playerRotationSpeed: 1000
-  rb: {fileID: 1967382435}
   movementDirection: {x: 0, y: 0}
+  player: {fileID: 1967382433}
+  spriteRenderer: {fileID: 0}
 --- !u!212 &1967382437
 SpriteRenderer:
   m_ObjectHideFlags: 0
