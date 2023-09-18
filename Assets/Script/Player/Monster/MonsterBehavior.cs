@@ -5,58 +5,50 @@ using UnityEngine;
 public class MonsterBehavior : MonoBehaviour
 {
     [SerializeField] GameObject Player;
+    [SerializeField] GameObject Monster;
     [SerializeField] bool isTargetPlayer;
     [SerializeField] PlayerSetting playerSetting;
-    [SerializeField] Rigidbody2D thisMonsterRb;
     [SerializeField] int monsterSpeed;
+
+    Rigidbody2D thisMonsterRb;
     void Start()
     {
-        WhenMonsterSpawn();
+        thisMonsterRb = Monster.GetComponent<Rigidbody2D>();
+        WhenMonsterSetting();
     }
 
-    void WhenMonsterSpawn()
+    void WhenMonsterSetting()
     {
-        playerSetting.numberOfCurrentMonsterTarget++;
-        if (playerSetting.numberOfCurrentMonsterTarget <= 3)
+        if (playerSetting.NumberOfCurrentMonsterTargetOnPlayer < playerSetting.maximunOfMonsterTargetOnplayer && !isTargetPlayer)
         {
+            playerSetting.NumberOfCurrentMonsterTargetOnPlayer++;
             isTargetPlayer = true;
         }
     }
 
-    void WhenMonsterDestroy()
+    public void WhenMonsterDestroy()
     {
-        playerSetting.numberOfCurrentMonsterTarget--;
+        playerSetting.NumberOfCurrentMonsterTargetOnPlayer--;
+        isTargetPlayer = false;
     }
 
     void Update()
     {
+        WhenMonsterSetting();
+
         if (isTargetPlayer)
-        {
-            MonsterFollowPlayer();
-        }
+            MonsterFollowObject(Player);
+
         else if (!isTargetPlayer)
-        {
-
-        }
+            return;
     }
 
-    void MonsterFollowMonster()
+    void MonsterFollowObject(GameObject inputObject)
     {
-        Vector3 positionOfPlayer = Vector3.MoveTowards(transform.position, Player.transform.position, monsterSpeed * Time.deltaTime);
-        thisMonsterRb.MovePosition(positionOfPlayer);
-
-        Vector3 lookAt = transform.InverseTransformPoint(Player.transform.position);
-        float angle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90;
-
-        transform.Rotate(0, 0, angle);
-    }
-
-    void MonsterFollowPlayer()
-    {
-        Vector3 positionOfPlayer = Vector3.MoveTowards(transform.position, Player.transform.position, monsterSpeed * Time.deltaTime);
-        thisMonsterRb.MovePosition(positionOfPlayer);
+        Vector3 position = Vector3.MoveTowards(transform.position, inputObject.transform.position, monsterSpeed * Time.deltaTime);
+        thisMonsterRb.MovePosition(position);
         
-        Vector3 lookAt = transform.InverseTransformPoint(Player.transform.position);
+        Vector3 lookAt = transform.InverseTransformPoint(inputObject.transform.position);
         float angle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90;
 
         transform.Rotate(0, 0, angle);
