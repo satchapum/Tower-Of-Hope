@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class ChestManager : Singleton<ChestManager> 
 {
+    [SerializeField] public int maxAmountOfChest;
     [SerializeField] List<itemSO> itemLists = new List<itemSO>();
     public List<itemSO> ItemLists => itemLists;
 

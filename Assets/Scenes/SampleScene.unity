@@ -178,6 +178,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 140952242}
   thisChestAction: {fileID: 140952241}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -369,8 +370,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1414,6 +1415,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 950759079}
   thisChestAction: {fileID: 950759078}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -1644,8 +1646,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -2207,6 +2209,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 1458355236}
   thisChestAction: {fileID: 1458355235}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -2403,6 +2406,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 1518867884}
   thisChestAction: {fileID: 1518867883}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -2599,6 +2603,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 1581818420}
   thisChestAction: {fileID: 1581818419}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -2769,6 +2774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca53c3f7a2e02e4e897bca5b4f0f8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxAmountOfChest: 0
   itemLists:
   - {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   - {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
@@ -3048,6 +3054,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 1747019827}
   thisChestAction: {fileID: 1747019826}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -3244,6 +3251,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 1795915092}
   thisChestAction: {fileID: 1795915091}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
@@ -3440,6 +3448,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   thisChest: {fileID: 1814360326}
   thisChestAction: {fileID: 1814360325}
+  chestManager: {fileID: 1592190403}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   salt: {fileID: 11400000, guid: 2977d5e5368e1524cbd04b40ba8f681c, type: 2}
