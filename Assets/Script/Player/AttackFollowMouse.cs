@@ -6,6 +6,10 @@ public class AttackFollowMouse : MonoBehaviour
 {
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject attackArea;
+    private void Start()
+    {
+        attackArea.SetActive(false);
+    }
 
     void Update()
     {
@@ -14,6 +18,5 @@ public class AttackFollowMouse : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         attackArea.transform.rotation = Quaternion.Slerp(attackArea.transform.rotation, rotation, rotateSpeed * Time.deltaTime);
     }
-
 
 }

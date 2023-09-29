@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class AttactSystem : MonoBehaviour
 {
-    [SerializeField] GameObject attackArea;
+    [SerializeField] GameObject attackPosition;
+    [SerializeField] List<GameObject> attackPrefab;
+    [SerializeField] float attackForce;
+    [SerializeField] string currentWeapon;
 
     private bool attacking = false;
 
-    private float timeToAttack = 0.25f;
+    private float timeToAttack = 1f;
     private float timer = 0f;
 
     void Update()
@@ -16,6 +19,7 @@ public class AttactSystem : MonoBehaviour
         if (InputManager.Instance.mouseLeftDown)
         {
             Attack();
+
         }
 
         if (attacking)
@@ -24,9 +28,9 @@ public class AttactSystem : MonoBehaviour
 
             if (timer >= timeToAttack)
             {
+                
                 timer = 0f;
                 attacking = false;
-                attackArea.SetActive(attacking);
             }
         }
     }
@@ -34,6 +38,17 @@ public class AttactSystem : MonoBehaviour
     void Attack()
     {
         attacking = true;
-        attackArea.SetActive(attacking);
+        createAttack();
+    }
+  
+    void createAttack()
+    {
+        foreach (var weapon in attackPrefab)
+        {
+            if (weapon.name == "Sword") 
+            {
+                Instantiate(weapon, attackPosition.transform.position, Quaternion.identity);
+            }
+        }
     }
 }
