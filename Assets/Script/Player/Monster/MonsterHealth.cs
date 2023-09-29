@@ -11,7 +11,7 @@ public class MonsterHealth : MonoBehaviour
     [SerializeField] GameObject thisMonsterObject;
     [SerializeField] MonsterBehavior monsterBehavior;
 
-    [SerializeField] GameObject attackArea;
+    [SerializeField] AttactSystem weaponType;
 
     public event Action<int, int> onHealthChange;
 
@@ -23,10 +23,9 @@ public class MonsterHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject != attackArea)
+        if (collision.gameObject != weaponType.attackPrefab[0])
             return;
 
-        //featureAddAnotherWeapondamage
         TakeDamage(1);
     }
 

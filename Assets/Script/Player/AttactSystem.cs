@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttactSystem : MonoBehaviour
 {
     [SerializeField] GameObject attackPosition;
-    [SerializeField] List<GameObject> attackPrefab;
+    [SerializeField] public List<GameObject> attackPrefab;
     [SerializeField] string currentWeapon;
 
     private bool attacking = false;
