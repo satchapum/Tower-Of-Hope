@@ -16,7 +16,7 @@ public class Sword : MonoBehaviour
         StartCoroutine("effectDestroy");
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         foreach (var monter in GameObject.FindObjectsOfType<Monster>())
         {
