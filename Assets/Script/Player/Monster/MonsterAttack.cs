@@ -12,8 +12,14 @@ public class MonsterAttack : MonoBehaviour
         {
             if (collision.gameObject == player.gameObject)
             {
+                monsterAttackDelay();
                 player.gameObject.GetComponent<Player_health>().TakeDamage(damage);
             }
         }
+    }
+
+    IEnumerator monsterAttackDelay()
+    {
+        yield return new WaitForSeconds(attackDelayTime);
     }
 }

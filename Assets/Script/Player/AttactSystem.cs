@@ -1,57 +1,108 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttactSystem : MonoBehaviour
 {
     [SerializeField] GameObject attackPosition;
     [SerializeField] public List<GameObject> attackPrefab;
-    [SerializeField] string currentWeapon;
 
-    private bool attacking = false;
+    [SerializeField] string currentWeapon_Lefthand;
+    [SerializeField] string currentWeapon_Righthand;
 
-    [SerializeField] float timeToAttack = 1f;
-    private float timer = 0f;
+    [Header("UITimeDelay")]
+    [SerializeField] public Image attack_LeftDelayUI;
+    [SerializeField] public Image attack_RightDelayUI;
+
+    public bool attacking_Left = false;
+    public bool attacking_Right = false;
+
+    //cangetfromweapon
+    public float TimeToAttackLeft => timeToAttackLeft;
+    [SerializeField] float timeToAttackLeft = 1f;
+    [SerializeField] float timeToAttackRight = 1f;
+    public float timer_left = 0f;
+    public float timer_right = 0f;
+
 
     void Update()
     {
-        if (attacking == false && InputManager.Instance.mouseLeftDown)
+        if (attacking_Left == false && InputManager.Instance.mouseLeftDown)
         {
-            Attack();
+            Attack("left");
 
         }
-
-        if (attacking)
+        else if (attacking_Right == false && InputManager.Instance.mouseRightDown)
         {
-            timer += Time.deltaTime;
-
-            if (timer >= timeToAttack)
-            {
-                
-                timer = 0f;
-                attacking = false;
-            }
+            Attack("right");
         }
     }
 
-    void Attack()
+    IEnumerator attackLeftDelay()
     {
-        attacking = true;
-        createAttack();
+        while (timer_left < timeToAttackLeft)
+        {
+            attack_LeftDelayUI.fillAmount = timer_left;
+            timer_left += Time.deltaTime;
+            yield return null;
+        }
+        timer_left = 0f;
+        attacking_Left = false;
+    }
+    IEnumerator attackRightDelay()
+    {
+        while (timer_right < timeToAttackRight)
+        {
+            attack_RightDelayUI.fillAmount = timer_right;
+            timer_right += Time.deltaTime;
+            yield return null;
+        }
+        timer_right = 0f;
+        attacking_Right = false;
+    }
+    void Attack(string hand)
+    {
+        if (hand == "left")
+        {
+            attacking_Left = true;
+            createAttack("left");
+            StartCoroutine(attackLeftDelay());
+        }
+        else if (hand == "right")
+        {
+            attacking_Right = true;
+            createAttack("right");
+            StartCoroutine(attackRightDelay());
+        }
+
     }
   
-    void createAttack()
+    void createAttack(string hand)
     {
         Vector3 effectRotate = new Vector3(attackPosition.transform.rotation.x, attackPosition.transform.rotation.x, attackPosition.transform.rotation.z + 90);
-
-        
-        foreach (var weapon in attackPrefab)
+        if (hand == "left")
         {
-            if (weapon.name == "Sword") 
+            foreach (var weapon in attackPrefab)
             {
-                GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
-                newEffect.SetActive(true);
-                newEffect.transform.Rotate(effectRotate);
+                if (weapon.name == currentWeapon_Lefthand)
+                {
+                    GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
+                    newEffect.SetActive(true);
+                    newEffect.transform.Rotate(effectRotate);
+                }
+            }
+        }
+        else if (hand == "right")
+        {
+            foreach (var weapon in attackPrefab)
+            {
+                if (weapon.name == currentWeapon_Righthand)
+                {
+                    GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
+                    newEffect.SetActive(true);
+                    newEffect.transform.Rotate(effectRotate);
+                }
             }
         }
     }
