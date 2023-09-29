@@ -23,10 +23,13 @@ public class MonsterHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject != weaponType.attackPrefab[0])
-            return;
+        if (collision.gameObject == weaponType.gameObject)
+            TakeDamage(1);
+        //useforeach
 
-        TakeDamage(1);
+
+        else
+            Debug.Log("");
     }
 
     void Start()
