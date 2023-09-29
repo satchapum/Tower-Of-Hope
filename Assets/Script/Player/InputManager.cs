@@ -20,6 +20,6 @@ public class InputManager : Singleton<InputManager>
         horizontalInput = Input.GetAxis(horizontalkey);
         verticalInput = Input.GetAxis(verticalkey);
 
-        mouseLeftDown = Input.GetKeyDown(MouseLeft);
+        mouseLeftDown = Input.GetKey(MouseLeft);
     }
 }

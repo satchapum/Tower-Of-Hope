@@ -3023,6 +3023,7 @@ Transform:
   m_LocalScale: {x: 4.0062823, y: 1.6187, z: 1.6187}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1995823777}
   - {fileID: 1741442607}
   m_Father: {fileID: 1967382438}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
@@ -3978,7 +3979,6 @@ Transform:
   - {fileID: 606519718}
   - {fileID: 1720956733}
   - {fileID: 1684255215}
-  - {fileID: 1995823777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1967382439
@@ -4007,11 +4007,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aee3782affc2774d8b909300aa0d0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPosition: {fileID: 1720956732}
+  attackPosition: {fileID: 1741442606}
   attackPrefab:
   - {fileID: 1999501360}
-  attackForce: 50
   currentWeapon: sword
+  timeToAttack: 1
 --- !u!114 &1967382441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4083,13 +4083,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995823776}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.24960797, y: 0.6177797, z: 0.6177797}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1999501361}
-  m_Father: {fileID: 1967382438}
+  m_Father: {fileID: 1720956733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999501360
 GameObject:
@@ -4101,8 +4101,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1999501361}
   - component: {fileID: 1999501362}
+  - component: {fileID: 1999501364}
+  - component: {fileID: 1999501363}
+  - component: {fileID: 1999501365}
   m_Layer: 0
-  m_Name: SwordEffect
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4175,6 +4178,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1999501363
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999501360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!50 &1999501364
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999501360}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1999501365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999501360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afaa98b67f351c45993f400d2136506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectSpeed: 10
+  rb: {fileID: 1999501364}
+  effectShowTime: 0.25
 --- !u!1 &2033701893
 GameObject:
   m_ObjectHideFlags: 0

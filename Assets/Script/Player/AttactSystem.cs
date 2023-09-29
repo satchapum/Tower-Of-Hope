@@ -6,17 +6,16 @@ public class AttactSystem : MonoBehaviour
 {
     [SerializeField] GameObject attackPosition;
     [SerializeField] List<GameObject> attackPrefab;
-    [SerializeField] float attackForce;
     [SerializeField] string currentWeapon;
 
     private bool attacking = false;
 
-    private float timeToAttack = 1f;
+    [SerializeField] float timeToAttack = 1f;
     private float timer = 0f;
 
     void Update()
     {
-        if (InputManager.Instance.mouseLeftDown)
+        if (attacking == false && InputManager.Instance.mouseLeftDown)
         {
             Attack();
 
@@ -43,11 +42,15 @@ public class AttactSystem : MonoBehaviour
   
     void createAttack()
     {
+        Vector3 effectRotate = new Vector3(attackPosition.transform.rotation.x, attackPosition.transform.rotation.x, attackPosition.transform.rotation.z + 90);
+
+        
         foreach (var weapon in attackPrefab)
         {
             if (weapon.name == "Sword") 
             {
-                Instantiate(weapon, attackPosition.transform.position, Quaternion.identity);
+                GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
+                newEffect.transform.Rotate(effectRotate);
             }
         }
     }
