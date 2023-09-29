@@ -11,7 +11,15 @@ public class Player_Movement : MonoBehaviour
     [Header("Setup")] 
     [SerializeField] Vector2 movementDirection;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject colliderCheck;
+    [SerializeField] GameObject attackArea;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    [Header("Position Of Check Collider And Attack")]
+    [SerializeField] GameObject posLeft;
+    [SerializeField] GameObject posRight;
+    [SerializeField] GameObject posTop;
+    [SerializeField] GameObject posBottom;
 
     Rigidbody2D rb;
 
@@ -24,12 +32,6 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         movementDirection = new Vector2 (InputManager.Instance.HorizontalInput , InputManager.Instance.VerticalInput);
-        
-        //if (movementDirection != Vector2.zero)
-        //{
-        //    Quaternion toRotationPlayer = Quaternion.LookRotation(Vector3.forward, movementDirection);
-        //    transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotationPlayer, playerRotationSpeed * Time.deltaTime);
-        //}
     }
 
     void FixedUpdate()
@@ -55,28 +57,43 @@ public class Player_Movement : MonoBehaviour
     }
     void FlipRight()
     {
-        spriteRenderer.flipX = false;
-        transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+        spriteRenderer.flipX = true;
+        ChangeRotation(90f);
+        SetPosition(posRight);
     }
 
     void FlipLeft()
     {
-        spriteRenderer.flipX = true;
-        transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        spriteRenderer.flipX = false;
+        ChangeRotation(-90f);
+        SetPosition(posLeft);
     }
 
     void FlipUp()
     {
         spriteRenderer.flipX = false;
-        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        ChangeRotation(180f);
+        SetPosition(posTop);
     }
 
     void FlipDown()
     {
         spriteRenderer.flipX = false;
-        transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+        ChangeRotation(0f);
+        SetPosition(posBottom);
     }
 
+    void ChangeRotation(float degree)
+    {
+        colliderCheck.transform.rotation = Quaternion.Euler(0f, 0f, degree);
+        attackArea.transform.rotation = Quaternion.Euler(0f, 0f, degree);
+    }
+
+    void SetPosition(GameObject targetPosition)
+    {
+        colliderCheck.transform.position = targetPosition.transform.position;
+        attackArea.transform.position = targetPosition.transform.position;
+    }
 
     void PlayerMove(Vector2 direction)
     {
