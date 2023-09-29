@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Movement : MonoBehaviour
+public class Player_Movement : Singleton<Player_Movement>
 {
     [Header("Player Setting")]
     [SerializeField] float moveSpeed;
@@ -12,7 +12,6 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] Vector2 movementDirection;
     [SerializeField] GameObject player;
     [SerializeField] GameObject colliderCheck;
-    [SerializeField] GameObject attackArea;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     [Header("Position Of Check Collider And Attack")]
@@ -86,13 +85,11 @@ public class Player_Movement : MonoBehaviour
     void ChangeRotation(float degree)
     {
         colliderCheck.transform.rotation = Quaternion.Euler(0f, 0f, degree);
-        attackArea.transform.rotation = Quaternion.Euler(0f, 0f, degree);
     }
 
     void SetPosition(GameObject targetPosition)
     {
         colliderCheck.transform.position = targetPosition.transform.position;
-        attackArea.transform.position = targetPosition.transform.position;
     }
 
     void PlayerMove(Vector2 direction)
