@@ -1,26 +1,22 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterHealth : MonoBehaviour
+public class Player_health : MonoBehaviour
 {
     [SerializeField] int maxHealth = 5;
     public int CurrentHealth => currentHealth;
     [SerializeField] int currentHealth;
 
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject thisMonsterObject;
-    [SerializeField] MonsterBehavior monsterBehavior;
+    public event Action<int, int> onHealthChange;
 
-    void monsterDie()
-    {
-        monsterBehavior.WhenMonsterDestroy();
-        Destroy(thisMonsterObject);
-    }
+    private IEnumerator coroutine;
 
     void Start()
     {
         currentHealth = maxHealth;
+        RefreshHealth();
     }
 
     public void TakeDamage(int damage)
@@ -29,10 +25,19 @@ public class MonsterHealth : MonoBehaviour
             return;
 
         currentHealth -= damage;
+        RefreshHealth();
 
         if (currentHealth <= 0)
-            monsterDie();
+            playerDie();
     }
 
+    void RefreshHealth()
+    {
+        onHealthChange?.Invoke(currentHealth, maxHealth);
+    }
 
+    void playerDie()
+    {
+        Destroy(gameObject);
+    }
 }

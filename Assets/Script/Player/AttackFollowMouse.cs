@@ -6,10 +6,6 @@ public class AttackFollowMouse : MonoBehaviour
 {
     [SerializeField] float rotateSpeed;
     [SerializeField] GameObject attackArea;
-    private void Start()
-    {
-        attackArea.SetActive(false);
-    }
 
     void Update()
     {

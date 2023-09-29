@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class UIHealthMonster : MonoBehaviour
+public abstract class UIHealthPlayer : MonoBehaviour
 {
-    MonsterHealth health;
+    Player_health health;
 
     void Awake()
     {
-        health = FindObjectOfType<MonsterHealth>();
+        health = FindObjectOfType<Player_health>();
         if (health != null)
             health.onHealthChange += SetHealth;
     }

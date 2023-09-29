@@ -50,6 +50,7 @@ public class AttactSystem : MonoBehaviour
             if (weapon.name == "Sword") 
             {
                 GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
+                newEffect.SetActive(true);
                 newEffect.transform.Rotate(effectRotate);
             }
         }

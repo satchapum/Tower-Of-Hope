@@ -18,13 +18,11 @@ public class Sword : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        foreach (var monter in GameObject.FindObjectsOfType<Monster>())
+        foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
-            if (collision.gameObject == monter.gameObject)
+            if (collision.gameObject == monster.gameObject)
                 collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage);
 
-            else
-                Debug.Log("");
         }
         
     }
