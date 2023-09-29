@@ -1,7 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
     [SerializeField] float effectSpeed;
     [SerializeField] int damage = 2;
@@ -12,19 +13,17 @@ public class Sword : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
-        
+
         StartCoroutine("effectDestroy");
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
             if (collision.gameObject == monster.gameObject)
                 collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage);
-
         }
-        
     }
 
     private void Update()
