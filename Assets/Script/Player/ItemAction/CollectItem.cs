@@ -17,8 +17,7 @@ public class CollectItem : KeyCode_F_Action
     }
     public override void F_Action(string type)
     {
-        int slot_1 = 1;
-        int slot_2 = 2;
+        
         if (type == gameObject.name)
         {
             if (attackSystem.currentWeapon_Lefthand == "")
@@ -32,24 +31,32 @@ public class CollectItem : KeyCode_F_Action
             else
             {
                 selectReplaceSlot.gameObject.SetActive(true);
-
-                while (attackSystem.numberSlotSelect == 0)
-                {
-                    if (attackSystem.numberSlotSelect == slot_1)
-                    {
-                        attackSystem.currentWeapon_Lefthand = gameObject.GetComponent<ItemInfo>().name;
-                        attackSystem.numberSlotSelect = 0;
-                        selectReplaceSlot.gameObject.SetActive(false);
-                    }
-                    else if (attackSystem.numberSlotSelect == slot_2)
-                    {
-                        attackSystem.currentWeapon_Righthand = gameObject.GetComponent<ItemInfo>().name;
-                        attackSystem.numberSlotSelect = 0;
-                        selectReplaceSlot.gameObject.SetActive(false);
-                    }
-                }
             }
             Destroy(gameObject);
+        }
+    }
+    IEnumerable selectSlotToRepalce()
+    {
+        var waitForButton = new WaitForUIButtons(yesButton, noButton);
+
+        int slot_1 = 1;
+        int slot_2 = 2;
+
+        while (attackSystem.numberSlotSelect == 0)
+        {
+            if (attackSystem.numberSlotSelect == slot_1)
+            {
+                attackSystem.currentWeapon_Lefthand = gameObject.GetComponent<ItemInfo>().name;
+                attackSystem.numberSlotSelect = 0;
+                selectReplaceSlot.gameObject.SetActive(false);
+            }
+            else if (attackSystem.numberSlotSelect == slot_2)
+            {
+                attackSystem.currentWeapon_Righthand = gameObject.GetComponent<ItemInfo>().name;
+                attackSystem.numberSlotSelect = 0;
+                selectReplaceSlot.gameObject.SetActive(false);
+            }
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
