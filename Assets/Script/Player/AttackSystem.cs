@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AttactSystem : MonoBehaviour
+public class AttackSystem : MonoBehaviour
 {
     [SerializeField] GameObject attackPosition;
     [SerializeField] public List<GameObject> attackPrefab;
 
-    [SerializeField] string currentWeapon_Lefthand;
-    [SerializeField] string currentWeapon_Righthand;
+    [SerializeField] public string currentWeapon_Lefthand;
+    [SerializeField] public string currentWeapon_Righthand;
 
     [Header("UITimeDelay")]
     [SerializeField] public Image attack_LeftDelayUI;
@@ -18,13 +18,14 @@ public class AttactSystem : MonoBehaviour
     public bool attacking_Left = false;
     public bool attacking_Right = false;
 
+    [SerializeField] public int numberSlotSelect = 0;
+
     //cangetfromweapon
     public float TimeToAttackLeft => timeToAttackLeft;
     [SerializeField] float timeToAttackLeft = 1f;
     [SerializeField] float timeToAttackRight = 1f;
     public float timer_left = 0f;
     public float timer_right = 0f;
-
 
     void Update()
     {
@@ -37,6 +38,11 @@ public class AttactSystem : MonoBehaviour
         {
             Attack("right");
         }
+    }
+
+    public void OnbuttonSelectSlotClick(int numberSlot)
+    {
+        numberSlotSelect = numberSlot;
     }
 
     IEnumerator attackLeftDelay()

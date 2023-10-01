@@ -16,7 +16,7 @@ public class CheckOtherCollider : MonoBehaviour
     void Update()
     {
 
-        if (isOnTriggerEnter2D == true)
+        if (isOnTriggerEnter2D == true && GameManager.Instance.currentMonsterCount == 0)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {

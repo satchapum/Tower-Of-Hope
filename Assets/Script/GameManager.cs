@@ -5,5 +5,6 @@ public class GameManager : Singleton<GameManager>
 {
     //จักการเกมพวก HUD
     [SerializeField] public bool isGetKey;
+    [SerializeField] public int currentMonsterCount;
 
 }

@@ -15,6 +15,11 @@ public class MonsterHealth : MonoBehaviour
     void monsterDie()
     {
         monsterBehavior.WhenMonsterDestroy();
+        GameManager.Instance.currentMonsterCount = GameManager.Instance.currentMonsterCount - 1;
+        if (GameManager.Instance.currentMonsterCount == 0)
+        {
+            ItemDrop.Instance.dropItem(gameObject.transform);
+        }
         Destroy(thisMonsterObject);
     }
 

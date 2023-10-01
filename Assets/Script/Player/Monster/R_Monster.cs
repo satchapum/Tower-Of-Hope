@@ -13,6 +13,7 @@ public class R_Monster : Monster
         for (int numberOfMinAmountMonster = 0; numberOfMinAmountMonster <= randomNumberOfAmount; numberOfMinAmountMonster++)
         {
             var monster = Instantiate(monsterGameobject, chestPosition, Quaternion.identity);
+            GameManager.Instance.currentMonsterCount++;
             monster.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             monster.SetActive(true);
         }
