@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_health : MonoBehaviour
+public class Player_health : Singleton<Player_health>
 {
     [SerializeField] int maxHealth = 5;
     public int CurrentHealth => currentHealth;
@@ -29,6 +29,12 @@ public class Player_health : MonoBehaviour
 
         if (currentHealth <= 0)
             playerDie();
+    }
+
+    public void healPlayerHealt(int numberOfHeal)
+    {
+        currentHealth += numberOfHeal;
+        RefreshHealth();
     }
 
     void RefreshHealth()

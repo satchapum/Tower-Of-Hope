@@ -14,6 +14,7 @@ public class ChestAction : KeyCode_F_Action
     [Header("item list")]
     [SerializeField] itemSO key;
     [SerializeField] itemSO monster;
+    [SerializeField] itemSO weapon;
     [SerializeField] itemSO salt;
     void Start()
     {
@@ -48,6 +49,11 @@ public class ChestAction : KeyCode_F_Action
                 float maxAmountOfMonsterIndex = monsterSpawn.Count;
                 float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
                 monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
+            }
+            else if (ChestManager.Instance.ItemLists[randomItemIndex] == weapon)
+            {
+                Debug.Log("Weapon");
+                WeaponDrop.Instance.dropWeapon(gameObject.transform);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == salt)
             {

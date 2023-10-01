@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDrop : Singleton<ItemDrop>
+public class WeaponDrop : Singleton<WeaponDrop>
 {
     [SerializeField] List<ItemInfo> itemList = new List<ItemInfo>();
 
     public List<ItemInfo> ItemList => itemList;
-    public void dropItem(Transform transformLastMonster)
+    public void dropWeapon(Transform transformLastMonster)
     {
         int numberOfItem =  GetRandomItem();
         foreach (var item in itemList)
