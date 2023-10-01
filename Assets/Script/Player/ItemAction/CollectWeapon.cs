@@ -27,12 +27,14 @@ public class CollectWeapon : KeyCode_F_Action
                 attackSystem.currentWeapon_Lefthand = gameObject.GetComponent<ItemInfo>().name;
                 attackSystem.numberSlotSelect = 0;
                 selectReplaceSlot.gameObject.SetActive(false);
+                Destroy(gameObject);
             }
             else if (attackSystem.numberSlotSelect == slot_2)
             {
                 attackSystem.currentWeapon_Righthand = gameObject.GetComponent<ItemInfo>().name;
                 attackSystem.numberSlotSelect = 0;
                 selectReplaceSlot.gameObject.SetActive(false);
+                Destroy(gameObject);
             }
 
         }

@@ -10,10 +10,6 @@ public class ChestManager : Singleton<ChestManager>
     [SerializeField] List<itemSO> itemLists = new List<itemSO>();
     public List<itemSO> ItemLists => itemLists;
 
-    public List<itemSO> setList()
-    {
-        return itemLists;
-    }
     public int GetRandomItem()
     {
         float random = Random.Range(0f, 1f);

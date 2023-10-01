@@ -27,7 +27,7 @@ public class ChestAction : KeyCode_F_Action
     {
         int numberOfLastChest = 1;
         int randomItemIndex = ChestManager.Instance.GetRandomItem();
-        if (chestManager.maxAmountOfChest == numberOfLastChest)
+        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false)
         {
             GameManager.Instance.isGetKey = true;
             Debug.Log("getKey Alr");
@@ -37,7 +37,12 @@ public class ChestAction : KeyCode_F_Action
 
         if (type == chestPrefab.name)
         {
-            if (ChestManager.Instance.ItemLists[randomItemIndex] == key)
+            while (ChestManager.Instance.ItemLists[randomItemIndex] == key && GameManager.Instance.isGetKey == true)
+            {
+                randomItemIndex = ChestManager.Instance.GetRandomItem();
+            }
+
+            if (ChestManager.Instance.ItemLists[randomItemIndex] == key )
             {
                 GameManager.Instance.isGetKey = true;
                 Debug.Log("getKey Alr");
