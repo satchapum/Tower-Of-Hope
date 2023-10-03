@@ -3429,7 +3429,7 @@ MonoBehaviour:
   E_image: {fileID: 1213608556}
   X_image: {fileID: 1660896419}
   Z_image: {fileID: 1820206724}
-  skill: {fileID: 0}
+  skill: {fileID: 1205083846}
   IsKeyQ_Down: 0
   IsKeyE_Down: 0
   IsKeyX_Down: 0
@@ -4028,7 +4028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Current_key: Q
   AttackPosition: {fileID: 1720956733}
-  CoolDownTime: 0
+  CoolDownTime: 5
 --- !u!1 &1410027187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,10 +4195,10 @@ MonoBehaviour:
   verticalkey: Vertical
   MouseLeft: 323
   MouseRight: 324
-  KeyQ: 0
-  KeyE: 0
-  KeyZ: 0
-  KeyX: 0
+  KeyQ: 113
+  KeyE: 101
+  KeyZ: 122
+  KeyX: 120
 --- !u!4 &1427886651
 Transform:
   m_ObjectHideFlags: 0
