@@ -49,7 +49,7 @@ public class AttackSystem : MonoBehaviour
     {
         while (timer_left < timeToAttackLeft)
         {
-            attack_LeftDelayUI.fillAmount = timer_left;
+            attack_LeftDelayUI.fillAmount = timer_left/timeToAttackLeft;
             timer_left += Time.deltaTime;
             yield return null;
         }
@@ -60,7 +60,7 @@ public class AttackSystem : MonoBehaviour
     {
         while (timer_right < timeToAttackRight)
         {
-            attack_RightDelayUI.fillAmount = timer_right;
+            attack_RightDelayUI.fillAmount = timer_right/timeToAttackRight;
             timer_right += Time.deltaTime;
             yield return null;
         }
@@ -81,7 +81,6 @@ public class AttackSystem : MonoBehaviour
             createAttack("right");
             StartCoroutine(attackRightDelay());
         }
-
     }
   
     void createAttack(string hand)
