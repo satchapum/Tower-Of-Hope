@@ -20,12 +20,15 @@ public class Player_Movement : Singleton<Player_Movement>
     [SerializeField] GameObject posTop;
     [SerializeField] GameObject posBottom;
 
+
     Rigidbody2D rb;
+    Animator anim;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = player.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -36,6 +39,7 @@ public class Player_Movement : Singleton<Player_Movement>
     void FixedUpdate()
     {
         PlayerMove(movementDirection);
+        anim.SetBool("Running", false);
 
         if (movementDirection.x < 0)
         {
@@ -59,6 +63,7 @@ public class Player_Movement : Singleton<Player_Movement>
         spriteRenderer.flipX = true;
         ChangeRotation(90f);
         SetPosition(posRight);
+        anim.SetBool("Running", true);
     }
 
     void FlipLeft()
@@ -66,6 +71,7 @@ public class Player_Movement : Singleton<Player_Movement>
         spriteRenderer.flipX = false;
         ChangeRotation(-90f);
         SetPosition(posLeft);
+        anim.SetBool("Running", true);
     }
 
     void FlipUp()
@@ -80,6 +86,7 @@ public class Player_Movement : Singleton<Player_Movement>
         spriteRenderer.flipX = false;
         ChangeRotation(0f);
         SetPosition(posBottom);
+        anim.SetBool("Running", true);
     }
 
     void ChangeRotation(float degree)
