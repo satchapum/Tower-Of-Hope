@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Sword : MonoBehaviour
+public class Sword : WeaponManager
 {
     [SerializeField] float effectSpeed;
     [SerializeField] int damage = 2;
@@ -9,12 +9,14 @@ public class Sword : MonoBehaviour
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;
     [SerializeField] float targetScale;
+
+    [SerializeField] float AttackDelay = 1;
+    public override float attackDelay { get { return this.AttackDelay; } set { this.AttackDelay = value; } }
+
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
-        
         StartCoroutine("effectDestroy");
-
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -21,7 +21,6 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] public int numberSlotSelect = 0;
 
     //cangetfromweapon
-    public float TimeToAttackLeft => timeToAttackLeft;
     [SerializeField] float timeToAttackLeft = 1f;
     [SerializeField] float timeToAttackRight = 1f;
     public float timer_left = 0f;
@@ -49,7 +48,7 @@ public class AttackSystem : MonoBehaviour
     {
         while (timer_left < timeToAttackLeft)
         {
-            attack_LeftDelayUI.fillAmount = timer_left/timeToAttackLeft;
+            attack_LeftDelayUI.fillAmount = timer_left/ timeToAttackLeft;
             timer_left += Time.deltaTime;
             yield return null;
         }
@@ -74,6 +73,7 @@ public class AttackSystem : MonoBehaviour
             attacking_Left = true;
             createAttack("left");
             StartCoroutine(attackLeftDelay());
+
         }
         else if (hand == "right")
         {
@@ -92,6 +92,7 @@ public class AttackSystem : MonoBehaviour
             {
                 if (weapon.name == currentWeapon_Lefthand)
                 {
+                    timeToAttackLeft = weapon.GetComponent<WeaponManager>().attackDelay;
                     GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
                     newEffect.SetActive(true);
                     newEffect.transform.Rotate(effectRotate);
@@ -104,6 +105,7 @@ public class AttackSystem : MonoBehaviour
             {
                 if (weapon.name == currentWeapon_Righthand)
                 {
+                    timeToAttackRight = weapon.GetComponent<WeaponManager>().attackDelay;
                     GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
                     newEffect.SetActive(true);
                     newEffect.transform.Rotate(effectRotate);
