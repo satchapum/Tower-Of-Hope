@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class Arrow : WeaponManager
 {
     [SerializeField] float effectSpeed;
     [SerializeField] int damage = 2;
@@ -10,12 +10,13 @@ public class Arrow : MonoBehaviour
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;
     [SerializeField] float targetScale;
+
+    [SerializeField] float AttackDelay = 1;
+    public override float attackDelay { get { return this.AttackDelay; } set { this.AttackDelay = value; } }
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
-
         StartCoroutine("effectDestroy");
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
