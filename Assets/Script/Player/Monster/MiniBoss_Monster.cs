@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class R_Monster : Monster
+public class MiniBoss_Monster : Monster
 {
     [SerializeField] GameObject monsterGameobject;
     [SerializeField] int minAmount = 1;

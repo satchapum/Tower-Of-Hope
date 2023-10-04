@@ -14,9 +14,7 @@ public class N_Monster : Monster
         {
             var monster = Instantiate(monsterGameobject, chestPosition, Quaternion.identity);
             GameManager.Instance.currentMonsterCount++;
-            monster.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
             monster.SetActive(true);
-        }
-        
+        } 
     }
 }

@@ -18,7 +18,7 @@ public class DoorAction : KeyCode_F_Action
 
     void Start()
     {
-        loadSceneCanvas.SetActive(true);
+        loadSceneCanvas.SetActive(false);
         checkOtherCollider.gameObjectType.Add(thisDoor);
         checkOtherCollider.keyCode_F_Actions.Add(thisDoorAction);
     }

@@ -69,6 +69,11 @@ public class MonsterBehavior : MonoBehaviour
                 FlipRight();
                 return;
             }
+            else if( direction.x < 0)
+            {
+                FlipLeft();
+                return;
+            }
             FlipUp();
             return;
         }
@@ -76,25 +81,37 @@ public class MonsterBehavior : MonoBehaviour
 
     void FlipRight()
     {
+
         spriteRenderer.flipX = false;
-        transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+        //ChangeRotation(90f);
+        //anim.SetBool("Running", true);
     }
 
     void FlipLeft()
     {
+
         spriteRenderer.flipX = true;
-        transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        //ChangeRotation(-90f);
+        //anim.SetBool("Running", true);
     }
 
     void FlipUp()
     {
+
         spriteRenderer.flipX = false;
-        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        //ChangeRotation(180f);
     }
 
     void FlipDown()
     {
         spriteRenderer.flipX = false;
-        transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+        //ChangeRotation(0f);
+        //anim.SetBool("Running", true);
     }
+
+    /*
+    void ChangeRotation(float degree)
+    {
+        colliderCheck.transform.rotation = Quaternion.Euler(0f, 0f, degree);
+    }*/
 }
