@@ -29,6 +29,9 @@ public class Skill_Use : MonoBehaviour
     public float skillXCooldown = 0f;
     public float skillZCooldown = 0f;
 
+    [SerializeField] AttackSystem attackSystem;
+    [SerializeField] Sprite normalUISkill;
+
     private void FixedUpdate()
     {
         foreach (var skillIcon in skill.skill_list)
@@ -49,6 +52,10 @@ public class Skill_Use : MonoBehaviour
             {
                 Z_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
             }
+        }
+        if (attackSystem.currentWeapon_Lefthand == attackSystem.currentWeapon_Righthand)
+        {
+            E_Icon.sprite = normalUISkill;
         }
     }
     private void Update()

@@ -27,10 +27,6 @@ public class AttackSystem : MonoBehaviour
     public float timer_left = 0f;
     public float timer_right = 0f;
 
-    private void FixedUpdate()
-    {
-        
-    }
     void Update()
     {
         if (attacking_Left == false && InputManager.Instance.mouseLeftDown)

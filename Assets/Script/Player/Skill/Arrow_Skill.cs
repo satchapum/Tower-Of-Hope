@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword_Skill : SkillManager
+public class Arrow_Skill : SkillManager
 {
-    public override Transform attackPositon { get{ return AttackPosition; } set{ AttackPosition = value; } }
+    public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
     public override int coolDownTime { get { return CoolDownTime; } set { CoolDownTime = value; } }
 
@@ -17,9 +17,9 @@ public class Sword_Skill : SkillManager
     [SerializeField] Transform AttackPosition;
     [SerializeField] int CoolDownTime;
     [SerializeField] string TargetWeapon;
-    
+
     public override void CreateSkill()
     {
-        Debug.Log("Sword skill");
+        Debug.Log("Arrow skill");
     }
 }
