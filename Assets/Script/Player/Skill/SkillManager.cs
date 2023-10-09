@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class SkillManager : MonoBehaviour
 {
+    public abstract Sprite skill_Icon { get; set; }
     public abstract string current_key { get; set; }
     public abstract int coolDownTime { get; set; }
     public abstract Transform attackPositon { get; set; }

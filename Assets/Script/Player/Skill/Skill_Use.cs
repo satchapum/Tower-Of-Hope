@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class Skill_Use : MonoBehaviour
 {
     [Header("SkillCooldown")]
-    [SerializeField] Image Q_image;
-    [SerializeField] Image E_image;
-    [SerializeField] Image X_image;
-    [SerializeField] Image Z_image;
+    [SerializeField] Image Q_CD;
+    [SerializeField] Image E_CD;
+    [SerializeField] Image X_CD;
+    [SerializeField] Image Z_CD;
+
+    [Header("SkillIcon")]
+    [SerializeField] Image Q_Icon;
+    [SerializeField] Image E_Icon;
+    [SerializeField] Image X_Icon;
+    [SerializeField] Image Z_Icon;
 
     [SerializeField] Skill_List skill;
 
@@ -23,6 +29,28 @@ public class Skill_Use : MonoBehaviour
     public float skillXCooldown = 0f;
     public float skillZCooldown = 0f;
 
+    private void FixedUpdate()
+    {
+        foreach (var skillIcon in skill.skill_list)
+        {
+            if (skillIcon.GetComponent<SkillManager>().current_key == "Q")
+            {
+                Q_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
+            }
+            else if (skillIcon.GetComponent<SkillManager>().current_key == "E")
+            {
+                E_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
+            }
+            else if (skillIcon.GetComponent<SkillManager>().current_key == "X")
+            {
+                X_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
+            }
+            else if (skillIcon.GetComponent<SkillManager>().current_key == "Z")
+            {
+                Z_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
+            }
+        }
+    }
     private void Update()
     {
         if (InputManager.Instance.KeyQ_Down && IsKeyQ_Down == false)
@@ -78,45 +106,49 @@ public class Skill_Use : MonoBehaviour
         {
             while (skillQCooldown < thisSkill.coolDownTime)
             {
-                Q_image.fillAmount = skillQCooldown/thisSkill.coolDownTime;
+                Q_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
                 skillQCooldown += Time.deltaTime;
                 yield return null;
             }
             skillQCooldown = 0f;
             IsKeyQ_Down = false;
+            Q_CD.fillAmount = 0;
         }
         else if (keyName == "E")
         {
             while (skillECooldown < thisSkill.coolDownTime)
             {
-                E_image.fillAmount = skillECooldown/thisSkill.coolDownTime;
+                E_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
                 skillECooldown += Time.deltaTime;
                 yield return null;
             }
             skillECooldown = 0f;
             IsKeyE_Down = false;
+            E_CD.fillAmount = 0;
         }
         else if (keyName == "X")
         {
             while (skillXCooldown < thisSkill.coolDownTime)
             {
-                X_image.fillAmount = skillQCooldown/thisSkill.coolDownTime;
+                X_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
                 skillXCooldown += Time.deltaTime;
                 yield return null;
             }
             skillXCooldown = 0f;
             IsKeyX_Down = false;
+            X_CD.fillAmount = 0;
         }
         else if (keyName == "Z")
         {
             while (skillZCooldown < thisSkill.coolDownTime)
             {
-                Z_image.fillAmount = skillQCooldown/thisSkill.coolDownTime;
+                Z_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
                 skillZCooldown += Time.deltaTime;
                 yield return null;
             }
             skillZCooldown = 0f;
             IsKeyZ_Down = false;
+            Z_CD.fillAmount = 0;
         }
 
     }
