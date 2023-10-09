@@ -9,25 +9,21 @@ public class Skill_Use : MonoBehaviour
     [SerializeField] Image Q_CD;
     [SerializeField] Image E_CD;
     [SerializeField] Image X_CD;
-    [SerializeField] Image Z_CD;
 
     [Header("SkillIcon")]
     [SerializeField] Image Q_Icon;
     [SerializeField] Image E_Icon;
     [SerializeField] Image X_Icon;
-    [SerializeField] Image Z_Icon;
 
     [SerializeField] Skill_List skill;
 
     public bool IsKeyQ_Down = false;
     public bool IsKeyE_Down = false;
     public bool IsKeyX_Down = false;
-    public bool IsKeyZ_Down = false;
 
     public float skillQCooldown = 0f;
     public float skillECooldown = 0f;
     public float skillXCooldown = 0f;
-    public float skillZCooldown = 0f;
 
     [SerializeField] AttackSystem attackSystem;
     [SerializeField] Sprite normalUISkill;
@@ -48,10 +44,7 @@ public class Skill_Use : MonoBehaviour
             {
                 X_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
             }
-            else if (skillIcon.GetComponent<SkillManager>().current_key == "Z")
-            {
-                Z_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
-            }
+            
         }
         if (attackSystem.currentWeapon_Lefthand == attackSystem.currentWeapon_Righthand)
         {
@@ -72,10 +65,6 @@ public class Skill_Use : MonoBehaviour
         {
             useSkill("X");
         }
-        else if (InputManager.Instance.KeyZ_Down && IsKeyZ_Down == false)
-        {
-            useSkill("Z");
-        }
     }
 
     void useSkill(string keyName)
@@ -93,10 +82,6 @@ public class Skill_Use : MonoBehaviour
                 else if (keyName == "E")
                 {
                     IsKeyE_Down = true;
-                }
-                else if (keyName == "Z")
-                {
-                    IsKeyZ_Down = true;
                 }
                 else if (keyName == "X")
                 {
@@ -125,7 +110,7 @@ public class Skill_Use : MonoBehaviour
         {
             while (skillECooldown < thisSkill.coolDownTime)
             {
-                E_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
+                E_CD.fillAmount = 1 - (skillECooldown / thisSkill.coolDownTime);
                 skillECooldown += Time.deltaTime;
                 yield return null;
             }
@@ -137,7 +122,7 @@ public class Skill_Use : MonoBehaviour
         {
             while (skillXCooldown < thisSkill.coolDownTime)
             {
-                X_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
+                X_CD.fillAmount = 1 - (skillXCooldown / thisSkill.coolDownTime);
                 skillXCooldown += Time.deltaTime;
                 yield return null;
             }
@@ -145,18 +130,5 @@ public class Skill_Use : MonoBehaviour
             IsKeyX_Down = false;
             X_CD.fillAmount = 0;
         }
-        else if (keyName == "Z")
-        {
-            while (skillZCooldown < thisSkill.coolDownTime)
-            {
-                Z_CD.fillAmount = 1 - (skillQCooldown / thisSkill.coolDownTime);
-                skillZCooldown += Time.deltaTime;
-                yield return null;
-            }
-            skillZCooldown = 0f;
-            IsKeyZ_Down = false;
-            Z_CD.fillAmount = 0;
-        }
-
     }
 }
