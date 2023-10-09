@@ -22,15 +22,14 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] public int numberSlotSelect = 0;
 
     //cangetfromweapon
-    [SerializeField] float timeToAttackLeft = 1f;
-    [SerializeField] float timeToAttackRight = 1f;
+    [SerializeField] public float timeToAttackLeft = 1f;
+    [SerializeField] public float timeToAttackRight = 1f;
     public float timer_left = 0f;
     public float timer_right = 0f;
+
     private void FixedUpdate()
     {
-        foreach (var WeaponIcon in attackPrefab)
-        {
-        }
+        
     }
     void Update()
     {
@@ -100,7 +99,7 @@ public class AttackSystem : MonoBehaviour
             {
                 if (weapon.name == currentWeapon_Lefthand)
                 {
-                    timeToAttackLeft = weapon.GetComponent<WeaponManager>().attackDelay;
+                    timeToAttackLeft = weapon.GetComponent<WeaponManager>().attackCooldown;
                     GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
                     newEffect.SetActive(true);
                     newEffect.transform.Rotate(effectRotate);
@@ -113,7 +112,7 @@ public class AttackSystem : MonoBehaviour
             {
                 if (weapon.name == currentWeapon_Righthand)
                 {
-                    timeToAttackRight = weapon.GetComponent<WeaponManager>().attackDelay;
+                    timeToAttackRight = weapon.GetComponent<WeaponManager>().attackCooldown;
                     GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
                     newEffect.SetActive(true);
                     newEffect.transform.Rotate(effectRotate);

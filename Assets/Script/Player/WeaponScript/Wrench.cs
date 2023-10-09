@@ -1,8 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Sword : WeaponManager
+public class Wrench : WeaponManager
 {
     [SerializeField] float effectSpeed;
     [SerializeField] int damage = 2;
@@ -25,7 +25,6 @@ public class Sword : WeaponManager
         {
             if (collision.gameObject == monster.gameObject)
                 collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage);
-
         }
     }
 

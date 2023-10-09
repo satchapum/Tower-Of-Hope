@@ -11,12 +11,9 @@ public class Arrow : WeaponManager
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;
     [SerializeField] float targetScale;
-    [SerializeField] Image WeaponIcon;
 
-    [SerializeField] float AttackDelay = 1;
-    public override float attackDelay { get { return this.AttackDelay; } set { this.AttackDelay = value; } }
-
-    public override Image weaponIcon { get { return this.WeaponIcon; } set { this.WeaponIcon = value; } }
+    [SerializeField] float AttackCooldown = 1;
+    public override float attackCooldown { get { return this.AttackCooldown; } set { this.AttackCooldown = value; } }
 
     void Start()
     {
