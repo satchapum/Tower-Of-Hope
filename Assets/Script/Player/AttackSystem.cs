@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,7 +26,12 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] float timeToAttackRight = 1f;
     public float timer_left = 0f;
     public float timer_right = 0f;
-
+    private void FixedUpdate()
+    {
+        foreach (var WeaponIcon in attackPrefab)
+        {
+        }
+    }
     void Update()
     {
         if (attacking_Left == false && InputManager.Instance.mouseLeftDown)
@@ -48,23 +54,25 @@ public class AttackSystem : MonoBehaviour
     {
         while (timer_left < timeToAttackLeft)
         {
-            attack_LeftDelayUI.fillAmount = timer_left/ timeToAttackLeft;
+            attack_LeftDelayUI.fillAmount = 1 - (timer_left/ timeToAttackLeft);
             timer_left += Time.deltaTime;
             yield return null;
         }
         timer_left = 0f;
         attacking_Left = false;
+        attack_LeftDelayUI.fillAmount = 0;
     }
     IEnumerator attackRightDelay()
     {
         while (timer_right < timeToAttackRight)
         {
-            attack_RightDelayUI.fillAmount = timer_right/timeToAttackRight;
+            attack_RightDelayUI.fillAmount = 1 - (timer_right/timeToAttackRight);
             timer_right += Time.deltaTime;
             yield return null;
         }
         timer_right = 0f;
         attacking_Right = false;
+        attack_RightDelayUI.fillAmount = 0;
     }
     void Attack(string hand)
     {

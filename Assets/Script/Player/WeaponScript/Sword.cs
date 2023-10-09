@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sword : WeaponManager
 {
@@ -9,9 +10,12 @@ public class Sword : WeaponManager
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;
     [SerializeField] float targetScale;
+    [SerializeField] Image WeaponIcon;
 
     [SerializeField] float AttackDelay = 1;
     public override float attackDelay { get { return this.AttackDelay; } set { this.AttackDelay = value; } }
+
+    public override Image weaponIcon { get { return this.WeaponIcon; } set { this.WeaponIcon = value; } }
 
     void Start()
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Arrow : WeaponManager
 {
@@ -10,9 +11,13 @@ public class Arrow : WeaponManager
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;
     [SerializeField] float targetScale;
+    [SerializeField] Image WeaponIcon;
 
     [SerializeField] float AttackDelay = 1;
     public override float attackDelay { get { return this.AttackDelay; } set { this.AttackDelay = value; } }
+
+    public override Image weaponIcon { get { return this.WeaponIcon; } set { this.WeaponIcon = value; } }
+
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
