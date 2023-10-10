@@ -5467,7 +5467,7 @@ GameObject:
   - component: {fileID: 1304880634}
   - component: {fileID: 1304880638}
   - component: {fileID: 1304880637}
-  - component: {fileID: 1304880636}
+  - component: {fileID: 1304880640}
   - component: {fileID: 1304880635}
   m_Layer: 0
   m_Name: Dagger
@@ -5526,25 +5526,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.4219244, y: 0}
   m_Size: {x: 0.1653738, y: 7.4484506}
   m_Direction: 0
---- !u!114 &1304880636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1304880633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f56e70820627f4f9569e0cfa908600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectSpeed: 20
-  damage: 1
-  rb: {fileID: 1304880637}
-  effectShowTime: 0.2
-  currentDisplaytime: 0
-  targetScale: 0.5
-  AttackCooldown: 0.25
 --- !u!50 &1304880637
 Rigidbody2D:
   serializedVersion: 4
@@ -5624,6 +5605,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1304880640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304880633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e67474d8c1f1f45bab7e4aebc25078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectSpeed: 20
+  damage: 1
+  rb: {fileID: 1304880637}
+  effectShowTime: 2
+  currentDisplaytime: 0
+  targetScale: 0.5
+  AttackCooldown: 0.1
 --- !u!1 &1311327392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10023,8 +10023,8 @@ MonoBehaviour:
   attacking_Left: 0
   attacking_Right: 0
   numberSlotSelect: 0
-  timeToAttackLeft: 1
-  timeToAttackRight: 1
+  timeToAttackLeft: 0
+  timeToAttackRight: 0
   timer_left: 0
   timer_right: 0
 --- !u!114 &1967382441
@@ -10389,12 +10389,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7529ca443594cd3418dbc2f8dfab70ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectSpeed: 10
-  damage: 4
+  effectSpeed: 1
+  damage: 100
   rb: {fileID: 2038011300}
-  effectShowTime: 1
+  effectShowTime: 5
   currentDisplaytime: 0
-  targetScale: 0
+  targetScale: 1
   AttackCooldown: 2.5
 --- !u!50 &2038011300
 Rigidbody2D:
