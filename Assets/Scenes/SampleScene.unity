@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671703959e13061458f5c8a8d09cba4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: ab0356d9f4471324fa755dd4c4fd0750, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -4890,7 +4890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8352ad47a30eb9b4db74f9998f2b6e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: 190bc799acb83b64190ff77a7c6f2f3e, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 6
@@ -5169,7 +5169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83705daef756aa429193c1202107a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: f1f5977a5f683a748b74374f88b92080, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
