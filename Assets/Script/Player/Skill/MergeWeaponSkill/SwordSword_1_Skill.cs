@@ -12,10 +12,13 @@ public class SwordSword_1_Skill : SkillManager
 
     public override string targetWeapon { get { return TargetWeapon; } set { TargetWeapon = value; } }
 
+    public override int manaCost { get { return ManaCost; } set { ManaCost = value; } }
+
     [SerializeField] Sprite Skill_Icon;
     [SerializeField] string Current_key;
     [SerializeField] Transform AttackPosition;
     [SerializeField] int CoolDownTime;
+    [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
 
     public override void CreateSkill()

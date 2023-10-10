@@ -8,6 +8,7 @@ public abstract class SkillManager : MonoBehaviour
     public abstract string current_key { get; set; }
     public abstract int coolDownTime { get; set; }
     public abstract Transform attackPositon { get; set; }
+    public abstract int manaCost { get; set; }
     public abstract string targetWeapon { get; set; }
     public abstract void CreateSkill();
 }

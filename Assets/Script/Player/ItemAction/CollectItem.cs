@@ -32,7 +32,7 @@ public class CollectItem : KeyCode_F_Action
             }
             else if (gameObject.GetComponent<ItemInfo>().name == "Mana")
             {
-                Debug.Log("refillmana = " + manaAmount);
+                Player_Mana.Instance.RePlayerMana(manaAmount);
                 Destroy(gameObject);
             }
         }

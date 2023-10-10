@@ -74,7 +74,17 @@ public class Skill_Use : MonoBehaviour
             var skilluse = skill.skill_list[orderInSkillList].GetComponent<SkillManager>();
             if (keyName == skilluse.current_key)
             {
-                skilluse.CreateSkill();
+                if (Player_Mana.Instance.CurrentMana >= skilluse.manaCost)
+                {
+                    skilluse.CreateSkill();
+                    Player_Mana.Instance.DrainPlayerMana(skilluse.manaCost);
+                }
+                else if (Player_Mana.Instance.CurrentMana < skilluse.manaCost)
+                {
+                    Debug.Log("not enough mana");
+                    break;
+                }
+
                 if (keyName == "Q")
                 {
                     IsKeyQ_Down = true;

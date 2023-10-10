@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_health : Singleton<Player_health>
@@ -10,8 +8,6 @@ public class Player_health : Singleton<Player_health>
     [SerializeField] int currentHealth;
 
     public event Action<int, int> onHealthChange;
-
-    private IEnumerator coroutine;
 
     void Start()
     {
