@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow_Skill : SkillManager
+public class MagicWand_Skill : SkillManager
 {
     public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
@@ -20,6 +18,6 @@ public class Arrow_Skill : SkillManager
 
     public override void CreateSkill()
     {
-        Debug.Log("Arrow skill");
+        Debug.Log("MagicWand skill");
     }
 }

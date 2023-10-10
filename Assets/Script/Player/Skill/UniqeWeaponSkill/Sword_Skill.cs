@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Wrench_Skill : SkillManager
+public class Sword_Skill : SkillManager
 {
-    public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
+    public override Transform attackPositon { get{ return AttackPosition; } set{ AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
     public override int coolDownTime { get { return CoolDownTime; } set { CoolDownTime = value; } }
 
@@ -17,9 +15,9 @@ public class Wrench_Skill : SkillManager
     [SerializeField] Transform AttackPosition;
     [SerializeField] int CoolDownTime;
     [SerializeField] string TargetWeapon;
-
+    
     public override void CreateSkill()
     {
-        Debug.Log("Wrench Skill");
+        Debug.Log("Sword skill");
     }
 }
