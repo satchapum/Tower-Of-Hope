@@ -550,6 +550,106 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &44009682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44009683}
+  - component: {fileID: 44009684}
+  m_Layer: 0
+  m_Name: MagicWandMagicWand_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &44009683
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44009682}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44009684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44009682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855981a0e12d2914c9a4c8fe5ce9ff36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 4
+  ManaCost: 10
+  TargetWeapon: MagicWand+MagicWand
+--- !u!1 &55944294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 55944295}
+  - component: {fileID: 55944296}
+  m_Layer: 0
+  m_Name: SwordMagicWand_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &55944295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55944294}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &55944296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55944294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671703959e13061458f5c8a8d09cba4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 10
+  TargetWeapon: Sword+MagicWand
 --- !u!1 &69425102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1127,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &148192173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148192174}
+  - component: {fileID: 148192175}
+  m_Layer: 0
+  m_Name: SpearDagger_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &148192174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148192173}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148192175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148192173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05f8f4432dceff4e89b5fe2b7c9dd95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 10
+  TargetWeapon: Spear+Dagger
 --- !u!1 &167776453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1690,7 @@ GameObject:
   - component: {fileID: 214818690}
   - component: {fileID: 214818691}
   m_Layer: 0
-  m_Name: SwordSword_1_skill
+  m_Name: SwordSword_Skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1573,12 +1723,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c1cc016c3bc29478db2bf841104b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 21300000, guid: d1a2c7ef94b11c646830e99024816ac7, type: 3}
+  Skill_Icon: {fileID: 0}
   Current_key: 
   AttackPosition: {fileID: 0}
-  CoolDownTime: 50
-  ManaCost: 0
-  TargetWeapon: not
+  CoolDownTime: 10
+  ManaCost: 10
+  TargetWeapon: Sword+Sword
 --- !u!1 &271565668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,6 +1995,20 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 214818690}
+  - {fileID: 1536745847}
+  - {fileID: 55944295}
+  - {fileID: 894757537}
+  - {fileID: 1861844860}
+  - {fileID: 1552973995}
+  - {fileID: 1225778964}
+  - {fileID: 1912946283}
+  - {fileID: 874569597}
+  - {fileID: 44009683}
+  - {fileID: 1911147563}
+  - {fileID: 1123956070}
+  - {fileID: 1039788190}
+  - {fileID: 148192174}
+  - {fileID: 528635217}
   m_Father: {fileID: 1205083844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464795676
@@ -2305,6 +2469,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1967382438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &528635216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528635217}
+  - component: {fileID: 528635218}
+  m_Layer: 0
+  m_Name: DaggerDagger_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &528635217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528635216}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528635218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528635216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0e971211cc9cb49adf45d73259c9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 20
+  TargetWeapon: Dagger+Dagger
 --- !u!1 &530909115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3805,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1684255215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &874569596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 874569597}
+  - component: {fileID: 874569598}
+  m_Layer: 0
+  m_Name: ArrowDagger_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &874569597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874569596}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874569598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874569596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e30887db4c7fe46bd82b7b64547283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 1
+  ManaCost: 40
+  TargetWeapon: Arrow+Dagger
+--- !u!1 &894757536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894757537}
+  - component: {fileID: 894757538}
+  m_Layer: 0
+  m_Name: SwordSpear_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &894757537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894757536}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894757538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894757536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604316c97b0346046b1768682d75ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 20
+  TargetWeapon: Sword+Spear
 --- !u!1 &924511308
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,6 +4436,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003406304}
   m_CullTransparentMesh: 1
+--- !u!1 &1039788189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039788190}
+  - component: {fileID: 1039788191}
+  m_Layer: 0
+  m_Name: SpearSpear_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1039788190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039788189}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039788191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039788189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824f0590fced44a408c322e0602b7b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 20
+  TargetWeapon: Spear+Spear
 --- !u!1 &1075144893
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,6 +4846,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   attackDelayTime: 1
+--- !u!1 &1123956069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123956070}
+  - component: {fileID: 1123956071}
+  m_Layer: 0
+  m_Name: MagicWandDagger_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1123956070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123956069}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123956071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123956069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8352ad47a30eb9b4db74f9998f2b6e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 6
+  ManaCost: 10
+  TargetWeapon: MagicWand+Dagger
 --- !u!1 &1192503056
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,6 +5034,20 @@ MonoBehaviour:
   - {fileID: 350079708}
   - {fileID: 1850310142}
   - {fileID: 214818689}
+  - {fileID: 1536745846}
+  - {fileID: 55944294}
+  - {fileID: 894757536}
+  - {fileID: 1861844859}
+  - {fileID: 1552973994}
+  - {fileID: 1225778963}
+  - {fileID: 1912946282}
+  - {fileID: 874569596}
+  - {fileID: 44009682}
+  - {fileID: 1911147562}
+  - {fileID: 1123956069}
+  - {fileID: 1039788189}
+  - {fileID: 148192173}
+  - {fileID: 528635216}
 --- !u!1 &1213608554
 GameObject:
   m_ObjectHideFlags: 0
@@ -4697,6 +5125,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213608554}
   m_CullTransparentMesh: 1
+--- !u!1 &1225778963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225778964}
+  - component: {fileID: 1225778965}
+  m_Layer: 0
+  m_Name: ArrowMagicWand_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1225778964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225778963}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225778965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225778963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83705daef756aa429193c1202107a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 30
+  TargetWeapon: Arrow+MagicWand
 --- !u!1 &1235757871
 GameObject:
   m_ObjectHideFlags: 0
@@ -6281,7 +6759,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSystem: {fileID: 1967382440}
   skillList: {fileID: 1205083846}
-  skillSwordSword_1: {fileID: 214818691}
+  skillSwordSword: {fileID: 214818691}
+  skillSwordArrow: {fileID: 1536745848}
+  skillSwordMagicWand: {fileID: 55944296}
+  skillSwordSpear: {fileID: 894757538}
+  skillSwordDagger: {fileID: 1861844861}
+  skillArrowArrow: {fileID: 1552973996}
+  skillArrowMagicWand: {fileID: 1225778965}
+  skillArrowSpear: {fileID: 1912946284}
+  skillArrowDagger: {fileID: 874569598}
+  skillMagicWandMagicWand: {fileID: 44009684}
+  skillMagicWandSpear: {fileID: 1911147564}
+  skillMagicWandDagger: {fileID: 1123956071}
+  skillSpearSpear: {fileID: 1039788191}
+  skillSpearDagger: {fileID: 148192175}
+  skillDaggerDagger: {fileID: 528635218}
 --- !u!1 &1511078649
 GameObject:
   m_ObjectHideFlags: 0
@@ -6891,6 +7383,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1536745846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536745847}
+  - component: {fileID: 1536745848}
+  m_Layer: 0
+  m_Name: SwordArrow_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1536745847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536745846}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1536745848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536745846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720dd6d547631274ba6162c9bbfa8b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 10
+  TargetWeapon: Sword+Arrow
 --- !u!1 &1552245664
 GameObject:
   m_ObjectHideFlags: 0
@@ -6966,6 +7508,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552245664}
   m_CullTransparentMesh: 1
+--- !u!1 &1552973994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552973995}
+  - component: {fileID: 1552973996}
+  m_Layer: 0
+  m_Name: ArrowArrow_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1552973995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552973994}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552973996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552973994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3ca6587dbed9e4cbd9c4d431ea2781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 20
+  TargetWeapon: Arrow+Arrow
 --- !u!1 &1581818417
 GameObject:
   m_ObjectHideFlags: 0
@@ -8785,6 +9377,56 @@ Transform:
   - {fileID: 1475333955}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1861844859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861844860}
+  - component: {fileID: 1861844861}
+  m_Layer: 0
+  m_Name: SwordDagger_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1861844860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861844859}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861844861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861844859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b249b85731490418798aaef19f1910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 20
+  TargetWeapon: Sword+Dagger
 --- !u!1 &1894887213
 GameObject:
   m_ObjectHideFlags: 0
@@ -8955,6 +9597,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1192503058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1911147562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911147563}
+  - component: {fileID: 1911147564}
+  m_Layer: 0
+  m_Name: MagicWandSpear_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1911147563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911147562}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911147564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911147562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4698caf6ec66e4f839314564db44d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 10
+  TargetWeapon: MagicWand+Spear
+--- !u!1 &1912946282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912946283}
+  - component: {fileID: 1912946284}
+  m_Layer: 0
+  m_Name: ArrowSpear_Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1912946283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912946282}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449328041}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912946284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912946282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aac4965748a78e458c636f167a47a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skill_Icon: {fileID: 0}
+  Current_key: 
+  AttackPosition: {fileID: 1720956733}
+  CoolDownTime: 5
+  ManaCost: 40
+  TargetWeapon: Arrow+Spear
 --- !u!1 &1943448259
 GameObject:
   m_ObjectHideFlags: 0
