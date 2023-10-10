@@ -1759,7 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833e4afdc0c8bcb4bafdf21f94e5f235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 21300000, guid: 8100e05cf7e14c44abd6d73882fc6c8b, type: 3}
+  Skill_Icon: {fileID: 21300000, guid: ba9c3779da1cfcb46b98a0e2f99bdf78, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 10
@@ -5652,7 +5652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dagger
   probabilityPercentage: 20
-  iconWeapon: {fileID: 21300000, guid: 1d6789372fd19d04f9b0310a26dec4ec, type: 3}
+  iconWeapon: {fileID: 21300000, guid: 236aa127b4cfbb34caa4a6e7d3808a80, type: 3}
 --- !u!70 &1433575154
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5761,7 +5761,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d6789372fd19d04f9b0310a26dec4ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 236aa127b4cfbb34caa4a6e7d3808a80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6326,7 +6326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946f69ac398efee4ba4dcbe9fbc48ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 21300000, guid: a3c79881c19804641a438257395e85a8, type: 3}
+  Skill_Icon: {fileID: 21300000, guid: c9f34ee1e0bbd7848a68a63051515854, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -8730,7 +8730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe429aa3de453974abfa69e5de157313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 21300000, guid: 5d0202ffb7a4a8d4ea12199b48e94e37, type: 3}
+  Skill_Icon: {fileID: 21300000, guid: dbc004e9e1e08924e887d677f8e94830, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 1
@@ -9159,7 +9159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f050e27fd96bace4987738ad5db33327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 5
   playerRotationSpeed: 1000
   movementDirection: {x: 0, y: 0}
   player: {fileID: 1967382433}
