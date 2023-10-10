@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 516764068}
   - component: {fileID: 516764071}
   - component: {fileID: 516764070}
-  - component: {fileID: 516764069}
+  - component: {fileID: 516764074}
   m_Layer: 0
   m_Name: health potion
   m_TagString: Untagged
@@ -2033,41 +2033,6 @@ MonoBehaviour:
   name: Health
   probabilityPercentage: 50
   iconWeapon: {fileID: 0}
---- !u!70 &516764069
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516764067}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0000009536743, y: 0}
-  m_Size: {x: 0.99999994, y: 1.9999999}
-  m_Direction: 0
 --- !u!114 &516764070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2142,8 +2107,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.047002554, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d9b9694fd8abe3c4f988dfee5a7f023a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2162,12 +2127,47 @@ Transform:
   m_GameObject: {fileID: 516764067}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3605, y: -0.4945, z: 0.38147163}
-  m_LocalScale: {x: 0.27888435, y: 0.14533125, z: 0.5055}
+  m_LocalPosition: {x: -0.5168, y: -0.3382, z: 0.38147163}
+  m_LocalScale: {x: 0.6745, y: 0.6745, z: 0.6745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1856598586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &516764074
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516764067}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.65
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,7 +4747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Arrow
   probabilityPercentage: 20
-  iconWeapon: {fileID: 21300000, guid: 1d6789372fd19d04f9b0310a26dec4ec, type: 3}
+  iconWeapon: {fileID: 21300000, guid: f72d44dcb77fc4f4fa8047eb47776d54, type: 3}
 --- !u!212 &1235757874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4789,7 +4789,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d6789372fd19d04f9b0310a26dec4ec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f72d44dcb77fc4f4fa8047eb47776d54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6074,7 +6074,7 @@ GameObject:
   - component: {fileID: 1475333950}
   - component: {fileID: 1475333953}
   - component: {fileID: 1475333952}
-  - component: {fileID: 1475333951}
+  - component: {fileID: 1475333956}
   m_Layer: 0
   m_Name: mana potion
   m_TagString: Untagged
@@ -6097,41 +6097,6 @@ MonoBehaviour:
   name: Mana
   probabilityPercentage: 50
   iconWeapon: {fileID: 0}
---- !u!70 &1475333951
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475333949}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: 0}
-  m_Size: {x: 0.99999994, y: 1.9999999}
-  m_Direction: 0
 --- !u!114 &1475333952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6206,8 +6171,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.031887054, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 47bb293920a887546bf8b944a427ba2c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6226,12 +6191,47 @@ Transform:
   m_GameObject: {fileID: 1475333949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.92, y: -0.4945, z: 0.38147163}
-  m_LocalScale: {x: 0.27888435, y: 0.15796876, z: 0.5055}
+  m_LocalPosition: {x: 0.755, y: -0.3295, z: 0.38147163}
+  m_LocalScale: {x: 0.6745, y: 0.6745, z: 0.6745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1856598586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1475333956
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475333949}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: 0.00000023841858}
+  serializedVersion: 2
+  m_Radius: 0.65
 --- !u!1 &1489866102
 GameObject:
   m_ObjectHideFlags: 0
