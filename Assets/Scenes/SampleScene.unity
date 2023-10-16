@@ -956,6 +956,7 @@ MonoBehaviour:
   thisChest: {fileID: 140952242}
   thisChestAction: {fileID: 140952241}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -1729,6 +1730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   attackDelayTime: 1
+  damageUpgradePerFloor: 3
 --- !u!1 &214818689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,6 +2017,43 @@ MonoBehaviour:
   CoolDownTime: 5
   ManaCost: 10
   TargetWeapon: Spear
+--- !u!1 &385191894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385191895}
+  m_Layer: 5
+  m_Name: LevelUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &385191895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385191894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 931837840}
+  - {fileID: 1747826517}
+  m_Father: {fileID: 1338055249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &449328040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,7 +4489,7 @@ RectTransform:
   - {fileID: 655674884}
   - {fileID: 510789852}
   - {fileID: 970759346}
-  m_Father: {fileID: 1338055249}
+  m_Father: {fileID: 385191895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4508,6 +4547,154 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &934420941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934420942}
+  - component: {fileID: 934420944}
+  - component: {fileID: 934420945}
+  - component: {fileID: 934420943}
+  m_Layer: 5
+  m_Name: GetKey(Beta)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &934420942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934420941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1338055249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &934420943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934420941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &934420944
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934420941}
+  m_CullTransparentMesh: 1
+--- !u!114 &934420945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934420941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abc54ac4e804e34aa8ad05d68772139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getKeyText: {fileID: 934420943}
 --- !u!1 &950759076
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,6 +4752,7 @@ MonoBehaviour:
   thisChest: {fileID: 950759079}
   thisChestAction: {fileID: 950759078}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -4868,6 +5056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayerLevelExperiencePerLevel: 0
   currenLevelExperience: 0
+  currentLevelShowText: {fileID: 1747826518}
   amountBaseHealthUpgradePerLevel: 1
   amountBaseManaUpgradePerLevel: 1
   amountBaseAttackDamagePerLevel: 1
@@ -5375,6 +5564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   attackDelayTime: 1
+  damageUpgradePerFloor: 2
 --- !u!1 &1123956069
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,10 +6779,11 @@ RectTransform:
   - {fileID: 1489866103}
   - {fileID: 1978919927}
   - {fileID: 3649498}
-  - {fileID: 931837840}
   - {fileID: 780347034}
   - {fileID: 738502879}
   - {fileID: 1943448260}
+  - {fileID: 934420942}
+  - {fileID: 385191895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7139,6 +7330,7 @@ MonoBehaviour:
   thisChest: {fileID: 1458355236}
   thisChestAction: {fileID: 1458355235}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -7957,6 +8149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   attackDelayTime: 1
+  damageUpgradePerFloor: 2
 --- !u!114 &1516144069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8163,6 +8356,7 @@ MonoBehaviour:
   thisChest: {fileID: 1518867884}
   thisChestAction: {fileID: 1518867883}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -8537,6 +8731,7 @@ MonoBehaviour:
   thisChest: {fileID: 1581818420}
   thisChestAction: {fileID: 1581818419}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -9504,6 +9699,7 @@ MonoBehaviour:
   thisChest: {fileID: 1747019827}
   thisChestAction: {fileID: 1747019826}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -9646,6 +9842,140 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1747826516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747826517}
+  - component: {fileID: 1747826519}
+  - component: {fileID: 1747826518}
+  m_Layer: 5
+  m_Name: CurrentLevelText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1747826517
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747826516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 385191895}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -284, y: 150}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1747826518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747826516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Level:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1747826519
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747826516}
+  m_CullTransparentMesh: 1
 --- !u!1 &1775960796
 GameObject:
   m_ObjectHideFlags: 0
@@ -9858,6 +10188,7 @@ MonoBehaviour:
   thisChest: {fileID: 1795915092}
   thisChestAction: {fileID: 1795915091}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -10057,6 +10388,7 @@ MonoBehaviour:
   thisChest: {fileID: 1814360326}
   thisChestAction: {fileID: 1814360325}
   chestManager: {fileID: 1592190403}
+  getkeyText: {fileID: 934420941}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -12082,8 +12414,9 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1347626422}
   - {fileID: 619394802}
+  - {fileID: 1347626422}
+  - {fileID: 997332818}
   - {fileID: 1427886651}
   - {fileID: 1967382438}
   - {fileID: 1592190404}
@@ -12095,4 +12428,3 @@ SceneRoots:
   - {fileID: 1192503058}
   - {fileID: 1856598586}
   - {fileID: 1205083844}
-  - {fileID: 997332818}

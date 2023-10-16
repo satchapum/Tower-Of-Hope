@@ -10,12 +10,16 @@ public class ChestAction : KeyCode_F_Action
     [SerializeField] GetGameObjectType_Chest thisChest;
     [SerializeField] KeyCode_F_Action thisChestAction;
     [SerializeField] ChestManager chestManager;
-    
+
+    [Header("For test")]
+    [SerializeField] GameObject getkeyText;
+
     [Header("item list")]
     [SerializeField] itemSO key;
     [SerializeField] itemSO monster;
     [SerializeField] itemSO weapon;
     [SerializeField] itemSO salt;
+
     void Start()
     {
         int thisChestCount = 1;
@@ -45,7 +49,9 @@ public class ChestAction : KeyCode_F_Action
             if (ChestManager.Instance.ItemLists[randomItemIndex] == key )
             {
                 GameManager.Instance.isGetKey = true;
+                UIGetKey.Instance.GetKeyText();
                 Debug.Log("getKey Alr");
+                Destroy(chestPrefab);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == monster)
             {
@@ -54,18 +60,19 @@ public class ChestAction : KeyCode_F_Action
                 float maxAmountOfMonsterIndex = monsterSpawn.Count;
                 float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
                 monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
+                Destroy(chestPrefab);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == weapon)
             {
                 Debug.Log("Weapon");
                 WeaponDrop.Instance.dropWeapon(gameObject.transform);
+                Destroy(chestPrefab);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == salt)
             {
-                //ต้องทำระบบเพิ่มความน่าจะเป็นหากเปิดได้ของชิ้นอื่น
                 Debug.Log("getSalt");
+                Destroy(chestPrefab);
             }
-            Destroy(chestPrefab);
         }
     }
     private void OnDestroy()

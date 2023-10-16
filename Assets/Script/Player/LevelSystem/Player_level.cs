@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 public class Player_level : Singleton<Player_level>
 {
     [SerializeField] int maxPlayerLevelExperiencePerLevel;
     public int CurrenLevelExperience => currenLevelExperience;
     [SerializeField] int currenLevelExperience;
+
+    [SerializeField] TMP_Text currentLevelShowText;
 
     public event Action<int, int> onLevelExperienceChange;
 
@@ -17,6 +20,7 @@ public class Player_level : Singleton<Player_level>
 
     void Start()
     {
+        currentLevelShowText.text = "Level : " + GameManager.Instance.currentplayerLevel;
         maxPlayerLevelExperiencePerLevel = GameManager.Instance.maxPlayerLevelExperiencePerLevel;
         RefreshLevelExperience();
     }
@@ -54,6 +58,7 @@ public class Player_level : Singleton<Player_level>
    void WhenLevelUp()
     {
         maxPlayerLevelExperiencePerLevel = GameManager.Instance.maxPlayerLevelExperiencePerLevel;
+        currentLevelShowText.text = "Level : " + GameManager.Instance.currentplayerLevel;
     }
 
     void RefreshLevelExperience()
