@@ -6,6 +6,7 @@ public class MonsterAttack : MonoBehaviour
 {
     [SerializeField] public int damage;
     [SerializeField] public float attackDelayTime = 1;
+    [SerializeField] int damageUpgradePerFloor = 2;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         foreach (var player in GameObject.FindObjectsOfType<Player_health>())
@@ -13,7 +14,7 @@ public class MonsterAttack : MonoBehaviour
             if (collision.gameObject == player.gameObject)
             {
                 monsterAttackDelay();
-                player.gameObject.GetComponent<Player_health>().TakeDamage(damage);
+                player.gameObject.GetComponent<Player_health>().TakeDamage(damage + (GameManager.Instance.currentFloor * damageUpgradePerFloor));
             }
         }
     }
