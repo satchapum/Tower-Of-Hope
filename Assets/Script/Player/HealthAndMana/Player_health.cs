@@ -19,6 +19,7 @@ public class Player_health : Singleton<Player_health>
     public void WhenLevelUp()
     {
         maxHealth = GameManager.Instance.playerBaseHealth;
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)

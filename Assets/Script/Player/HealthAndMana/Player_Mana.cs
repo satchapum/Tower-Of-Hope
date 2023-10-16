@@ -19,6 +19,7 @@ public class Player_Mana : Singleton<Player_Mana>
     public void WhenLevelUp()
     {
         maxMana = GameManager.Instance.playerBaseMana;
+        currentMana = maxMana;
     }
 
     public void TakeMana(int manaDrain)
