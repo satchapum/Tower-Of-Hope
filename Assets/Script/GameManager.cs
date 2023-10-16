@@ -6,6 +6,7 @@ public class GameManager : Singleton<GameManager>
     [Header("Game Setting")]
     [SerializeField] public bool isGetKey;
     [SerializeField] public int currentMonsterCount;
+    [SerializeField] public int currentFloor;
 
     [Header("Player Setting")]
     [SerializeField] public int currentplayerLevel = 1;

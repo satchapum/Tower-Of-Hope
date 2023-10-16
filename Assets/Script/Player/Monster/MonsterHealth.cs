@@ -25,6 +25,7 @@ public class MonsterHealth : MonoBehaviour
 
     void Start()
     {
+        maxHealth = GameManager.Instance.currentFloor * maxHealth;
         currentHealth = maxHealth;
     }
 

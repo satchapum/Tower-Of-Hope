@@ -13,6 +13,7 @@ public class Player_level : Singleton<Player_level>
     [SerializeField] int amountBaseHealthUpgradePerLevel = 1;
     [SerializeField] int amountBaseManaUpgradePerLevel = 1;
     [SerializeField] int amountBaseAttackDamagePerLevel = 1;
+    [SerializeField] int amountMaxIncreasePerLevel = 1;
 
     void Start()
     {
@@ -39,14 +40,20 @@ public class Player_level : Singleton<Player_level>
         GameManager.Instance.playerBaseAttackDamage += amountBaseAttackDamagePerLevel;
         GameManager.Instance.playerBaseHealth += amountBaseHealthUpgradePerLevel;
         GameManager.Instance.playerBaseMana += amountBaseManaUpgradePerLevel;
+        GameManager.Instance.maxPlayerLevelExperiencePerLevel += amountMaxIncreasePerLevel;
 
         Player_Mana.Instance.WhenLevelUp();
         Player_Mana.Instance.RefreshMana();
         Player_health.Instance.WhenLevelUp();
         Player_health.Instance.RefreshHealth();
 
-        maxPlayerLevelExperiencePerLevel = GameManager.Instance.maxPlayerLevelExperiencePerLevel;
+        WhenLevelUp();
         RefreshLevelExperience();
+    }
+
+   void WhenLevelUp()
+    {
+        maxPlayerLevelExperiencePerLevel = GameManager.Instance.maxPlayerLevelExperiencePerLevel;
     }
 
     void RefreshLevelExperience()
