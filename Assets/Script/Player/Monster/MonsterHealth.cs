@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class MonsterHealth : MonoBehaviour
@@ -11,6 +12,17 @@ public class MonsterHealth : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject thisMonsterObject;
     [SerializeField] MonsterBehavior monsterBehavior;
+    [SerializeField] TMP_Text damageText;
+
+    public event Action<int> onTakeDamage;
+
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            monsterDie();
+        }
+    }
 
     void monsterDie()
     {
@@ -33,12 +45,21 @@ public class MonsterHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
             return;
-
-        currentHealth -= damage;
-
-        if (currentHealth <= 0)
-            monsterDie();
+        
+        else if (currentHealth > 0)
+        {
+            damageText.text = "-" + (damage);
+            StartCoroutine(TextAnimation());
+            currentHealth -= damage;
+            
+        }
+        
     }
 
-
+    IEnumerator TextAnimation()
+    {
+        damageText.enabled = true;
+        yield return new WaitForSeconds(1f);
+        damageText.enabled = false;
+    }
 }
