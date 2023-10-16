@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 37609883}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 37609886}
   thisItemAction: {fileID: 37609887}
@@ -650,37 +651,6 @@ MonoBehaviour:
   CoolDownTime: 5
   ManaCost: 10
   TargetWeapon: Sword+MagicWand
---- !u!1 &69425102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 69425103}
-  m_Layer: 0
-  m_Name: Item
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &69425103
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69425102}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3911297, y: 1.9199886, z: -0.38147163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &70724807
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 90264306}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 90264309}
   thisItemAction: {fileID: 90264310}
@@ -1274,6 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 167776453}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 167776456}
   thisItemAction: {fileID: 167776457}
@@ -5339,6 +5311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 1235757871}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 1235757876}
   thisItemAction: {fileID: 1235757877}
@@ -5622,7 +5595,7 @@ MonoBehaviour:
   rb: {fileID: 1304880637}
   effectShowTime: 2
   currentDisplaytime: 0
-  targetScale: 0.5
+  targetScale: 1
   AttackCooldown: 0.1
 --- !u!1 &1311327392
 GameObject:
@@ -5896,6 +5869,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGetKey: 0
   currentMonsterCount: 0
+  currentplayerLevel: 0
+  playerBaseAttackDamage: 0
+  palyerBaseHealth: 0
+  playerBaseMana: 0
 --- !u!4 &1347626422
 Transform:
   m_ObjectHideFlags: 0
@@ -6192,6 +6169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 1433575152}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 1433575155}
   thisItemAction: {fileID: 1433575156}
@@ -8105,6 +8083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 1596830097}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 1596830102}
   thisItemAction: {fileID: 1596830103}
@@ -9524,6 +9503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653aa0b9e8b6c6c439b9333c9fa3ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObject: {fileID: 1894887213}
   attackSystem: {fileID: 1967382440}
   thisItem: {fileID: 1894887216}
   thisItemAction: {fileID: 1894887217}
@@ -9715,7 +9695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1943448260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10817,7 +10797,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1347626422}
   - {fileID: 619394802}
-  - {fileID: 69425103}
   - {fileID: 1427886651}
   - {fileID: 1967382438}
   - {fileID: 1592190404}

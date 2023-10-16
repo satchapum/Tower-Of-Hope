@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class CheckOtherCollider : MonoBehaviour
+public class CheckOtherCollider : Singleton<CheckOtherCollider>
 {
     [SerializeField] public bool isOnTriggerEnter2D;
     [SerializeField] public string currentItemType;
