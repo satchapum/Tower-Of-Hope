@@ -11,19 +11,21 @@ public class Player_level : Singleton<Player_level>
 
     void Start()
     {
-        RefreshHealth();
+        RefreshLevelExperience();
     }
 
-    public void TakeDamage(int monsterExperience)
+    public void GetLevelExperience(int monsterExperience)
     {
-        if (monsterExperience >= 100)
+        currenLevelExperience += monsterExperience;
+        if (currenLevelExperience >= 100)
         {
+            currenLevelExperience = currenLevelExperience - maxPlayerLevelExperiencePerLevel;
             GameManager.Instance.currentplayerLevel += 1;
         }
-        RefreshHealth();
+        RefreshLevelExperience();
     }
 
-    void RefreshHealth()
+    void RefreshLevelExperience()
     {
         onLevelExperienceChange?.Invoke(currenLevelExperience, maxPlayerLevelExperiencePerLevel);
     }

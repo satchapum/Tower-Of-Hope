@@ -81,37 +81,22 @@ public class MonsterBehavior : MonoBehaviour
 
     void FlipRight()
     {
-
         spriteRenderer.flipX = false;
-        //ChangeRotation(90f);
-        //anim.SetBool("Running", true);
     }
 
     void FlipLeft()
     {
-
         spriteRenderer.flipX = true;
-        //ChangeRotation(-90f);
-        //anim.SetBool("Running", true);
     }
 
     void FlipUp()
     {
 
         spriteRenderer.flipX = false;
-        //ChangeRotation(180f);
     }
 
     void FlipDown()
     {
         spriteRenderer.flipX = false;
-        //ChangeRotation(0f);
-        //anim.SetBool("Running", true);
     }
-
-    /*
-    void ChangeRotation(float degree)
-    {
-        colliderCheck.transform.rotation = Quaternion.Euler(0f, 0f, degree);
-    }*/
 }
