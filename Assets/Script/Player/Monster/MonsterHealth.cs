@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterHealth : MonoBehaviour
 {
-    [SerializeField] int maxHealth = 5;
+    [SerializeField] int maxHealth;
     public int CurrentHealth => currentHealth;
     [SerializeField] int currentHealth;
 

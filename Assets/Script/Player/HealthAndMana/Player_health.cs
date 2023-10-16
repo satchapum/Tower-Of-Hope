@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player_health : Singleton<Player_health>
 {
-    [SerializeField] int maxHealth = 5;
+    [SerializeField] int maxHealth;
     public int CurrentHealth => currentHealth;
     [SerializeField] int currentHealth;
 
@@ -11,8 +11,14 @@ public class Player_health : Singleton<Player_health>
 
     void Start()
     {
+        maxHealth = GameManager.Instance.playerBaseHealth;
         currentHealth = maxHealth;
         RefreshHealth();
+    }
+
+    public void WhenLevelUp()
+    {
+        maxHealth = GameManager.Instance.playerBaseHealth;
     }
 
     public void TakeDamage(int damage)
@@ -33,7 +39,7 @@ public class Player_health : Singleton<Player_health>
         RefreshHealth();
     }
 
-    void RefreshHealth()
+    public void RefreshHealth()
     {
         onHealthChange?.Invoke(currentHealth, maxHealth);
     }

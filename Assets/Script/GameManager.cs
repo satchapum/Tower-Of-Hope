@@ -8,9 +8,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public int currentMonsterCount;
 
     [Header("Player Setting")]
-    [SerializeField] public int currentplayerLevel;
-    [SerializeField] public int playerBaseAttackDamage;
-    [SerializeField] public int palyerBaseHealth;
-    [SerializeField] public int playerBaseMana;
+    [SerializeField] public int currentplayerLevel = 1;
+    [SerializeField] public int playerBaseAttackDamage = 5;
+    [SerializeField] public int playerBaseHealth = 100;
+    [SerializeField] public int playerBaseMana = 100;
+    [SerializeField] public int maxPlayerLevelExperiencePerLevel = 100;
 
 }

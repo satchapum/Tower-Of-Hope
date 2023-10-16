@@ -6,6 +6,6 @@ public class UILevel_Slider : UILevelPlayer
 
     public override void SetPlayerLevelExperience(int currenLevelExperience, int maxPlayerLevelExperiencePerLevel)
     {
-        levelExperienceSlider.value = currenLevelExperience / maxPlayerLevelExperiencePerLevel;
+        levelExperienceSlider.value =  currenLevelExperience / (float)maxPlayerLevelExperiencePerLevel;
     }
 }

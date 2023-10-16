@@ -25,7 +25,7 @@ public class Arrow : WeaponManager
         foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
             if (collision.gameObject == monster.gameObject)
-                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage);
+                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage + GameManager.Instance.playerBaseAttackDamage);
         }
     }
 

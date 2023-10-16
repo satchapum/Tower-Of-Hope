@@ -10,6 +10,7 @@ public class MonsterBehavior : MonoBehaviour
     [SerializeField] PlayerSetting playerSetting;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] int monsterSpeed;
+    [SerializeField] int numberOfExperience = 10;
 
     Rigidbody2D thisMonsterRb;
     void Start()
@@ -30,6 +31,7 @@ public class MonsterBehavior : MonoBehaviour
 
     public void WhenMonsterDestroy()
     {
+        Player_level.Instance.GetLevelExperience(numberOfExperience);
         playerSetting.NumberOfCurrentMonsterTargetOnPlayer--;
         isTargetPlayer = false;
     }

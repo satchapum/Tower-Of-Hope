@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Mana : Singleton<Player_Mana>
 {
-    [SerializeField] int maxMana = 5;
+    [SerializeField] int maxMana;
     public int CurrentMana => currentMana;
     [SerializeField] int currentMana;
 
@@ -12,8 +12,13 @@ public class Player_Mana : Singleton<Player_Mana>
 
     void Start()
     {
+        maxMana = GameManager.Instance.playerBaseMana;
         currentMana = maxMana;
         RefreshMana();
+    }
+    public void WhenLevelUp()
+    {
+        maxMana = GameManager.Instance.playerBaseMana;
     }
 
     public void TakeMana(int manaDrain)
@@ -24,6 +29,7 @@ public class Player_Mana : Singleton<Player_Mana>
         currentMana -= manaDrain;
         RefreshMana();
     }
+
     public void RePlayerMana(int numberOfReMana)
     {
         currentMana += numberOfReMana;
@@ -34,13 +40,14 @@ public class Player_Mana : Singleton<Player_Mana>
         RefreshMana();
 
     }
+
     public void DrainPlayerMana(int numberOfUsesMana)
     {
         currentMana -= numberOfUsesMana;
         RefreshMana();
     }
 
-    void RefreshMana()
+    public void RefreshMana()
     {
         onManaChange?.Invoke(currentMana, maxMana);
     }
