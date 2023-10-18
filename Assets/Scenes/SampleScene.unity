@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 15
-  damage: 3
+  damage: 12
   rb: {fileID: 17846483}
   effectShowTime: 1
   currentDisplaytime: 0
@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 40
   currentHealth: 0
   player: {fileID: 1967382433}
   thisMonsterObject: {fileID: 184166015}
@@ -1654,8 +1654,8 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 1967382439}
   spriteRenderer: {fileID: 184166019}
-  monsterSpeed: 30
-  numberOfExperience: 15
+  monsterSpeed: 20
+  numberOfExperience: 12
 --- !u!114 &184166023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c1cc016c3bc29478db2bf841104b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: f0b946e73f545b243975ba24b679c751, type: 3}
   Current_key: 
   AttackPosition: {fileID: 0}
   CoolDownTime: 10
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Health
-  probabilityPercentage: 50
+  probabilityPercentage: 20
   iconWeapon: {fileID: 0}
 --- !u!114 &516764070
 MonoBehaviour:
@@ -4451,7 +4451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 5
-  damage: 1
+  damage: 3
   rb: {fileID: 928104632}
   effectShowTime: 0.1
   currentDisplaytime: 0
@@ -5485,8 +5485,8 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 1967382439}
   spriteRenderer: {fileID: 1099966011}
-  monsterSpeed: 30
-  numberOfExperience: 10
+  monsterSpeed: 20
+  numberOfExperience: 8
 --- !u!114 &1099966014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5499,7 +5499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 30
   currentHealth: 0
   player: {fileID: 1967382433}
   thisMonsterObject: {fileID: 1099966007}
@@ -6542,7 +6542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 20
-  damage: 1
+  damage: 8
   rb: {fileID: 1304880637}
   effectShowTime: 2
   currentDisplaytime: 0
@@ -6824,9 +6824,9 @@ MonoBehaviour:
   currentMonsterCount: 0
   currentFloor: 1
   currentplayerLevel: 1
-  playerBaseAttackDamage: 5
-  playerBaseHealth: 100
-  playerBaseMana: 100
+  playerBaseAttackDamage: 0
+  playerBaseHealth: 20
+  playerBaseMana: 120
   maxPlayerLevelExperiencePerLevel: 100
 --- !u!4 &1347626422
 Transform:
@@ -7507,7 +7507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Mana
-  probabilityPercentage: 50
+  probabilityPercentage: 60
   iconWeapon: {fileID: 0}
 --- !u!114 &1475333952
 MonoBehaviour:
@@ -7541,7 +7541,7 @@ MonoBehaviour:
   checkOtherCollider: {fileID: 606519719}
   selectReplaceSlot: {fileID: 780347033}
   healAmount: 0
-  manaAmount: 5
+  manaAmount: 20
 --- !u!212 &1475333954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8110,7 +8110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 50
   currentHealth: 0
   player: {fileID: 1967382433}
   thisMonsterObject: {fileID: 1516144060}
@@ -8133,8 +8133,8 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 1967382439}
   spriteRenderer: {fileID: 1516144064}
-  monsterSpeed: 30
-  numberOfExperience: 20
+  monsterSpeed: 20
+  numberOfExperience: 16
 --- !u!114 &1516144068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8147,7 +8147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80270e91e5c9cdc44bbf1833e66a0bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 4
   attackDelayTime: 1
   damageUpgradePerFloor: 2
 --- !u!114 &1516144069
@@ -8668,7 +8668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3ca6587dbed9e4cbd9c4d431ea2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: 1f95e90fad4d8fc48a59ab644a9fd4c4, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -11504,7 +11504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1becade064e19694fb7267f60d4fb715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 50
+  rotateSpeed: 25
   attackArea: {fileID: 1720956732}
 --- !u!114 &1967382442
 MonoBehaviour:
@@ -11989,7 +11989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 1
-  damage: 100
+  damage: 10
   rb: {fileID: 2038011300}
   effectShowTime: 5
   currentDisplaytime: 0
@@ -12333,7 +12333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 20
-  damage: 4
+  damage: 10
   rb: {fileID: 7038272420586224250}
   effectShowTime: 0.25
   currentDisplaytime: 0
@@ -12352,7 +12352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 10
-  damage: 2
+  damage: 15
   rb: {fileID: 4796596768830656040}
   effectShowTime: 0.25
   currentDisplaytime: 0

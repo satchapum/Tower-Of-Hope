@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
   name: Weapon
-  probabilityPercentage: 40
+  probabilityPercentage: 30
