@@ -1784,7 +1784,8 @@ MonoBehaviour:
   CoolDownTime: 10
   ManaCost: 10
   TargetWeapon: Sword+Sword
-  skillEffectTime: 3
+  skillEffectTime: 1
+  whenSpawnDelay: 1
   swordForCreate: {fileID: 581885586}
 --- !u!1 &271565668
 GameObject:
@@ -2982,7 +2983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &581885587
 Transform:
   m_ObjectHideFlags: 0
@@ -2991,13 +2992,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581885586}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.38281706, w: 0.9238242}
-  m_LocalPosition: {x: 2.6332, y: 0.1948, z: 0}
-  m_LocalScale: {x: 1.8887, y: 1.8887, z: 1.8887}
+  m_LocalRotation: {x: -0, y: -0, z: -0.37962514, w: 0.92514044}
+  m_LocalPosition: {x: 2.02, y: 0.2, z: 0}
+  m_LocalScale: {x: 1.3711963, y: 1.3711963, z: 1.3711963}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 214818690}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.017}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.621}
 --- !u!212 &581885588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3125,7 +3126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPlayer: {fileID: 1967382438}
-  rotateSpeed: 1000
+  rotateSpeed: 500
   sword: {fileID: 7571984422329864532}
 --- !u!1 &606519717
 GameObject:
@@ -7028,6 +7029,7 @@ MonoBehaviour:
   isGetKey: 0
   currentMonsterCount: 0
   currentFloor: 1
+  monsterDelaySpawn: 2
   currentplayerLevel: 1
   playerBaseAttackDamage: 0
   playerBaseHealth: 20

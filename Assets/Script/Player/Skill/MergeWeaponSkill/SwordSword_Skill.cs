@@ -21,6 +21,7 @@ public class SwordSword_Skill : SkillManager
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
     [SerializeField] float skillEffectTime;
+    [SerializeField] float whenSpawnDelay;
     [SerializeField] GameObject swordForCreate;
 
     public override void CreateSkill()
@@ -32,6 +33,9 @@ public class SwordSword_Skill : SkillManager
     {
         GameObject swordForRotate = Instantiate(swordForCreate, AttackPosition, false);
         swordForRotate.SetActive(true);
+        swordForRotate.GetComponent<RotateSword>().enabled = false;
+        yield return new WaitForSeconds(whenSpawnDelay);
+        swordForRotate.GetComponent<RotateSword>().enabled = true;
         yield return new WaitForSeconds(skillEffectTime);
         Destroy(swordForRotate);
     }

@@ -15,7 +15,7 @@ public class CheckOtherCollider : Singleton<CheckOtherCollider>
     }
     void Update()
     {
-        if (isOnTriggerEnter2D == true && GameManager.Instance.currentMonsterCount == 0)
+        if (isOnTriggerEnter2D == true && GameManager.Instance.currentMonsterCount == 0 && GameManager.Instance.isMonsterSpawn == false)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {

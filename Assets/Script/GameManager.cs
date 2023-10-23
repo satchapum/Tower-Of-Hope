@@ -7,6 +7,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public bool isGetKey;
     [SerializeField] public int currentMonsterCount;
     [SerializeField] public int currentFloor = 1;
+    [SerializeField] public float monsterDelaySpawn = 2;
+    [SerializeField] public bool isMonsterSpawn = false;
 
     [Header("Player Setting")]
     [SerializeField] public int currentplayerLevel = 1;

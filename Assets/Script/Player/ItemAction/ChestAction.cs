@@ -56,11 +56,8 @@ public class ChestAction : KeyCode_F_Action
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == monster)
             {
                 Debug.Log("Monster");
-                float minAmountOfMonsterIndex = 0;
-                float maxAmountOfMonsterIndex = monsterSpawn.Count;
-                float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
-                monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
-                Destroy(chestPrefab);
+                StartCoroutine(monsterSpawnDelay());
+                
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == weapon)
             {
@@ -82,5 +79,17 @@ public class ChestAction : KeyCode_F_Action
         checkOtherCollider.gameObjectType.Remove(thisChest);
         checkOtherCollider.keyCode_F_Actions.Remove(thisChestAction);
         chestManager.maxAmountOfChest -= numberOfChestUse;
+    }
+
+    IEnumerator monsterSpawnDelay()
+    {
+        GameManager.Instance.isMonsterSpawn = true;
+        yield return new WaitForSeconds(GameManager.Instance.monsterDelaySpawn);
+        float minAmountOfMonsterIndex = 0;
+        float maxAmountOfMonsterIndex = monsterSpawn.Count;
+        float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
+        monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
+        GameManager.Instance.isMonsterSpawn = false;
+        Destroy(chestPrefab);
     }
 }
