@@ -4,5 +4,6 @@ using UnityEngine;
 
 public abstract class Monster : MonoBehaviour
 {
+    public abstract void WhenAttack();
     public abstract void SpawnMonster(Vector2 chestPosition);
 }
