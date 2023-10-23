@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MagicWand_Skill : SkillManager
 {
@@ -18,9 +19,19 @@ public class MagicWand_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] float skillEffectTime;
+    [SerializeField] GameObject fireEffect;
 
     public override void CreateSkill()
     {
-        Debug.Log("MagicWand skill");
+        StartCoroutine(SkillTime());
+    }
+    IEnumerator SkillTime()
+    {
+        GameObject laserbeamCreate = Instantiate(fireEffect, AttackPosition.position, AttackPosition.transform.rotation);
+        laserbeamCreate.SetActive(true);
+        yield return new WaitForSeconds(skillEffectTime);
+        Destroy(laserbeamCreate);
+
     }
 }

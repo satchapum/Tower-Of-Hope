@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagicWand : WeaponManager
 {
     [SerializeField] float effectSpeed;
-    [SerializeField] int damage = 2;
+    [SerializeField] public int damage = 2;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;

@@ -20,9 +20,20 @@ public class MagicWandMagicWand_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] float skillEffectTime;
+    [SerializeField] GameObject LaserForCreate;
 
     public override void CreateSkill()
     {
-        Debug.Log("MagicWandMagicWand Skill");
+        Debug.Log("MagicWand skill");
+        StartCoroutine(SkillTime());
+    }
+    IEnumerator SkillTime()
+    {
+        GameObject laserbeamCreate = Instantiate(LaserForCreate, AttackPosition, false);
+        laserbeamCreate.SetActive(true);
+        yield return new WaitForSeconds(skillEffectTime);
+        Destroy(laserbeamCreate);
+
     }
 }
