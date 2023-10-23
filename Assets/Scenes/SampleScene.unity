@@ -567,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &44009683
 Transform:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &55944295
 Transform:
   m_ObjectHideFlags: 0
@@ -1115,7 +1115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &148192174
 Transform:
   m_ObjectHideFlags: 0
@@ -1518,7 +1518,7 @@ GameObject:
   - component: {fileID: 184166018}
   - component: {fileID: 184166024}
   m_Layer: 0
-  m_Name: Monster#2
+  m_Name: Monster#2(Golem)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1671,6 +1671,8 @@ MonoBehaviour:
   monsterGameobject: {fileID: 184166015}
   minAmount: 1
   maxAmount: 3
+  speedWhenAttack: 0
+  delayTime: 2
 --- !u!61 &184166024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1747,7 +1749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &214818690
 Transform:
   m_ObjectHideFlags: 0
@@ -1933,7 +1935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &275000913
 Transform:
   m_ObjectHideFlags: 0
@@ -1983,7 +1985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &350079709
 Transform:
   m_ObjectHideFlags: 0
@@ -2610,7 +2612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &528635217
 Transform:
   m_ObjectHideFlags: 0
@@ -4155,7 +4157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &874569597
 Transform:
   m_ObjectHideFlags: 0
@@ -4205,7 +4207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &894757537
 Transform:
   m_ObjectHideFlags: 0
@@ -4255,7 +4257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &924511309
 Transform:
   m_ObjectHideFlags: 0
@@ -4289,6 +4291,8 @@ MonoBehaviour:
   CoolDownTime: 7
   ManaCost: 10
   TargetWeapon: Sword
+  damageIncrese: 2
+  skillEffectTime: 3
 --- !u!1 &928104628
 GameObject:
   m_ObjectHideFlags: 0
@@ -5167,7 +5171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1039788190
 Transform:
   m_ObjectHideFlags: 0
@@ -5352,7 +5356,7 @@ GameObject:
   - component: {fileID: 1099966010}
   - component: {fileID: 1099966016}
   m_Layer: 0
-  m_Name: Monster#1
+  m_Name: Monster#1(Mimic)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5468,6 +5472,8 @@ MonoBehaviour:
   monsterGameobject: {fileID: 1099966007}
   minAmount: 2
   maxAmount: 5
+  speedWhenAttack: 0
+  delayTime: 3
 --- !u!114 &1099966013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5581,7 +5587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1123956070
 Transform:
   m_ObjectHideFlags: 0
@@ -5962,7 +5968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1225778964
 Transform:
   m_ObjectHideFlags: 0
@@ -7799,7 +7805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1511078650
 Transform:
   m_ObjectHideFlags: 0
@@ -8165,6 +8171,8 @@ MonoBehaviour:
   monsterGameobject: {fileID: 1516144060}
   minAmount: 1
   maxAmount: 3
+  speedWhenAttack: 0
+  delayTime: 5
 --- !u!1 &1517932472
 GameObject:
   m_ObjectHideFlags: 0
@@ -8515,7 +8523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1536745847
 Transform:
   m_ObjectHideFlags: 0
@@ -8640,7 +8648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1552973995
 Transform:
   m_ObjectHideFlags: 0
@@ -10624,7 +10632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1850310143
 Transform:
   m_ObjectHideFlags: 0
@@ -10723,7 +10731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1861844860
 Transform:
   m_ObjectHideFlags: 0
@@ -11078,7 +11086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1911147563
 Transform:
   m_ObjectHideFlags: 0
@@ -11128,7 +11136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1912946283
 Transform:
   m_ObjectHideFlags: 0
@@ -11460,7 +11468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfCurrentMonsterTargetOnPlayer: 0
-  maximunOfMonsterTargetOnplayer: 3
+  maximunOfMonsterTargetOnplayer: 10
 --- !u!114 &1967382440
 MonoBehaviour:
   m_ObjectHideFlags: 0

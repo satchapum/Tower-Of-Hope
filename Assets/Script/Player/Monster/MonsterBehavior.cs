@@ -9,7 +9,7 @@ public class MonsterBehavior : MonoBehaviour
     [SerializeField] bool isTargetPlayer;
     [SerializeField] PlayerSetting playerSetting;
     [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] int monsterSpeed;
+    [SerializeField] public int monsterSpeed;
     [SerializeField] int numberOfExperience = 10;
 
     Rigidbody2D thisMonsterRb;

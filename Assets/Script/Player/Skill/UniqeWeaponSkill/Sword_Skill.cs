@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Sword_Skill : SkillManager
 {
@@ -18,9 +19,25 @@ public class Sword_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] int damageIncrese = 2;
+    [SerializeField] float skillEffectTime;
 
     public override void CreateSkill()
     {
-        Debug.Log("Sword skill");
+        Debug.Log("Create Sword Skill");
+        StartCoroutine(SkillTime());
+    }
+
+    IEnumerator SkillTime()
+    {
+        var playerSetting = FindAnyObjectByType<GameManager>();
+        var playerObject = FindAnyObjectByType<PlayerSetting>();
+        int playerBeforeBuffDamage = playerSetting.playerBaseAttackDamage;
+        playerObject.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        playerSetting.playerBaseAttackDamage = playerSetting.playerBaseAttackDamage + damageIncrese;
+        yield return new WaitForSeconds(skillEffectTime);
+        playerObject.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        playerSetting.playerBaseAttackDamage = playerBeforeBuffDamage;
+
     }
 }

@@ -13,8 +13,10 @@ public class MonsterAttack : MonoBehaviour
         {
             if (collision.gameObject == player.gameObject)
             {
-                monsterAttackDelay();
+                //Addanimation<==
+                gameObject.GetComponent<Monster>().WhenAttack();
                 player.gameObject.GetComponent<Player_health>().TakeDamage(damage + (GameManager.Instance.currentFloor * damageUpgradePerFloor));
+                monsterAttackDelay();
             }
         }
     }
