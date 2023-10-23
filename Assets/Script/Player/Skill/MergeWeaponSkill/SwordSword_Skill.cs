@@ -20,9 +20,19 @@ public class SwordSword_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] float skillEffectTime;
+    [SerializeField] GameObject swordForCreate;
 
     public override void CreateSkill()
     {
         Debug.Log("SwordSword skill");
+        StartCoroutine(SkillTime());
+    }
+    IEnumerator SkillTime()
+    {
+        GameObject swordForRotate = Instantiate(swordForCreate, AttackPosition, false);
+        swordForRotate.SetActive(true);
+        yield return new WaitForSeconds(skillEffectTime);
+        Destroy(swordForRotate);
     }
 }

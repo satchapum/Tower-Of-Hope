@@ -24,7 +24,7 @@ public class Sword_Skill : SkillManager
 
     public override void CreateSkill()
     {
-        Debug.Log("Create Sword Skill");
+        Debug.Log("Sword Skill");
         StartCoroutine(SkillTime());
     }
 
