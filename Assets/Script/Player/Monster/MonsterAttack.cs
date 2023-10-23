@@ -15,8 +15,8 @@ public class MonsterAttack : MonoBehaviour
             {
                 //Addanimation<==
                 gameObject.GetComponent<Monster>().WhenAttack();
+                StartCoroutine(monsterAttackDelay());
                 player.gameObject.GetComponent<Player_health>().TakeDamage(damage + (GameManager.Instance.currentFloor * damageUpgradePerFloor));
-                monsterAttackDelay();
             }
         }
     }

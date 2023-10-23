@@ -31,7 +31,7 @@ public class MagicWand : WeaponManager
     private void Update()
     {
         currentDisplaytime += Time.deltaTime;
-        gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, Mathf.Lerp(gameObject.transform.localScale.y, targetScale, currentDisplaytime / 3f), gameObject.transform.localScale.z);
+        gameObject.transform.localScale = new Vector3(Mathf.Lerp(gameObject.transform.localScale.x, targetScale, currentDisplaytime / 3f), Mathf.Lerp(gameObject.transform.localScale.y, targetScale, currentDisplaytime / 3f), Mathf.Lerp(gameObject.transform.localScale.z, targetScale, currentDisplaytime / 3f));
     }
 
     IEnumerator effectDestroy()
