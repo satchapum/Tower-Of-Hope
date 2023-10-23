@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05f8f4432dceff4e89b5fe2b7c9dd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: c56f0a15d0e5fa04fa37e782e7f78db9, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -4513,7 +4513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e30887db4c7fe46bd82b7b64547283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: 87d9cfa29d7c29149a81e974f3541b09, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 1
@@ -4563,7 +4563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604316c97b0346046b1768682d75ed4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: d22272e74a590eb43ba3b3bd78f82530, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -5527,7 +5527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824f0590fced44a408c322e0602b7b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: 363ddf303699df541b2216ef8d1b7eb7, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -8912,7 +8912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720dd6d547631274ba6162c9bbfa8b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: bbff4f225150cf3499d2be520e5d9e07, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
@@ -11282,7 +11282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b249b85731490418798aaef19f1910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: b93a0112850d3af40833c2c5c1bf1193, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
   CoolDownTime: 5
