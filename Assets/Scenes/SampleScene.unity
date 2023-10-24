@@ -599,10 +599,10 @@ MonoBehaviour:
   Skill_Icon: {fileID: 21300000, guid: 7c025c30b69df524c860f05aa79712d2, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
-  CoolDownTime: 4
-  ManaCost: 10
+  CoolDownTime: 20
+  ManaCost: 35
   TargetWeapon: MagicWand+MagicWand
-  skillEffectTime: 0.5
+  skillEffectTime: 0.25
   LaserForCreate: {fileID: 1653675755}
 --- !u!1 &55944294
 GameObject:
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ba03a078331c9408dda8949c88b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 18
   currentDisplaytime: 0
   targetScale: 3
 --- !u!50 &107629767
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   Current_key: 
   AttackPosition: {fileID: 1424579851}
   CoolDownTime: 10
-  ManaCost: 10
+  ManaCost: 15
   TargetWeapon: Sword+Sword
   skillEffectTime: 1
   whenSpawnDelay: 1
@@ -2096,8 +2096,8 @@ MonoBehaviour:
   Skill_Icon: {fileID: 21300000, guid: ba9c3779da1cfcb46b98a0e2f99bdf78, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1720956733}
-  CoolDownTime: 10
-  ManaCost: 10
+  CoolDownTime: 12
+  ManaCost: 20
   TargetWeapon: MagicWand
   skillEffectTime: 0.25
   fireEffect: {fileID: 107629764}
@@ -9750,7 +9750,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0.73833895, b: 1, a: 0.5686275}
+  m_Color: {r: 1, g: 0.46810645, b: 0.015723169, a: 0.5686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9772,7 +9772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0ceaf3d93337441b7b815224f9d7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 30
 --- !u!50 &1653675759
 Rigidbody2D:
   serializedVersion: 4
@@ -12955,8 +12955,8 @@ MonoBehaviour:
   rb: {fileID: 4796596768830656040}
   effectShowTime: 0.25
   currentDisplaytime: 0
-  targetScale: 3
-  AttackCooldown: 1
+  targetScale: 2
+  AttackCooldown: 1.5
 --- !u!1 &7710557755298687782
 GameObject:
   m_ObjectHideFlags: 0
