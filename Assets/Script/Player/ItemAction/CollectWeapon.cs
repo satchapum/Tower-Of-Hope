@@ -28,7 +28,7 @@ public class CollectWeapon : KeyCode_F_Action
             {
                 if (attackSystem.numberSlotSelect == slot_1)
                 {
-                    attackSystem.currentWeapon_Lefthand = ItemInfo.name;
+                    GameManager.Instance.currentWeapon_Lefthand = ItemInfo.name;
                     attackSystem.numberSlotSelect = 0;
 
                     WeaponUI.Instance.SetUILeftHand(ItemInfo.iconWeapon);
@@ -38,7 +38,7 @@ public class CollectWeapon : KeyCode_F_Action
                 }
                 else if (attackSystem.numberSlotSelect == slot_2)
                 {
-                    attackSystem.currentWeapon_Righthand = ItemInfo.name;
+                    GameManager.Instance.currentWeapon_Righthand = ItemInfo.name;
                     attackSystem.numberSlotSelect = 0;
 
                     WeaponUI.Instance.SetUIRightHand(ItemInfo.iconWeapon);
@@ -55,18 +55,18 @@ public class CollectWeapon : KeyCode_F_Action
         
         if (type == thisGameObject.name)
         {
-            if (attackSystem.currentWeapon_Lefthand == "")
+            if (GameManager.Instance.currentWeapon_Lefthand == "")
             {
                 WeaponUI.Instance.SetUILeftHand(ItemInfo.iconWeapon);
 
-                attackSystem.currentWeapon_Lefthand = ItemInfo.name;
+                GameManager.Instance.currentWeapon_Lefthand = ItemInfo.name;
                 Destroy(thisGameObject);
             }
-            else if (attackSystem.currentWeapon_Righthand == "")
+            else if (GameManager.Instance.currentWeapon_Righthand == "")
             {
                 WeaponUI.Instance.SetUIRightHand(ItemInfo.iconWeapon);
 
-                attackSystem.currentWeapon_Righthand = ItemInfo.name;
+                GameManager.Instance.currentWeapon_Righthand = ItemInfo.name;
                 Destroy(thisGameObject);
             }
             else

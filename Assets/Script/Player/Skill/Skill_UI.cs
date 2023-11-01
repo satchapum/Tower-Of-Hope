@@ -27,15 +27,15 @@ public class Skill_UI : MonoBehaviour
     {
         foreach (var targetSkill in skillList.skill_list)
         {
-            if (attackSystem.currentWeapon_Lefthand == targetSkill.GetComponent<SkillManager>().targetWeapon)
+            if (GameManager.Instance.currentWeapon_Lefthand == targetSkill.GetComponent<SkillManager>().targetWeapon)
             {
                 targetSkill.GetComponent<SkillManager>().current_key = "Q";
             }
-            else if (attackSystem.currentWeapon_Righthand == targetSkill.GetComponent<SkillManager>().targetWeapon)
+            else if (GameManager.Instance.currentWeapon_Righthand == targetSkill.GetComponent<SkillManager>().targetWeapon)
             {
                 targetSkill.GetComponent<SkillManager>().current_key = "E";
             }
-            else if(attackSystem.currentWeapon_Lefthand != targetSkill.GetComponent<SkillManager>().targetWeapon || attackSystem.currentWeapon_Righthand == targetSkill.GetComponent<SkillManager>().targetWeapon)
+            else if(GameManager.Instance.currentWeapon_Lefthand != targetSkill.GetComponent<SkillManager>().targetWeapon || GameManager.Instance.currentWeapon_Righthand == targetSkill.GetComponent<SkillManager>().targetWeapon)
             {
                 targetSkill.GetComponent<SkillManager>().current_key = "";
             }
@@ -50,7 +50,7 @@ public class Skill_UI : MonoBehaviour
 
     void AllMergeSkill()
     {
-        if (attackSystem.currentWeapon_Lefthand == "Sword" && attackSystem.currentWeapon_Righthand == "Sword")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Sword" && GameManager.Instance.currentWeapon_Righthand == "Sword")
         {
             skillSwordSword.current_key = "X";
         }
@@ -59,7 +59,7 @@ public class Skill_UI : MonoBehaviour
             skillSwordSword.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Sword" && attackSystem.currentWeapon_Righthand == "Arrow" || attackSystem.currentWeapon_Lefthand == "Arrow" && attackSystem.currentWeapon_Righthand == "Sword")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Sword" && GameManager.Instance.currentWeapon_Righthand == "Arrow" || GameManager.Instance.currentWeapon_Lefthand == "Arrow" && GameManager.Instance.currentWeapon_Righthand == "Sword")
         {
             skillSwordArrow.current_key = "X";
         }
@@ -68,7 +68,7 @@ public class Skill_UI : MonoBehaviour
             skillSwordArrow.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Sword" && attackSystem.currentWeapon_Righthand == "MagicWand" || attackSystem.currentWeapon_Lefthand == "MagicWand" && attackSystem.currentWeapon_Righthand == "Sword")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Sword" && GameManager.Instance.currentWeapon_Righthand  == "MagicWand" || GameManager.Instance.currentWeapon_Lefthand == "MagicWand" && GameManager.Instance.currentWeapon_Righthand == "Sword")
         {
             skillSwordMagicWand.current_key = "X";
         }
@@ -77,7 +77,7 @@ public class Skill_UI : MonoBehaviour
             skillSwordMagicWand.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Sword" && attackSystem.currentWeapon_Righthand == "Spear" || attackSystem.currentWeapon_Lefthand == "Spear" && attackSystem.currentWeapon_Righthand == "Sword")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Sword" && GameManager.Instance.currentWeapon_Righthand == "Spear" || GameManager.Instance.currentWeapon_Lefthand == "Spear" && GameManager.Instance.currentWeapon_Righthand == "Sword")
         {
             skillSwordSpear.current_key = "X";
         }
@@ -86,7 +86,7 @@ public class Skill_UI : MonoBehaviour
             skillSwordSpear.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Sword" && attackSystem.currentWeapon_Righthand == "Dagger" || attackSystem.currentWeapon_Lefthand == "Dagger" && attackSystem.currentWeapon_Righthand == "Sword")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Sword" && GameManager.Instance.currentWeapon_Righthand == "Dagger" || GameManager.Instance.currentWeapon_Lefthand == "Dagger" && GameManager.Instance.currentWeapon_Righthand == "Sword")
         {
             skillSwordDagger.current_key = "X";
         }
@@ -95,7 +95,7 @@ public class Skill_UI : MonoBehaviour
             skillSwordDagger.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Arrow" && attackSystem.currentWeapon_Righthand == "Arrow")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Arrow" && GameManager.Instance.currentWeapon_Righthand == "Arrow")
         {
             skillArrowArrow.current_key = "X";
         }
@@ -104,7 +104,7 @@ public class Skill_UI : MonoBehaviour
             skillArrowArrow.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Arrow" && attackSystem.currentWeapon_Righthand == "MagicWand" || attackSystem.currentWeapon_Lefthand == "MagicWand" && attackSystem.currentWeapon_Righthand == "Arrow")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Arrow" && GameManager.Instance.currentWeapon_Righthand == "MagicWand" || GameManager.Instance.currentWeapon_Lefthand == "MagicWand" && GameManager.Instance.currentWeapon_Righthand == "Arrow")
         {
             skillArrowMagicWand.current_key = "X";
         }
@@ -113,7 +113,7 @@ public class Skill_UI : MonoBehaviour
             skillArrowMagicWand.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Arrow" && attackSystem.currentWeapon_Righthand == "Spear" || attackSystem.currentWeapon_Lefthand == "Spear" && attackSystem.currentWeapon_Righthand == "Arrow")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Arrow" && GameManager.Instance.currentWeapon_Righthand == "Spear" || GameManager.Instance.currentWeapon_Lefthand == "Spear" && GameManager.Instance.currentWeapon_Righthand == "Arrow")
         {
             skillArrowSpear.current_key = "X";
         }
@@ -122,7 +122,7 @@ public class Skill_UI : MonoBehaviour
             skillArrowSpear.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Arrow" && attackSystem.currentWeapon_Righthand == "Dagger" || attackSystem.currentWeapon_Lefthand == "Dagger" && attackSystem.currentWeapon_Righthand == "Arrow")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Arrow" && GameManager.Instance.currentWeapon_Righthand == "Dagger" || GameManager.Instance.currentWeapon_Lefthand == "Dagger" && GameManager.Instance.currentWeapon_Righthand == "Arrow")
         {
             skillArrowDagger.current_key = "X";
         }
@@ -131,7 +131,7 @@ public class Skill_UI : MonoBehaviour
             skillArrowDagger.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "MagicWand" && attackSystem.currentWeapon_Righthand == "MagicWand")
+        if (GameManager.Instance.currentWeapon_Lefthand == "MagicWand" && GameManager.Instance.currentWeapon_Righthand == "MagicWand")
         {
             skillMagicWandMagicWand.current_key = "X";
         }
@@ -140,7 +140,7 @@ public class Skill_UI : MonoBehaviour
             skillMagicWandMagicWand.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "MagicWand" && attackSystem.currentWeapon_Righthand == "Spear" || attackSystem.currentWeapon_Lefthand == "Spear" && attackSystem.currentWeapon_Righthand == "MagicWand")
+        if (GameManager.Instance.currentWeapon_Lefthand == "MagicWand" && GameManager.Instance.currentWeapon_Righthand == "Spear" || GameManager.Instance.currentWeapon_Lefthand == "Spear" && GameManager.Instance.currentWeapon_Righthand == "MagicWand")
         {
             skillMagicWandSpear.current_key = "X";
         }
@@ -149,7 +149,7 @@ public class Skill_UI : MonoBehaviour
             skillMagicWandSpear.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "MagicWand" && attackSystem.currentWeapon_Righthand == "Dagger" || attackSystem.currentWeapon_Lefthand == "Dagger" && attackSystem.currentWeapon_Righthand == "MagicWand")
+        if (GameManager.Instance.currentWeapon_Lefthand == "MagicWand" && GameManager.Instance.currentWeapon_Righthand == "Dagger" || GameManager.Instance.currentWeapon_Lefthand == "Dagger" && GameManager.Instance.currentWeapon_Righthand == "MagicWand")
         {
             skillMagicWandDagger.current_key = "X";
         }
@@ -158,7 +158,7 @@ public class Skill_UI : MonoBehaviour
             skillMagicWandDagger.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Spear" && attackSystem.currentWeapon_Righthand == "Spear")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Spear" && GameManager.Instance.currentWeapon_Righthand == "Spear")
         {
             skillSpearSpear.current_key = "X";
         }
@@ -167,7 +167,7 @@ public class Skill_UI : MonoBehaviour
             skillSpearSpear.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Spear" && attackSystem.currentWeapon_Righthand == "Dagger" || attackSystem.currentWeapon_Lefthand == "Dagger" && attackSystem.currentWeapon_Righthand == "Spear")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Spear" && GameManager.Instance.currentWeapon_Righthand == "Dagger" || GameManager.Instance.currentWeapon_Lefthand == "Dagger" && GameManager.Instance.currentWeapon_Righthand == "Spear")
         {
             skillSpearDagger.current_key = "X";
         }
@@ -176,7 +176,7 @@ public class Skill_UI : MonoBehaviour
             skillSpearDagger.current_key = "";
         }
 
-        if (attackSystem.currentWeapon_Lefthand == "Dagger" && attackSystem.currentWeapon_Righthand == "Dagger")
+        if (GameManager.Instance.currentWeapon_Lefthand == "Dagger" && GameManager.Instance.currentWeapon_Righthand == "Dagger")
         {
             skillDaggerDagger.current_key = "X";
         }

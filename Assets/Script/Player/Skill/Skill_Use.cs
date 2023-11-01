@@ -46,7 +46,7 @@ public class Skill_Use : MonoBehaviour
             }
             
         }
-        if (attackSystem.currentWeapon_Lefthand == attackSystem.currentWeapon_Righthand)
+        if (GameManager.Instance.currentWeapon_Lefthand == GameManager.Instance.currentWeapon_Righthand)
         {
             E_Icon.sprite = normalUISkill;
         }
@@ -74,12 +74,12 @@ public class Skill_Use : MonoBehaviour
             var skilluse = skill.skill_list[orderInSkillList].GetComponent<SkillManager>();
             if (keyName == skilluse.current_key)
             {
-                if (Player_Mana.Instance.CurrentMana >= skilluse.manaCost)
+                if (GameManager.Instance.currentMana >= skilluse.manaCost)
                 {
                     skilluse.CreateSkill();
                     Player_Mana.Instance.DrainPlayerMana(skilluse.manaCost);
                 }
-                else if (Player_Mana.Instance.CurrentMana < skilluse.manaCost)
+                else if (GameManager.Instance.currentMana < skilluse.manaCost)
                 {
                     Debug.Log("not enough mana");
                     break;

@@ -5,8 +5,6 @@ using TMPro;
 public class Player_level : Singleton<Player_level>
 {
     [SerializeField] int maxPlayerLevelExperiencePerLevel;
-    public int CurrenLevelExperience => currenLevelExperience;
-    [SerializeField] int currenLevelExperience;
 
     [SerializeField] TMP_Text currentLevelShowText;
 
@@ -18,6 +16,8 @@ public class Player_level : Singleton<Player_level>
     [SerializeField] int amountBaseAttackDamagePerLevel = 1;
     [SerializeField] int amountMaxIncreasePerLevel = 1;
 
+    [SerializeField] int amountOflevelWhenLevelUp = 2;
+
     void Start()
     {
         currentLevelShowText.text = "Level : " + GameManager.Instance.currentplayerLevel;
@@ -27,10 +27,10 @@ public class Player_level : Singleton<Player_level>
 
     public void GetLevelExperience(int monsterExperience)
     {
-        currenLevelExperience += monsterExperience;
-        if (currenLevelExperience >= 100)
+        GameManager.Instance.currentLevelExperience += monsterExperience;
+        if (GameManager.Instance.currentLevelExperience >= maxPlayerLevelExperiencePerLevel)
         {
-            currenLevelExperience = currenLevelExperience - maxPlayerLevelExperiencePerLevel;
+            GameManager.Instance.currentLevelExperience = 0;
             DoLevelUp();
         }
         RefreshLevelExperience();
@@ -38,6 +38,8 @@ public class Player_level : Singleton<Player_level>
 
     void DoLevelUp()
     {
+        
+
         int numberOfUpgradeLevel = 1;
 
         GameManager.Instance.currentplayerLevel += numberOfUpgradeLevel;
@@ -57,12 +59,13 @@ public class Player_level : Singleton<Player_level>
 
    void WhenLevelUp()
     {
+        GameManager.Instance.maxPlayerLevelExperiencePerLevel = (GameManager.Instance.maxPlayerLevelExperiencePerLevel * amountOflevelWhenLevelUp) - (GameManager.Instance.maxPlayerLevelExperiencePerLevel / amountOflevelWhenLevelUp);
         maxPlayerLevelExperiencePerLevel = GameManager.Instance.maxPlayerLevelExperiencePerLevel;
         currentLevelShowText.text = "Level : " + GameManager.Instance.currentplayerLevel;
     }
 
     void RefreshLevelExperience()
     {
-        onLevelExperienceChange?.Invoke(currenLevelExperience, maxPlayerLevelExperiencePerLevel);
+        onLevelExperienceChange?.Invoke(GameManager.Instance.currentLevelExperience, maxPlayerLevelExperiencePerLevel);
     }
 }

@@ -8,9 +8,6 @@ public class AttackSystem : MonoBehaviour
     [SerializeField] GameObject attackPosition;
     [SerializeField] public List<GameObject> attackPrefab;
 
-    [SerializeField] public string currentWeapon_Lefthand;
-    [SerializeField] public string currentWeapon_Righthand;
-
     [Header("UITimeDelay")]
     [SerializeField] public Image attack_LeftDelayUI;
     [SerializeField] public Image attack_RightDelayUI;
@@ -28,12 +25,13 @@ public class AttackSystem : MonoBehaviour
 
     void Update()
     {
-        if (attacking_Left == false && InputManager.Instance.mouseLeftDown)
+
+        if (attacking_Left == false && InputManager.Instance.mouseLeftDown && GameManager.Instance.currentWeapon_Lefthand != "")
         {
             Attack("left");
 
         }
-        else if (attacking_Right == false && InputManager.Instance.mouseRightDown)
+        else if (attacking_Right == false && InputManager.Instance.mouseRightDown && GameManager.Instance.currentWeapon_Righthand != "")
         {
             Attack("right");
         }
@@ -92,7 +90,7 @@ public class AttackSystem : MonoBehaviour
         {
             foreach (var weapon in attackPrefab)
             {
-                if (weapon.name == currentWeapon_Lefthand)
+                if (weapon.name == GameManager.Instance.currentWeapon_Lefthand)
                 {
                     timeToAttackLeft = weapon.GetComponent<WeaponManager>().attackCooldown;
                     GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);
@@ -105,7 +103,7 @@ public class AttackSystem : MonoBehaviour
         {
             foreach (var weapon in attackPrefab)
             {
-                if (weapon.name == currentWeapon_Righthand)
+                if (weapon.name == GameManager.Instance.currentWeapon_Righthand)
                 {
                     timeToAttackRight = weapon.GetComponent<WeaponManager>().attackCooldown;
                     GameObject newEffect = Instantiate(weapon, attackPosition.transform.position, attackPosition.transform.rotation);

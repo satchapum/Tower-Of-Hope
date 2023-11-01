@@ -13,8 +13,7 @@ public class MonsterHealth : MonoBehaviour
     [SerializeField] GameObject thisMonsterObject;
     [SerializeField] MonsterBehavior monsterBehavior;
     [SerializeField] TMP_Text damageText;
-
-    public event Action<int> onTakeDamage;
+    [SerializeField] int amountOfHealtWhenChangeFloor = 2;
 
     private void Update()
     {
@@ -37,7 +36,7 @@ public class MonsterHealth : MonoBehaviour
 
     void Start()
     {
-        maxHealth = GameManager.Instance.currentFloor * maxHealth;
+        maxHealth = (GameManager.Instance.currentFloor * amountOfHealtWhenChangeFloor) + maxHealth;
         currentHealth = maxHealth;
     }
 

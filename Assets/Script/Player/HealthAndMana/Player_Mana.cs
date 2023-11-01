@@ -5,38 +5,36 @@ using UnityEngine;
 public class Player_Mana : Singleton<Player_Mana>
 {
     [SerializeField] int maxMana;
-    public int CurrentMana => currentMana;
-    [SerializeField] int currentMana;
 
     public event Action<int, int> onManaChange;
 
     void Start()
     {
         maxMana = GameManager.Instance.playerBaseMana;
-        currentMana = maxMana;
+        GameManager.Instance.currentMana = maxMana;
         RefreshMana();
     }
     public void WhenLevelUp()
     {
         maxMana = GameManager.Instance.playerBaseMana;
-        currentMana = maxMana;
+        GameManager.Instance.currentMana = maxMana;
     }
 
     public void TakeMana(int manaDrain)
     {
-        if (currentMana <= 0)
+        if (GameManager.Instance.currentMana <= 0)
             return;
 
-        currentMana -= manaDrain;
+        GameManager.Instance.currentMana -= manaDrain;
         RefreshMana();
     }
 
     public void RePlayerMana(int numberOfReMana)
     {
-        currentMana += numberOfReMana;
-        if (currentMana > maxMana)
+        GameManager.Instance.currentMana += numberOfReMana;
+        if (GameManager.Instance.currentMana > maxMana)
         {
-            currentMana = maxMana;
+            GameManager.Instance.currentMana = maxMana;
         }
         RefreshMana();
 
@@ -44,12 +42,12 @@ public class Player_Mana : Singleton<Player_Mana>
 
     public void DrainPlayerMana(int numberOfUsesMana)
     {
-        currentMana -= numberOfUsesMana;
+        GameManager.Instance.currentMana -= numberOfUsesMana;
         RefreshMana();
     }
 
     public void RefreshMana()
     {
-        onManaChange?.Invoke(currentMana, maxMana);
+        onManaChange?.Invoke(GameManager.Instance.currentMana, maxMana);
     }
 }

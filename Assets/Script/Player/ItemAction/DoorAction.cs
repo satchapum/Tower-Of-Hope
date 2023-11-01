@@ -11,7 +11,7 @@ public class DoorAction : KeyCode_F_Action
     [SerializeField] GetGameObjectType_Door thisDoor;
     [SerializeField] KeyCode_F_Action thisDoorAction;
     [SerializeField] GameObject loadSceneCanvas;
-    [SerializeField] int numberOfscene = 0;
+    [SerializeField] TMP_Text loadText;
 
     [SerializeField] float delayCloseTime = 1;
     [SerializeField] float delayLoadTime = 1;
@@ -28,6 +28,8 @@ public class DoorAction : KeyCode_F_Action
         {
             if (GameManager.Instance.isGetKey == true)
             {
+                GameManager.Instance.currentFloor++;
+                GameManager.Instance.SetPlayerDataWhenChangeFloor();
                 StartCoroutine(LoadSceneDelay());
             }
             else
@@ -39,16 +41,18 @@ public class DoorAction : KeyCode_F_Action
     IEnumerator LoadSceneDelay()
     {
         loadSceneCanvas.SetActive(true);
+        loadText.text = "Load New Scene";
         checkOtherCollider.gameObjectType.Remove(thisDoor);
         checkOtherCollider.keyCode_F_Actions.Remove(thisDoorAction);
         yield return new WaitForSeconds(delayLoadTime);
-        loadSceneCanvas.SetActive(true);
-        SceneManager.LoadScene(numberOfscene);
+        loadSceneCanvas.SetActive(false);
+        SceneManager.LoadScene(GameManager.Instance.currentFloor);
     }
     IEnumerator DeleteDelay()
     {
         loadSceneCanvas.SetActive(true);
+        loadText.text = "No key!!";
         yield return new WaitForSeconds(delayCloseTime);
-        loadSceneCanvas.GetComponent<TMP_Text>().text = "No key!!";
+        loadSceneCanvas.SetActive(false);
     }
 }

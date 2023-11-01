@@ -31,7 +31,7 @@ public class ChestAction : KeyCode_F_Action
     {
         int numberOfLastChest = 1;
         int randomItemIndex = ChestManager.Instance.GetRandomItem();
-        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false)
+        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && GameManager.Instance.isMonsterSpawn == false)
         {
             GameManager.Instance.isGetKey = true;
             Debug.Log("getKey Alr");
@@ -39,7 +39,7 @@ public class ChestAction : KeyCode_F_Action
             return;
         }
 
-        if (type == chestPrefab.name)
+        if (type == chestPrefab.name && GameManager.Instance.isMonsterSpawn == false)
         {
             while (ChestManager.Instance.ItemLists[randomItemIndex] == key && GameManager.Instance.isGetKey == true)
             {
@@ -75,7 +75,7 @@ public class ChestAction : KeyCode_F_Action
     private void OnDestroy()
     {
         int numberOfChestUse = 1;
-
+        GameManager.Instance.isMonsterSpawn = false;
         checkOtherCollider.gameObjectType.Remove(thisChest);
         checkOtherCollider.keyCode_F_Actions.Remove(thisChestAction);
         chestManager.maxAmountOfChest -= numberOfChestUse;
@@ -89,7 +89,6 @@ public class ChestAction : KeyCode_F_Action
         float maxAmountOfMonsterIndex = monsterSpawn.Count;
         float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
         monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
-        GameManager.Instance.isMonsterSpawn = false;
         Destroy(chestPrefab);
     }
 }
