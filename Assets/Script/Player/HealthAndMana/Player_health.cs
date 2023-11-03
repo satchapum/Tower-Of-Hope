@@ -1,9 +1,13 @@
 using System;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player_health : Singleton<Player_health>
 {
     [SerializeField] int maxHealth;
+    [SerializeField] int delayTimeForEndUI;
+    [SerializeField] GameObject diedUI;
 
     public event Action<int, int> onHealthChange;
 
@@ -24,6 +28,7 @@ public class Player_health : Singleton<Player_health>
         if (GameManager.Instance.currentHealth <= 0)
             return;
 
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         GameManager.Instance.currentHealth -= damage;
         RefreshHealth();
 
@@ -45,6 +50,13 @@ public class Player_health : Singleton<Player_health>
     void playerDie()
     {
         GameManager.Instance.ResetData();
-        Destroy(gameObject);
+        StartCoroutine(EndUIDelay());
+    }
+
+    IEnumerator EndUIDelay()
+    {
+        diedUI.SetActive(true);
+        yield return new WaitForSeconds(delayTimeForEndUI);
+        SceneManager.LoadScene(0);
     }
 }

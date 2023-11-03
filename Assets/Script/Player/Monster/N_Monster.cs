@@ -5,6 +5,7 @@ using UnityEngine;
 public class N_Monster : Monster
 {
     [SerializeField] GameObject monsterGameobject;
+    [SerializeField] MonsterAttack monsterAttack;
     [SerializeField] int minAmount = 2;
     [SerializeField] int maxAmount = 5;
 
@@ -30,8 +31,12 @@ public class N_Monster : Monster
     }
     IEnumerator DelayTime(int currentMonsterSpeed)
     {
+        int monsterAttackDamage = monsterAttack.damage;
+        int damageWhenAttackFinish = 0;
+        monsterAttack.damage = damageWhenAttackFinish;
         gameObject.GetComponent<MonsterBehavior>().monsterSpeed = speedWhenAttack;
         yield return new WaitForSeconds(delayTime);
         gameObject.GetComponent<MonsterBehavior>().monsterSpeed = currentMonsterSpeed;
+        monsterAttack.damage = monsterAttackDamage;
     }
 }

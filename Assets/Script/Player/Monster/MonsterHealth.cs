@@ -47,6 +47,7 @@ public class MonsterHealth : MonoBehaviour
         
         else if (currentHealth > 0)
         {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             damageText.text = "-" + (damage);
             StartCoroutine(TextAnimation());
             currentHealth -= damage;
