@@ -47,7 +47,7 @@ public class MonsterHealth : MonoBehaviour
         
         else if (currentHealth > 0)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+            StartCoroutine(DamageTakeFeedback());
             damageText.text = "-" + (damage);
             StartCoroutine(TextAnimation());
             currentHealth -= damage;
@@ -61,5 +61,12 @@ public class MonsterHealth : MonoBehaviour
         damageText.enabled = true;
         yield return new WaitForSeconds(1f);
         damageText.enabled = false;
+    }
+
+    IEnumerator DamageTakeFeedback()
+    {
+        int takeDamageFeedbackTime = 1;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(takeDamageFeedbackTime);
     }
 }

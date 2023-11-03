@@ -28,7 +28,7 @@ public class Player_health : Singleton<Player_health>
         if (GameManager.Instance.currentHealth <= 0)
             return;
 
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        StartCoroutine(DamageTakeFeedback());
         GameManager.Instance.currentHealth -= damage;
         RefreshHealth();
 
@@ -58,5 +58,12 @@ public class Player_health : Singleton<Player_health>
         diedUI.SetActive(true);
         yield return new WaitForSeconds(delayTimeForEndUI);
         SceneManager.LoadScene(0);
+    }
+
+    IEnumerator DamageTakeFeedback()
+    {
+        int takeDamageFeedbackTime = 1;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(takeDamageFeedbackTime);
     }
 }
