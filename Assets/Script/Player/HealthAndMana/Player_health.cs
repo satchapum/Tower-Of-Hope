@@ -44,6 +44,7 @@ public class Player_health : Singleton<Player_health>
 
     void playerDie()
     {
+        GameManager.Instance.ResetData();
         Destroy(gameObject);
     }
 }
