@@ -13,6 +13,7 @@ public class PauseScript : MonoBehaviour
     {
         int numberOftimeToStartGame = 1;
         int numberOftimeToStopGame = 0;
+
         if (InputManager.Instance.KeyESC_Down && IsPause == true)
         {
             pauseUI.SetActive(false);
@@ -32,6 +33,7 @@ public class PauseScript : MonoBehaviour
     public void WhenButtonResumeClickOnPause()
     {
         int numberOftimeToStartGame = 1;
+
         Time.timeScale = numberOftimeToStartGame;
         IsPause = false;
         pauseUI.SetActive(false);
@@ -57,6 +59,9 @@ public class PauseScript : MonoBehaviour
     public void WhenButtonToMainMenuClick()
     {
         int numberOfMenuScene = 0;
+        int numberOftimeToStartGame = 1;
+
+        Time.timeScale = numberOftimeToStartGame;
         SceneManager.LoadScene(numberOfMenuScene);
     }
 }
