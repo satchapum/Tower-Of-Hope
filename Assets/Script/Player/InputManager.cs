@@ -11,6 +11,7 @@ public class InputManager : Singleton<InputManager>
     [SerializeField] KeyCode KeyQ;
     [SerializeField] KeyCode KeyE;
     [SerializeField] KeyCode KeyX;
+    [SerializeField] KeyCode KeyESC;
 
     public float HorizontalInput => horizontalInput;
     float horizontalInput;
@@ -26,6 +27,7 @@ public class InputManager : Singleton<InputManager>
 
     public bool KeyX_Down { get; private set; }
 
+    public bool KeyESC_Down { get; private set; }
 
     private void Update()
     {
@@ -38,5 +40,7 @@ public class InputManager : Singleton<InputManager>
         KeyQ_Down = Input.GetKey(KeyQ);
         KeyE_Down = Input.GetKey(KeyE);
         KeyX_Down = Input.GetKey(KeyX);
+
+        KeyESC_Down = Input.GetKeyDown(KeyESC);
     }
 }

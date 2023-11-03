@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafe9722720586a41ad4038cbfac73f2, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  currentFloor: 0
+  currentFloor: 1
   currentplayerLevel: 1
   currentLevelExperience: 0
   playerBaseAttackDamage: 5

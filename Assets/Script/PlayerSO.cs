@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "PlayerSO", order = 2)]
 public class PlayerSO : ScriptableObject
 {
-    [SerializeField] public int currentFloor = 0;
+    [SerializeField] public int currentFloor = 1;
     [SerializeField] public int currentplayerLevel = 1;
     [SerializeField] public int currentLevelExperience;
     [SerializeField] public int playerBaseAttackDamage = 5;
