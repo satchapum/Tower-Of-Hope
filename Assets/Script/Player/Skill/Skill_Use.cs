@@ -28,10 +28,23 @@ public class Skill_Use : MonoBehaviour
     [SerializeField] AttackSystem attackSystem;
     [SerializeField] Sprite normalUISkill;
 
+    [SerializeField] Sprite skillBoxWithOutSkill;
+
     private void FixedUpdate()
     {
         foreach (var skillIcon in skill.skill_list)
         {
+            if (GameManager.Instance.currentWeapon_Lefthand == "Wrench")
+            {
+                Q_Icon.sprite = skillBoxWithOutSkill;
+                X_Icon.sprite = skillBoxWithOutSkill;
+            }
+            else if(GameManager.Instance.currentWeapon_Righthand == "Wrench")
+            {
+                E_Icon.sprite = skillBoxWithOutSkill;
+                X_Icon.sprite = skillBoxWithOutSkill;
+            }
+
             if (skillIcon.GetComponent<SkillManager>().current_key == "Q")
             {
                 Q_Icon.sprite = skillIcon.GetComponent<SkillManager>().skill_Icon;
@@ -97,12 +110,12 @@ public class Skill_Use : MonoBehaviour
                 {
                     IsKeyX_Down = true;
                 }
-                StartCoroutine(attackLeftDelay(skilluse, keyName));
+                StartCoroutine(SkillDelay(skilluse, keyName));
             }
         }
     }
 
-    IEnumerator attackLeftDelay(SkillManager thisSkill, string keyName)
+    IEnumerator SkillDelay(SkillManager thisSkill, string keyName)
     {
         if (keyName == "Q")
         {

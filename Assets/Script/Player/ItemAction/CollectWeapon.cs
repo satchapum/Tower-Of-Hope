@@ -20,6 +20,7 @@ public class CollectWeapon : KeyCode_F_Action
 
     private void Update()
     {
+        int numberToStartGame = 1;
         int slot_1 = 1;
         int slot_2 = 2;
         if (attackSystem.numberSlotSelect != 0)
@@ -28,6 +29,7 @@ public class CollectWeapon : KeyCode_F_Action
             {
                 if (attackSystem.numberSlotSelect == slot_1)
                 {
+                    Time.timeScale = numberToStartGame;
                     GameManager.Instance.currentWeapon_Lefthand = ItemInfo.name;
                     attackSystem.numberSlotSelect = 0;
 
@@ -38,6 +40,7 @@ public class CollectWeapon : KeyCode_F_Action
                 }
                 else if (attackSystem.numberSlotSelect == slot_2)
                 {
+                    Time.timeScale = numberToStartGame;
                     GameManager.Instance.currentWeapon_Righthand = ItemInfo.name;
                     attackSystem.numberSlotSelect = 0;
 
@@ -52,7 +55,7 @@ public class CollectWeapon : KeyCode_F_Action
 
     public override void F_Action(string type)
     {
-        
+        int numberToStopGame = 0;
         if (type == thisGameObject.name)
         {
             if (GameManager.Instance.currentWeapon_Lefthand == "")
@@ -72,6 +75,7 @@ public class CollectWeapon : KeyCode_F_Action
             else
             {
                 selectReplaceSlot.gameObject.SetActive(true);
+                Time.timeScale = numberToStopGame;
             }
             
         }

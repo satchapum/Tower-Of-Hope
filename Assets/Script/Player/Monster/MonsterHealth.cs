@@ -65,8 +65,9 @@ public class MonsterHealth : MonoBehaviour
 
     IEnumerator DamageTakeFeedback()
     {
-        int takeDamageFeedbackTime = 1;
+        float takeDamageFeedbackTime = 0.5f;
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(takeDamageFeedbackTime);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

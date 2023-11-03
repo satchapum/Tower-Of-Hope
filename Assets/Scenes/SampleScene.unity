@@ -7606,6 +7606,7 @@ MonoBehaviour:
   skillXCooldown: 0
   attackSystem: {fileID: 488402339}
   normalUISkill: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  skillBoxWithOutSkill: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &907711176
 GameObject:
   m_ObjectHideFlags: 0
