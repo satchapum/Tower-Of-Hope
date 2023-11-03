@@ -8,13 +8,17 @@ public class InformationScript : MonoBehaviour
     [SerializeField] bool IsOpenInformationUI;
     public void WhenButtonInformationClick()
     {
-        if(IsOpenInformationUI == true)
+        int numberToStopGame = 0;
+        int numberToStartGame = 1;
+        if (IsOpenInformationUI == true)
         {
+            Time.timeScale = numberToStartGame;
             informationUI.SetActive(false);
             IsOpenInformationUI = false;
         }
         else if (IsOpenInformationUI == false)
         {
+            Time.timeScale = numberToStopGame;
             informationUI.SetActive(true);
             IsOpenInformationUI = true;
         }
