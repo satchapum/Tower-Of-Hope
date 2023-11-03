@@ -34,6 +34,7 @@ public class ChestAction : KeyCode_F_Action
         if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && GameManager.Instance.isMonsterSpawn == false)
         {
             GameManager.Instance.isGetKey = true;
+            UIGetKey.Instance.GetKeyText();
             Debug.Log("getKey Alr");
             Destroy(chestPrefab);
             return;
