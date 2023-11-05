@@ -53,6 +53,7 @@ public class PauseScript : MonoBehaviour
 
     public void WhenButtonToDesktopClick()
     {
+        GameManager.Instance.ResetData();
         Application.Quit();
     }
 
@@ -62,6 +63,7 @@ public class PauseScript : MonoBehaviour
         int numberOftimeToStartGame = 1;
 
         Time.timeScale = numberOftimeToStartGame;
+        GameManager.Instance.ResetData();
         SceneManager.LoadScene(numberOfMenuScene);
     }
 }

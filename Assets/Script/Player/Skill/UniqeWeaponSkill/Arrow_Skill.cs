@@ -19,8 +19,20 @@ public class Arrow_Skill : SkillManager
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
 
+    [SerializeField] GameObject Arrow;
+    [SerializeField] Transform ArrowPositon_1;
+    [SerializeField] Transform ArrowPositon_2;
+    [SerializeField] Transform ArrowPositon_3;
+
     public override void CreateSkill()
     {
         Debug.Log("Arrow skill");
+        GameObject Arrow_1 = Instantiate(Arrow, ArrowPositon_1.position, ArrowPositon_1.transform.rotation);
+        GameObject Arrow_2 = Instantiate(Arrow, ArrowPositon_2.position, ArrowPositon_2.transform.rotation);
+        GameObject Arrow_3 = Instantiate(Arrow, ArrowPositon_3.position, ArrowPositon_3.transform.rotation);
+
+        Arrow_1.SetActive(true);
+        Arrow_2.SetActive(true);
+        Arrow_3.SetActive(true);
     }
 }

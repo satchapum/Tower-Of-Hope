@@ -21,6 +21,7 @@ public class Dagger_Skill : SkillManager
 
     public override void CreateSkill()
     {
+        StartCoroutine(Player_Movement.Instance.DoDash());
         Debug.Log("Dagger skill");
     }
 }

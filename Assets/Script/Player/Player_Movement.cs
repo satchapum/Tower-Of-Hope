@@ -20,12 +20,18 @@ public class Player_Movement : Singleton<Player_Movement>
     [SerializeField] GameObject posTop;
     [SerializeField] GameObject posBottom;
 
+    [Header("Dash")]
+    [SerializeField] Vector2 currentPosVec;
+    [SerializeField] float dashSpeed = 10;
+    [SerializeField] float dashTime = 1f;
+    [SerializeField] TrailRenderer tr;
 
     Rigidbody2D rb;
     Animator anim;
 
     private void Start()
     {
+        tr.emitting = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = player.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -102,5 +108,15 @@ public class Player_Movement : Singleton<Player_Movement>
     void PlayerMove(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    public IEnumerator DoDash()
+    {
+        float speedTemp = moveSpeed;
+        tr.emitting = true;
+        moveSpeed = dashSpeed;
+        yield return new WaitForSeconds(dashTime);
+        moveSpeed = speedTemp;
+        tr.emitting = false;
     }
 }
