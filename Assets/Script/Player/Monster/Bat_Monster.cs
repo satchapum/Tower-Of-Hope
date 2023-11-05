@@ -12,12 +12,17 @@ public class Bat_Monster : Monster
     [Header("WhenAttackSetting")]
     [SerializeField] int speedWhenAttack;
     [SerializeField] float delayTime;
+    [SerializeField] int currentMonsterSpeed;
+
+    private void Start()
+    {
+        currentMonsterSpeed = gameObject.GetComponent<MonsterBehavior>().monsterSpeed;
+    }
 
     public override void WhenAttack()
     {
         Debug.Log(gameObject.name + "stop : " + delayTime);
-        int currentMonsterSpeed = gameObject.GetComponent<MonsterBehavior>().monsterSpeed;
-        StartCoroutine(DelayTime(currentMonsterSpeed));
+        StartCoroutine(DelayTime());
     }
     public override void SpawnMonster(Vector2 chestPosition)
     {
@@ -29,14 +34,17 @@ public class Bat_Monster : Monster
             monster.SetActive(true);
         }
     }
-    IEnumerator DelayTime(int currentMonsterSpeed)
+    IEnumerator DelayTime()
     {
         int monsterAttackDamage = monsterAttack.damage;
         int damageWhenAttackFinish = 0;
+        monsterGameobject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         monsterAttack.damage = damageWhenAttackFinish;
         gameObject.GetComponent<MonsterBehavior>().monsterSpeed = speedWhenAttack;
         yield return new WaitForSeconds(delayTime);
         gameObject.GetComponent<MonsterBehavior>().monsterSpeed = currentMonsterSpeed;
+        monsterGameobject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        monsterGameobject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         monsterAttack.damage = monsterAttackDamage;
     }
 }

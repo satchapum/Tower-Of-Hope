@@ -20,9 +20,26 @@ public class ArrowArrow_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] public int damage;
+    [SerializeField] GameObject arrowForCreate;
+    [SerializeField] float delaySpawn;
+    [SerializeField] int numberOfArrow;
+    [SerializeField] Transform player;
 
     public override void CreateSkill()
     {
         Debug.Log("ArrowArrow Skill");
+        StartCoroutine(SpawnArrow());
+    }
+
+    IEnumerator SpawnArrow()
+    {
+        for (int currentNumberOfArrow = 0; currentNumberOfArrow < numberOfArrow; currentNumberOfArrow++)
+        {
+            Vector3 randomspawnPosition = new Vector3(Random.Range((float)(player.position.x - 4), (float)(player.position.x + 4)), (Random.Range((float)(player.position.y - 4), (float)(player.position.y + 4))), 0);
+            GameObject arrow = Instantiate(arrowForCreate, randomspawnPosition, Quaternion.identity);
+            arrow.SetActive(true);
+            yield return new WaitForSeconds(delaySpawn);
+        }
     }
 }
