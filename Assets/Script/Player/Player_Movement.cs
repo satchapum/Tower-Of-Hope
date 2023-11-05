@@ -93,6 +93,7 @@ public class Player_Movement : Singleton<Player_Movement>
         spriteRenderer.flipX = false;
         ChangeRotation(180f);
         SetPosition(posTop);
+        anim.SetBool("Running", true);
     }
 
     void FlipDown()

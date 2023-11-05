@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniBoss_Monster : Monster
+public class Bat_Monster : Monster
 {
     [SerializeField] GameObject monsterGameobject;
     [SerializeField] MonsterAttack monsterAttack;

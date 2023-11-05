@@ -45,6 +45,7 @@ public class MonsterBehavior : MonoBehaviour
 
         else if (!isTargetPlayer)
             return;
+      
     }
 
     void MonsterFollowObject(GameObject inputObject)
