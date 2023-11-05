@@ -4,6 +4,5 @@ using UnityEngine;
 public class itemSO : ScriptableObject
 {
     [SerializeField] public Sprite itemImage;
-    [SerializeField] public string name;
     [SerializeField] public int probabilityPercentage;
 }

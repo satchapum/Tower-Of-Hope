@@ -27,12 +27,15 @@ public class Arrow_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("Arrow skill");
-        GameObject Arrow_1 = Instantiate(Arrow, ArrowPositon_1.position, ArrowPositon_1.transform.rotation);
-        GameObject Arrow_2 = Instantiate(Arrow, ArrowPositon_2.position, ArrowPositon_2.transform.rotation);
-        GameObject Arrow_3 = Instantiate(Arrow, ArrowPositon_3.position, ArrowPositon_3.transform.rotation);
 
-        Arrow_1.SetActive(true);
-        Arrow_2.SetActive(true);
-        Arrow_3.SetActive(true);
+        CreateArrow(ArrowPositon_1);
+        CreateArrow(ArrowPositon_2);
+        CreateArrow(ArrowPositon_3);
+    }
+
+    void CreateArrow(Transform ArrowPositon)
+    {
+        GameObject create_Arrow = Instantiate(Arrow, ArrowPositon.position, ArrowPositon.transform.rotation);
+        create_Arrow.SetActive(true);
     }
 }

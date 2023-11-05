@@ -31,7 +31,8 @@ public class SwordSword_Skill : SkillManager
     }
     IEnumerator SkillTime()
     {
-        GameObject swordForRotate = Instantiate(swordForCreate, AttackPosition, false);
+        GameObject swordForRotate = Instantiate(swordForCreate, AttackPosition.transform.position, AttackPosition.transform.rotation);
+        swordForRotate.transform.parent = AttackPosition.transform;
         swordForRotate.SetActive(true);
         swordForRotate.GetComponent<RotateSword>().enabled = false;
         yield return new WaitForSeconds(whenSpawnDelay);
