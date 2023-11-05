@@ -18,9 +18,14 @@ public class Spear_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] GameObject spear;
+    [SerializeField] GameObject playerAttackParent;
 
     public override void CreateSkill()
     {
+        GameObject createSpear = Instantiate(spear, AttackPosition.position, AttackPosition.transform.rotation);
+        createSpear.transform.parent = playerAttackParent.transform;
+        createSpear.SetActive(true);
         Debug.Log("Spear skill");
     }
 }
