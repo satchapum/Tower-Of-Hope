@@ -21,10 +21,13 @@ public class Player_Movement : Singleton<Player_Movement>
     [SerializeField] GameObject posBottom;
 
     [Header("Dash")]
+    [SerializeField] Transform moveBackPosition;
     [SerializeField] Vector2 currentPosVec;
     [SerializeField] float dashSpeed = 10;
+    [SerializeField] float moveBackDashSpeed = 20;
     [SerializeField] float dashTime = 1f;
-    [SerializeField] TrailRenderer tr;
+    [SerializeField] public TrailRenderer tr;
+    [SerializeField] public bool isBackWardDash = false;
 
     Rigidbody2D rb;
     Animator anim;
@@ -40,6 +43,11 @@ public class Player_Movement : Singleton<Player_Movement>
     void Update()
     {
         movementDirection = new Vector2 (InputManager.Instance.HorizontalInput , InputManager.Instance.VerticalInput);
+
+        if (isBackWardDash)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, moveBackPosition.position, moveBackDashSpeed * Time.deltaTime);
+        }
     }
 
     void FixedUpdate()
@@ -119,4 +127,6 @@ public class Player_Movement : Singleton<Player_Movement>
         moveSpeed = speedTemp;
         tr.emitting = false;
     }
+
+    
 }

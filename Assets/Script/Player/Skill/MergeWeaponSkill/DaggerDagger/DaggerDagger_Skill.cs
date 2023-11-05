@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicWandMagicWand_Skill : SkillManager
+public class DaggerDagger_Skill : SkillManager
 {
     public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
@@ -20,20 +20,31 @@ public class MagicWandMagicWand_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
-    [SerializeField] float skillEffectTime;
-    [SerializeField] GameObject LaserForCreate;
+    [SerializeField] public int damage;
+    [SerializeField] float timeToCreate;
+    [SerializeField] int numberToCreate;
+    [SerializeField] public float timeToDestroy;
+    [SerializeField] GameObject dagger;
 
     public override void CreateSkill()
     {
-        Debug.Log("MagicWand skill");
-        StartCoroutine(SkillTime());
+        Debug.Log("DaggerDagger Skill");
+        StartCoroutine(CreateDelay());
     }
-    IEnumerator SkillTime()
-    {
-        GameObject laserbeamCreate = Instantiate(LaserForCreate, AttackPosition, false);
-        laserbeamCreate.SetActive(true);
-        yield return new WaitForSeconds(skillEffectTime);
-        Destroy(laserbeamCreate);
 
+    IEnumerator CreateDelay()
+    {
+        for (int currentNumberOfDaggerCreate = 0; currentNumberOfDaggerCreate < numberToCreate; currentNumberOfDaggerCreate++)
+        {
+            CreateDagger();
+            yield return new WaitForSeconds(timeToCreate);
+        }
+        
+    }
+
+    void CreateDagger()
+    {
+        GameObject create_Arrow = Instantiate(dagger, AttackPosition.position, AttackPosition.transform.rotation);
+        create_Arrow.SetActive(true);
     }
 }

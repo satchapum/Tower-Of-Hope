@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpearSpear_Skill : SkillManager
+public class MagicWandMagicWand_Skill : SkillManager
 {
     public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
@@ -20,9 +20,21 @@ public class SpearSpear_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
+    [SerializeField] float skillEffectTime;
+    [SerializeField] GameObject LaserForCreate;
+    [SerializeField] public int damage;
 
     public override void CreateSkill()
     {
-        Debug.Log("SpearSpear Skill ");
+        Debug.Log("MagicWand skill");
+        StartCoroutine(SkillTime());
+    }
+    IEnumerator SkillTime()
+    {
+        GameObject laserbeamCreate = Instantiate(LaserForCreate, AttackPosition, false);
+        laserbeamCreate.SetActive(true);
+        yield return new WaitForSeconds(skillEffectTime);
+        Destroy(laserbeamCreate);
+
     }
 }
