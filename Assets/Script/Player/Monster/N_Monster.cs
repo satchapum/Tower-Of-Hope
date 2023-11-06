@@ -29,7 +29,8 @@ public class N_Monster : Monster
         var randomNumberOfAmount = Random.Range(minAmount, maxAmount);
         for (int numberOfMinAmountMonster = 0; numberOfMinAmountMonster <= randomNumberOfAmount; numberOfMinAmountMonster++)
         {
-            var monster = Instantiate(monsterGameobject, chestPosition, Quaternion.identity);
+            Vector3 randomspawnPosition = new Vector3(Random.Range((float)(chestPosition.x - 2), (float)(chestPosition.x + 2)), (Random.Range((float)(chestPosition.y - 2), (float)(chestPosition.y + 2))), 0);
+            var monster = Instantiate(monsterGameobject, randomspawnPosition, Quaternion.identity);
             GameManager.Instance.currentMonsterCount++;
             monster.SetActive(true);
         } 

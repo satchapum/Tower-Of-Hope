@@ -31,7 +31,7 @@ public class ChestAction : KeyCode_F_Action
     {
         int numberOfLastChest = 1;
         int randomItemIndex = ChestManager.Instance.GetRandomItem();
-        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && GameManager.Instance.isMonsterSpawn == false)
+        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && GameManager.Instance.isMonsterSpawn == false && type == chestPrefab.name)
         {
             GameManager.Instance.isGetKey = true;
             UIGetKey.Instance.GetKeyText();
