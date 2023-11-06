@@ -20,12 +20,15 @@ public class ChestAction : KeyCode_F_Action
     [SerializeField] itemSO weapon;
     [SerializeField] itemSO salt;
 
+    Animator animChest;
+
     void Start()
     {
         int thisChestCount = 1;
         chestManager.maxAmountOfChest += thisChestCount;
         checkOtherCollider.gameObjectType.Add(thisChest);
         checkOtherCollider.keyCode_F_Actions.Add(thisChestAction);
+        animChest = GetComponent<Animator>();
     }
     public override void F_Action(string type)
     {
@@ -33,6 +36,7 @@ public class ChestAction : KeyCode_F_Action
         int randomItemIndex = ChestManager.Instance.GetRandomItem();
         if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && GameManager.Instance.isMonsterSpawn == false && type == chestPrefab.name)
         {
+            animChest.SetBool("Openning", true);
             GameManager.Instance.isGetKey = true;
             UIGetKey.Instance.GetKeyText();
             Debug.Log("getKey Alr");
@@ -49,6 +53,7 @@ public class ChestAction : KeyCode_F_Action
 
             if (ChestManager.Instance.ItemLists[randomItemIndex] == key )
             {
+                animChest.SetBool("Openning", true);
                 GameManager.Instance.isGetKey = true;
                 UIGetKey.Instance.GetKeyText();
                 Debug.Log("getKey Alr");
@@ -56,18 +61,21 @@ public class ChestAction : KeyCode_F_Action
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == monster)
             {
+                animChest.SetBool("Openning", true);
                 Debug.Log("Monster");
                 StartCoroutine(monsterSpawnDelay());
                 
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == weapon)
             {
+                animChest.SetBool("Openning", true);
                 Debug.Log("Weapon");
                 WeaponDrop.Instance.dropWeapon(gameObject.transform);
                 Destroy(chestPrefab);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == salt)
             {
+                animChest.SetBool("Openning", true);
                 Debug.Log("getSalt");
                 Destroy(chestPrefab);
             }
