@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d11e59e64a752a45b0744ec02cb71fd, type: 3}
   m_Name: MagicWandSpear_Skill
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   manaCost: 10
   CoolDownTime: 5
