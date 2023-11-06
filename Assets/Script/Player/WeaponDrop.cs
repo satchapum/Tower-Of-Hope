@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponDrop : Singleton<WeaponDrop>
 {
+    [SerializeField] int numberOfAdding;
     [SerializeField] List<ItemInfo> itemList = new List<ItemInfo>();
 
     public List<ItemInfo> ItemList => itemList;
@@ -14,7 +15,8 @@ public class WeaponDrop : Singleton<WeaponDrop>
         {
             if (itemList[numberOfItem] == item)
             {
-                var thisItem = Instantiate(item, transformLastMonster.position,Quaternion.identity);
+                GameObject thisItem = Instantiate(item.gameObject, transformLastMonster.position, Quaternion.identity);
+                thisItem.name = item.name + '(' + numberOfAdding + ')';
                 thisItem.gameObject.SetActive(true);
             }
         }
