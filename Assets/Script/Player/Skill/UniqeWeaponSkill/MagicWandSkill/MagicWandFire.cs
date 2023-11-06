@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MagicWandFire : MonoBehaviour
 {
-    [SerializeField] int damage = 2;
+    [SerializeField] MagicWand_Skill magicWand_Skill;
     [SerializeField] float currentDisplaytime;
     [SerializeField] float targetScale;
 
@@ -13,7 +13,7 @@ public class MagicWandFire : MonoBehaviour
         foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
             if (collision.gameObject == monster.gameObject)
-                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage + GameManager.Instance.playerBaseAttackDamage);
+                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(magicWand_Skill.damage + GameManager.Instance.playerBaseAttackDamage);
         }
     }
 

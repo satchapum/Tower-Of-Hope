@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordSword_Skill : SkillManager
 {
+    [SerializeField] SkillSO skillData;
     public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
     public override int coolDownTime { get { return CoolDownTime; } set { CoolDownTime = value; } }
@@ -23,6 +24,14 @@ public class SwordSword_Skill : SkillManager
     [SerializeField] float skillEffectTime;
     [SerializeField] float whenSpawnDelay;
     [SerializeField] GameObject swordForCreate;
+    [SerializeField] public int damage;
+
+    private void Awake()
+    {
+        CoolDownTime = skillData.CoolDownTime;
+        ManaCost = skillData.manaCost;
+        damage = skillData.damage;
+    }
 
     public override void CreateSkill()
     {

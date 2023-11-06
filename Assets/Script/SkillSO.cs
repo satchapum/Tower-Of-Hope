@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillSO : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[CreateAssetMenu(fileName = "SkillData", menuName = "SkillSO", order = 3)]
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class SkillSO : ScriptableObject
+{
+    [SerializeField] public int damage;
+    [SerializeField] public int manaCost;
+    [SerializeField] public int CoolDownTime;
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Spear_Skill : SkillManager
 {
+    [SerializeField] SkillSO skillData;
     public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
     public override int coolDownTime { get { return CoolDownTime; } set { CoolDownTime = value; } }
@@ -20,7 +21,14 @@ public class Spear_Skill : SkillManager
     [SerializeField] string TargetWeapon;
     [SerializeField] GameObject spear;
     [SerializeField] GameObject playerAttackParent;
+    [SerializeField] public int damage;
 
+    private void Awake()
+    {
+        CoolDownTime = skillData.CoolDownTime;
+        ManaCost = skillData.manaCost;
+        damage = skillData.damage;
+    }
     public override void CreateSkill()
     {
         GameObject createSpear = Instantiate(spear, AttackPosition.position, AttackPosition.transform.rotation);

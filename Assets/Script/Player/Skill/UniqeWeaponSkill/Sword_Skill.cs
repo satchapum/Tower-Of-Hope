@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Sword_Skill : SkillManager
 {
+    [SerializeField] SkillSO skillData;
     public override Transform attackPositon { get { return AttackPosition; } set { AttackPosition = value; } }
     public override string current_key { get { return Current_key; } set { Current_key = value; } }
     public override int coolDownTime { get { return CoolDownTime; } set { CoolDownTime = value; } }
@@ -22,6 +23,12 @@ public class Sword_Skill : SkillManager
     [SerializeField] int damageIncrese = 2;
     [SerializeField] float skillEffectTime;
 
+    private void Awake()
+    {
+        CoolDownTime = skillData.CoolDownTime;
+        ManaCost = skillData.manaCost;
+        damageIncrese = skillData.damage;
+    }
     public override void CreateSkill()
     {
         Debug.Log("Sword Skill");

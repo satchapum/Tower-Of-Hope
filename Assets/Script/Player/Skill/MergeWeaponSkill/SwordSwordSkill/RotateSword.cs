@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotateSword : MonoBehaviour
 {
+    [SerializeField] SwordSword_Skill skill;
     [SerializeField] Transform targetPlayer;
     [SerializeField] float rotateSpeed;
     [SerializeField] Sword sword;
@@ -16,7 +17,7 @@ public class RotateSword : MonoBehaviour
         foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
             if (collision.gameObject == monster.gameObject)
-                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(sword.damage);
+                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(skill.damage);
 
         }
     }

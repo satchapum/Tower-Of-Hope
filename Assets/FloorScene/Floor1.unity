@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 123308469}
   - component: {fileID: 123308468}
   - component: {fileID: 123308467}
+  - component: {fileID: 123308472}
   m_Layer: 0
   m_Name: ChestMockup (3)
   m_TagString: Chest
@@ -791,6 +792,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &123308472
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123308465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &126131260
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,12 +857,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e30887db4c7fe46bd82b7b64547283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: e850f6293bd3555468f6bb3076afb733, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 87d9cfa29d7c29149a81e974f3541b09, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 1
   ManaCost: 40
   TargetWeapon: Arrow+Dagger
+  damage: 0
 --- !u!1 &132470960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,12 +1726,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83705daef756aa429193c1202107a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 6484ae8a3997f1844af49eedd3676ad7, type: 2}
   Skill_Icon: {fileID: 21300000, guid: f1f5977a5f683a748b74374f88b92080, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 30
   TargetWeapon: Arrow+MagicWand
+  damage: 0
 --- !u!1 &176847586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,12 +2561,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946f69ac398efee4ba4dcbe9fbc48ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 09208d25927e8004ea2152b977b768e9, type: 2}
   Skill_Icon: {fileID: 21300000, guid: c9f34ee1e0bbd7848a68a63051515854, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 3
   ManaCost: 5
   TargetWeapon: Arrow
+  damage: 0
   Arrow: {fileID: 1436137776}
   ArrowPositon_1: {fileID: 1533007482}
   ArrowPositon_2: {fileID: 1548788949}
@@ -2919,12 +2947,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604316c97b0346046b1768682d75ed4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 677bfabe7f86aa647bdf0e2016744abe, type: 2}
   Skill_Icon: {fileID: 21300000, guid: d22272e74a590eb43ba3b3bd78f82530, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 20
   TargetWeapon: Sword+Spear
+  damage: 0
 --- !u!1 &312352166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,6 +3376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833e4afdc0c8bcb4bafdf21f94e5f235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 8b351cc3b39e9f644a7360e59f666fb6, type: 2}
   Skill_Icon: {fileID: 21300000, guid: ba9c3779da1cfcb46b98a0e2f99bdf78, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
@@ -3354,6 +3385,7 @@ MonoBehaviour:
   TargetWeapon: MagicWand
   skillEffectTime: 0.25
   fireEffect: {fileID: 1078159858}
+  damage: 0
 --- !u!1 &336774672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4123,7 +4155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0ceaf3d93337441b7b815224f9d7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill: {fileID: 0}
+  skill: {fileID: 1983409304}
 --- !u!1 &373202812
 GameObject:
   m_ObjectHideFlags: 0
@@ -4789,12 +4821,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b249b85731490418798aaef19f1910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 36d486a26d38bfe449164d907a73467f, type: 2}
   Skill_Icon: {fileID: 21300000, guid: b93a0112850d3af40833c2c5c1bf1193, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 20
   TargetWeapon: Sword+Dagger
+  damage: 0
 --- !u!1 &487443212
 GameObject:
   m_ObjectHideFlags: 0
@@ -6304,12 +6338,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe429aa3de453974abfa69e5de157313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 1c93f25d3a8009a4f9349e9ed28675db, type: 2}
   Skill_Icon: {fileID: 21300000, guid: dbc004e9e1e08924e887d677f8e94830, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 10
   TargetWeapon: Dagger
+  damage: 0
 --- !u!1 &562485733
 GameObject:
   m_ObjectHideFlags: 0
@@ -6784,6 +6820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86530c95295a1e419f8c5ea1f77f9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: a32dc6a065019904a9f38d35fbf17841, type: 2}
   Skill_Icon: {fileID: 21300000, guid: a3c79881c19804641a438257395e85a8, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1675697031}
@@ -6792,6 +6829,7 @@ MonoBehaviour:
   TargetWeapon: Spear
   spear: {fileID: 2018221197}
   playerAttackParent: {fileID: 1675697030}
+  damage: 0
 --- !u!1 &635713872
 GameObject:
   m_ObjectHideFlags: 0
@@ -6988,12 +7026,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4698caf6ec66e4f839314564db44d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 3b7a5433cb3583f4493525be43424215, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 46b094dc61ca6ab439076fdd30d2d140, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 10
   TargetWeapon: MagicWand+Spear
+  damage: 0
 --- !u!1 &675461874
 GameObject:
   m_ObjectHideFlags: 0
@@ -7008,6 +7048,7 @@ GameObject:
   - component: {fileID: 675461878}
   - component: {fileID: 675461877}
   - component: {fileID: 675461876}
+  - component: {fileID: 675461881}
   m_Layer: 0
   m_Name: ChestMockup (5)
   m_TagString: Chest
@@ -7194,6 +7235,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &675461881
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675461874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &683005497
 GameObject:
   m_ObjectHideFlags: 0
@@ -7561,6 +7623,7 @@ GameObject:
   - component: {fileID: 698002114}
   - component: {fileID: 698002113}
   - component: {fileID: 698002112}
+  - component: {fileID: 698002117}
   m_Layer: 0
   m_Name: ChestMockup (6)
   m_TagString: Chest
@@ -7747,6 +7810,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &698002117
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698002110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &745873249
 GameObject:
   m_ObjectHideFlags: 0
@@ -7761,6 +7845,7 @@ GameObject:
   - component: {fileID: 745873253}
   - component: {fileID: 745873252}
   - component: {fileID: 745873251}
+  - component: {fileID: 745873256}
   m_Layer: 0
   m_Name: ChestMockup
   m_TagString: Chest
@@ -7947,6 +8032,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &745873256
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745873249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &747802953
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,6 +8469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671703959e13061458f5c8a8d09cba4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 9443bbcd3c2c7294095274b7777534fc, type: 2}
   Skill_Icon: {fileID: 21300000, guid: ab0356d9f4471324fa755dd4c4fd0750, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
@@ -8421,6 +8528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c1cc016c3bc29478db2bf841104b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 7592cce925739b7438e4b7cd5813d5af, type: 2}
   Skill_Icon: {fileID: 21300000, guid: f0b946e73f545b243975ba24b679c751, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1535571938}
@@ -8430,6 +8538,7 @@ MonoBehaviour:
   skillEffectTime: 1
   whenSpawnDelay: 1
   swordForCreate: {fileID: 1038180433}
+  damage: 0
 --- !u!1 &790572988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8616,6 +8725,7 @@ GameObject:
   - component: {fileID: 811658408}
   - component: {fileID: 811658407}
   - component: {fileID: 811658406}
+  - component: {fileID: 811658411}
   m_Layer: 0
   m_Name: ChestMockup (7)
   m_TagString: Chest
@@ -8802,6 +8912,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &811658411
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811658404}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &816932066
 GameObject:
   m_ObjectHideFlags: 0
@@ -8949,6 +9080,7 @@ GameObject:
   - component: {fileID: 820725448}
   - component: {fileID: 820725447}
   - component: {fileID: 820725446}
+  - component: {fileID: 820725451}
   m_Layer: 0
   m_Name: ChestMockup (4)
   m_TagString: Chest
@@ -9135,6 +9267,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &820725451
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820725444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &858748975
 GameObject:
   m_ObjectHideFlags: 0
@@ -10281,17 +10434,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0e971211cc9cb49adf45d73259c9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 808f1cdff2cfb9841b3062880d7dc8c6, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 2bad69e857fe1fe47a4ece2af0f81a89, type: 3}
   Current_key: 
   AttackPosition: {fileID: 1695682565}
-  CoolDownTime: 5
-  ManaCost: 20
+  CoolDownTime: 0
+  ManaCost: 0
   TargetWeapon: Dagger+Dagger
-  damage: 4
   timeToCreate: 0.15
   numberToCreate: 5
   timeToDestroy: 3
   dagger: {fileID: 2134239192}
+  damage: 0
 --- !u!4 &1029210549
 Transform:
   m_ObjectHideFlags: 0
@@ -10469,6 +10623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256668daeb79cb34380dac5b227694e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 785080676}
   targetPlayer: {fileID: 488402343}
   rotateSpeed: 500
   sword: {fileID: 1672493154}
@@ -10652,6 +10807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3ca6587dbed9e4cbd9c4d431ea2781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 4e6a1cb48e0deab41b6543207b0def5b, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 1f95e90fad4d8fc48a59ab644a9fd4c4, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
@@ -10857,7 +11013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ba03a078331c9408dda8949c88b11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 18
+  magicWand_Skill: {fileID: 333353933}
   currentDisplaytime: 0
   targetScale: 3
 --- !u!1 &1106923458
@@ -11159,16 +11315,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824f0590fced44a408c322e0602b7b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: efb3d93d980032341b04435a31a4239c, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 363ddf303699df541b2216ef8d1b7eb7, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 20
   TargetWeapon: Spear+Spear
-  damage: 5
   timeToDestroy: 3
   backWardTime: 0.1
   Spear: {fileID: 195610924}
+  damage: 5
 --- !u!1 &1138310013
 GameObject:
   m_ObjectHideFlags: 0
@@ -11531,6 +11688,7 @@ GameObject:
   - component: {fileID: 1187163167}
   - component: {fileID: 1187163166}
   - component: {fileID: 1187163165}
+  - component: {fileID: 1187163170}
   m_Layer: 0
   m_Name: ChestMockup (1)
   m_TagString: Chest
@@ -11717,6 +11875,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1187163170
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187163163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1197343127
 GameObject:
   m_ObjectHideFlags: 0
@@ -14970,12 +15149,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8352ad47a30eb9b4db74f9998f2b6e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 3b7a5433cb3583f4493525be43424215, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 190bc799acb83b64190ff77a7c6f2f3e, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 6
   ManaCost: 10
   TargetWeapon: MagicWand+Dagger
+  damage: 0
 --- !u!1 &1343983773
 GameObject:
   m_ObjectHideFlags: 0
@@ -15020,6 +15201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542548ee653b6844cb4e49f6aa477bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 8f20edccdc29c594a977237aeae7ebfb, type: 2}
   Skill_Icon: {fileID: 21300000, guid: e6ebee513036bec44b24d6270eada28e, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
@@ -15561,8 +15743,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1436137777}
   - component: {fileID: 1436137781}
+  - component: {fileID: 1436137782}
   - component: {fileID: 1436137780}
-  - component: {fileID: 1436137779}
   - component: {fileID: 1436137778}
   m_Layer: 0
   m_Name: Arrow_For_Skill
@@ -15621,25 +15803,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.55483973, y: 0.006337285}
   m_Size: {x: 0.43120456, y: 0.43120456}
   m_Direction: 0
---- !u!114 &1436137779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436137776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f56e70820627f4f9569e0cfa908600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectSpeed: 15
-  damage: 10
-  rb: {fileID: 1436137780}
-  effectShowTime: 3
-  currentDisplaytime: 0
-  targetScale: 1
-  AttackCooldown: 0.5
 --- !u!50 &1436137780
 Rigidbody2D:
   serializedVersion: 4
@@ -15719,6 +15882,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1436137782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436137776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e271ccc69a12b3e4786ecc7e82c58743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 279438584}
+  effectSpeed: 10
+  rb: {fileID: 1436137780}
+  effectShowTime: 3
+  currentDisplaytime: 0
+  targetScale: 1
 --- !u!1 &1437806821
 GameObject:
   m_ObjectHideFlags: 0
@@ -15960,12 +16141,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aac4965748a78e458c636f167a47a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 9488e4356fc42864bba677044a53e0a4, type: 2}
   Skill_Icon: {fileID: 0}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 40
   TargetWeapon: Arrow+Spear
+  damage: 0
 --- !u!1 &1519917622
 GameObject:
   m_ObjectHideFlags: 0
@@ -18416,12 +18599,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720dd6d547631274ba6162c9bbfa8b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 36d486a26d38bfe449164d907a73467f, type: 2}
   Skill_Icon: {fileID: 21300000, guid: bbff4f225150cf3499d2be520e5d9e07, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
   ManaCost: 10
   TargetWeapon: Sword+Arrow
+  damage: 0
 --- !u!1 &1827399164
 GameObject:
   m_ObjectHideFlags: 0
@@ -18466,12 +18651,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05f8f4432dceff4e89b5fe2b7c9dd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: da64a0bd11d0b81449cc72cdd5acc1ff, type: 2}
   Skill_Icon: {fileID: 21300000, guid: c56f0a15d0e5fa04fa37e782e7f78db9, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
-  CoolDownTime: 5
-  ManaCost: 10
+  CoolDownTime: 0
+  ManaCost: 0
   TargetWeapon: Spear+Dagger
+  damage: 0
 --- !u!1 &1832819621
 GameObject:
   m_ObjectHideFlags: 0
@@ -20370,6 +20557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855981a0e12d2914c9a4c8fe5ce9ff36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: e395d90f72cdc72438f1310f694f8113, type: 2}
   Skill_Icon: {fileID: 21300000, guid: 7c025c30b69df524c860f05aa79712d2, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
@@ -20555,13 +20743,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4ee5b88c9f5564fbc99ae3c06ff05d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spear_Skill: {fileID: 633653195}
   spearSpeed: 20
   spearTarget: {fileID: 1402575582}
   numberOfRound: 10
   spearDelay: 0.1
   currentTarget: {fileID: 0}
   tempTarget: {fileID: 1675697031}
-  spear: {fileID: 201577737}
 --- !u!58 &2018221204
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20964,6 +21152,7 @@ GameObject:
   - component: {fileID: 2078936258}
   - component: {fileID: 2078936257}
   - component: {fileID: 2078936256}
+  - component: {fileID: 2078936261}
   m_Layer: 0
   m_Name: ChestMockup (2)
   m_TagString: Chest
@@ -21150,6 +21339,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2078936261
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078936254}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b82600bf0ed47b941847eabe5fc38745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2086253195
 GameObject:
   m_ObjectHideFlags: 0

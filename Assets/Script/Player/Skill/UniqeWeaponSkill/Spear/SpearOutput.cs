@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpearOutput : MonoBehaviour
 {
+    [SerializeField] Spear_Skill spear_Skill;
     [SerializeField] float spearSpeed;
     [SerializeField] Transform spearTarget;
     [SerializeField] int numberOfRound = 5;
     [SerializeField] float spearDelay = 0.2f;
     [SerializeField] Transform currentTarget;
     [SerializeField] Transform tempTarget;
-    [SerializeField] Spear spear;
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class SpearOutput : MonoBehaviour
         foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
             if (collision.gameObject == monster.gameObject)
-                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(spear.damage + GameManager.Instance.playerBaseAttackDamage);
+                collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(spear_Skill.damage + GameManager.Instance.playerBaseAttackDamage);
         }
     }
 

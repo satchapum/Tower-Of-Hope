@@ -7,6 +7,7 @@ public class ItemSelectSlot : MonoBehaviour
     [SerializeField] GameObject uiSlotWeaponSelect;
     public void WhenCloseButtonInSelectSlotClick()
     {
+        Time.timeScale = 1;
         uiSlotWeaponSelect.SetActive(false);
     } 
 }
