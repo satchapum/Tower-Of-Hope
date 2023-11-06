@@ -6,11 +6,11 @@ public class SpearOutput : MonoBehaviour
 {
     [SerializeField] Spear_Skill spear_Skill;
     [SerializeField] float spearSpeed;
-    [SerializeField] Transform spearTarget;
     [SerializeField] int numberOfRound = 5;
     [SerializeField] float spearDelay = 0.2f;
-    [SerializeField] Transform currentTarget;
+    [SerializeField] Transform spearTarget;
     [SerializeField] Transform tempTarget;
+    Transform currentTarget;
 
     void Start()
     {

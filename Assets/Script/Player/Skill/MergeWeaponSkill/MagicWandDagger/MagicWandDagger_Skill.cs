@@ -22,6 +22,9 @@ public class MagicWandDagger_Skill : SkillManager
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
     [SerializeField] public int damage;
+    [SerializeField] int numberToCreate;
+    [SerializeField] float timeToCreate;
+    [SerializeField] GameObject daggerForCreate;
 
     private void Awake()
     {
@@ -32,5 +35,20 @@ public class MagicWandDagger_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("MagicWandDagger skill");
+        StartCoroutine(CreateDelay());
+    }
+
+    IEnumerator CreateDelay()
+    {
+        for (int currentNumberOfDaggerCreate = 0; currentNumberOfDaggerCreate < numberToCreate; currentNumberOfDaggerCreate++)
+        {
+            CreateDagger();
+            yield return new WaitForSeconds(timeToCreate);
+        }
+    }
+    void CreateDagger()
+    {
+        GameObject create_Arrow = Instantiate(daggerForCreate, AttackPosition.position, AttackPosition.transform.rotation);
+        create_Arrow.SetActive(true);
     }
 }
