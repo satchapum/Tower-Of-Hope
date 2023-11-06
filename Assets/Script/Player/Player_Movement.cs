@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Movement : Singleton<Player_Movement>
 {
     [Header("Player Setting")]
-    [SerializeField] float moveSpeed;
+    [SerializeField] public float moveSpeed;
     [SerializeField] float playerRotationSpeed;
 
     [Header("Setup")] 
