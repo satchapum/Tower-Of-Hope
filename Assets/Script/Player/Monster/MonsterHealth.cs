@@ -7,7 +7,7 @@ public class MonsterHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth;
     public int CurrentHealth => currentHealth;
-    [SerializeField] int currentHealth;
+    [SerializeField] public int currentHealth;
 
     [SerializeField] GameObject player;
     [SerializeField] GameObject thisMonsterObject;
@@ -69,5 +69,15 @@ public class MonsterHealth : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(takeDamageFeedbackTime);
         gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    public IEnumerator DoDamageBleeding(int numberOfTimeDoDamage, int damage, float delayTime)
+    {
+        for (int numberOfDamageTakenTime = 0; numberOfDamageTakenTime < numberOfTimeDoDamage; numberOfDamageTakenTime++)
+        {
+            yield return new WaitForSeconds(delayTime);
+            int  monsterTakeDamage = (currentHealth * damage) / 100;
+            TakeDamage(monsterTakeDamage); 
+        }
     }
 }

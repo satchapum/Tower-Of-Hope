@@ -22,6 +22,8 @@ public class ArrowDagger_Skill : SkillManager
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
     [SerializeField] public int damage;
+    [SerializeField] GameObject daggerForCreate;
+    [SerializeField] public float timeToDestroy;
 
     private void Awake()
     {
@@ -33,5 +35,11 @@ public class ArrowDagger_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("ArrowDagger Skill");
+        CreateDagger();
+    }
+    void CreateDagger()
+    {
+        GameObject create_Arrow = Instantiate(daggerForCreate, AttackPosition.position, AttackPosition.transform.rotation);
+        create_Arrow.SetActive(true);
     }
 }
