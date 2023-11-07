@@ -22,6 +22,8 @@ public class ArrowSpear_Skill : SkillManager
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
     [SerializeField] public int damage;
+    [SerializeField] GameObject arrowForCreate;
+    [SerializeField] public float timeToDestroy;
 
     private void Awake()
     {
@@ -33,5 +35,11 @@ public class ArrowSpear_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("ArrowSpear Skill");
+        CreateDagger();
+    }
+    void CreateDagger()
+    {
+        GameObject create_Arrow = Instantiate(arrowForCreate, AttackPosition.position, AttackPosition.transform.rotation);
+        create_Arrow.SetActive(true);
     }
 }

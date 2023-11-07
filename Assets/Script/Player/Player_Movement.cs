@@ -29,6 +29,11 @@ public class Player_Movement : Singleton<Player_Movement>
     [SerializeField] public TrailRenderer tr;
     [SerializeField] public bool isBackWardDash = false;
 
+    [Header("MoveToMonster")]
+    [SerializeField] public bool isMoveToMonster = false;
+    [SerializeField] public GameObject monsterTarget;
+    [SerializeField] SwordSpear_Skill swordSpear_Skill;
+
     Rigidbody2D rb;
     Animator anim;
 
@@ -42,12 +47,16 @@ public class Player_Movement : Singleton<Player_Movement>
 
     void Update()
     {
-        movementDirection = new Vector2 (InputManager.Instance.HorizontalInput , InputManager.Instance.VerticalInput);
-
-        if (isBackWardDash)
+        if (!isMoveToMonster)
         {
-            transform.position = Vector3.MoveTowards(transform.position, moveBackPosition.position, moveBackDashSpeed * Time.deltaTime);
+            movementDirection = new Vector2(InputManager.Instance.HorizontalInput, InputManager.Instance.VerticalInput);
+
+            if (isBackWardDash)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, moveBackPosition.position, moveBackDashSpeed * Time.deltaTime);
+            }
         }
+        
     }
 
     void FixedUpdate()
@@ -72,6 +81,26 @@ public class Player_Movement : Singleton<Player_Movement>
             FlipUp();
         }
     }
+
+    public void JumpToMonster(GameObject monster)
+    {
+        monsterTarget = monster;
+        float moveSpeedMultiply =  5;
+        transform.position = Vector3.MoveTowards(transform.position, monster.transform.position, moveSpeed * moveSpeedMultiply * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject == monsterTarget)
+        {
+            swordSpear_Skill.isSkilluse = false;
+            player.GetComponent<Player_Movement>().isMoveToMonster = false;
+            player.GetComponent<Player_health>().healPlayerHealt(swordSpear_Skill.amountOfHeal);
+            monsterTarget.GetComponent<MonsterHealth>().TakeDamage(swordSpear_Skill.damage);
+        }
+
+    }
+
     void FlipRight()
     {
         spriteRenderer.flipX = true;

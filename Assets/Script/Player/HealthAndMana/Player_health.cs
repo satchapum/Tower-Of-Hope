@@ -39,6 +39,10 @@ public class Player_health : Singleton<Player_health>
     public void healPlayerHealt(int numberOfHeal)
     {
         GameManager.Instance.currentHealth += numberOfHeal;
+        if (GameManager.Instance.currentHealth > maxHealth)
+        {
+            GameManager.Instance.currentHealth = maxHealth;
+        }
         RefreshHealth();
     }
 

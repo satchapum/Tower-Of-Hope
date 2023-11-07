@@ -21,7 +21,19 @@ public class SwordSpear_Skill : SkillManager
     [SerializeField] int CoolDownTime;
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
-    [SerializeField] int damage;
+    [SerializeField] public int damage;
+    [SerializeField] GameObject player;
+    [SerializeField] public bool isSkilluse = false;
+    [SerializeField] public int amountOfHeal;
+    GameObject monster;
+
+    private void Update()
+    {
+        if (isSkilluse)
+        {
+            player.GetComponent<Player_Movement>().JumpToMonster(monster);
+        }
+    }
 
     private void Awake()
     {
@@ -32,5 +44,23 @@ public class SwordSpear_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("SwordSpear Skill");
+        
+        if (FindAnyObjectByType<Monster>())
+        {
+            isSkilluse = true;
+            player.GetComponent<Player_Movement>().isMoveToMonster = true;
+            monster = FindAnyObjectByType<Monster>().gameObject;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject == monster)
+        {
+            isSkilluse = false;
+            player.GetComponent<Player_Movement>().isMoveToMonster = false;
+            player.GetComponent<Player_health>().healPlayerHealt(amountOfHeal);
+            monster.GetComponent<MonsterHealth>().TakeDamage(damage);
+        }
+       
     }
 }
