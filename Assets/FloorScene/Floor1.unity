@@ -5442,6 +5442,10 @@ MonoBehaviour:
   ManaCost: 20
   TargetWeapon: Sword+Dagger
   damage: 0
+  percentOfSpeedIncrease: 40
+  buffTime: 4
+  sword: {fileID: 1672493154}
+  dagger: {fileID: 628161916}
 --- !u!1 &487443212
 GameObject:
   m_ObjectHideFlags: 0

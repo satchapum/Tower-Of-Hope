@@ -22,6 +22,10 @@ public class SwordDagger_Skill : SkillManager
     [SerializeField] int ManaCost;
     [SerializeField] string TargetWeapon;
     [SerializeField] int damage;
+    [SerializeField] int percentOfSpeedIncrease;
+    [SerializeField] float buffTime;
+    [SerializeField] Sword sword;
+    [SerializeField] Dagger dagger;
 
     private void Awake()
     {
@@ -31,6 +35,18 @@ public class SwordDagger_Skill : SkillManager
     }
     public override void CreateSkill()
     {
+        
         Debug.Log("SwordDagger Skill ");
+        StartCoroutine(DoSkill());
+    }
+    IEnumerator DoSkill()
+    {
+        float attackCooldownSwordTemp = sword.attackCooldown;
+        float attackCooldownDaggerTemp = dagger.attackCooldown;
+        sword.attackCooldown = sword.attackCooldown  - ((sword.attackCooldown * percentOfSpeedIncrease) / 100);
+        dagger.attackCooldown = dagger.attackCooldown - ((dagger.attackCooldown * percentOfSpeedIncrease) / 100);
+        yield return new WaitForSeconds(buffTime);
+        sword.attackCooldown = attackCooldownSwordTemp;
+        dagger.attackCooldown = attackCooldownDaggerTemp;
     }
 }
