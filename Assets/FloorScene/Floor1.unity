@@ -897,7 +897,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 75d7ddf01c6353749ab386b237fc30d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fa711c9bcca5974d882e0d73805a561, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7922,7 +7922,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.96, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8294,7 +8294,7 @@ MonoBehaviour:
   ManaCost: 10
   TargetWeapon: MagicWand+Spear
   damage: 5
-  numberOfSpearDrop: 3
+  numberOfSpearDrop: 5
   spearForCreate: {fileID: 1141524087}
   delaySpawn: 0.2
 --- !u!1 &675461874
@@ -10187,8 +10187,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 75d7ddf01c6353749ab386b237fc30d2, type: 3}
-  m_Color: {r: 0, g: 0.31132078, b: 0.004746296, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 61df6e33cb90fbb4d8e762619b51e6cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13647,7 +13647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8e4f71c9761b544b553a2ec9881f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectSpeed: 30
+  effectSpeed: 20
   rb: {fileID: 1159084914}
   currentDisplaytime: 0
   targetScale: 1
@@ -13728,7 +13728,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 236aa127b4cfbb34caa4a6e7d3808a80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08ac199919e1f5e4f897202fa4d9f4c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18508,7 +18508,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 236aa127b4cfbb34caa4a6e7d3808a80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41e832606f218c047b70edb0e2975f1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18598,7 +18598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillData: {fileID: 11400000, guid: 9488e4356fc42864bba677044a53e0a4, type: 2}
-  Skill_Icon: {fileID: 0}
+  Skill_Icon: {fileID: 21300000, guid: b6edf8280e0dab5448fd4b5ae83216d9, type: 3}
   Current_key: 
   AttackPosition: {fileID: 467138752}
   CoolDownTime: 5
@@ -20025,7 +20025,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -23799,7 +23799,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 75d7ddf01c6353749ab386b237fc30d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ec7065905fb5b9478603887f13de42d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -24998,7 +24998,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72a50c21428ca86428e0c4b8abc35ad0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72becd760eac95246b90bd9bda5af0cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
