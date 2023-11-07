@@ -20,6 +20,15 @@ public class MonsterBehavior : MonoBehaviour
         WhenMonsterSetting();
     }
 
+    public IEnumerator Stun(float stunTime) 
+    {
+        int speedWhenGotStun = 0;
+        int monsterSpeedTemp = monsterSpeed;
+        monsterSpeed = speedWhenGotStun;
+        yield return new WaitForSeconds(stunTime);
+        monsterSpeed = monsterSpeedTemp;
+    }
+
     void WhenMonsterSetting()
     {
         if (playerSetting.NumberOfCurrentMonsterTargetOnPlayer < playerSetting.maximunOfMonsterTargetOnplayer && !isTargetPlayer)
