@@ -43,7 +43,12 @@ public class ChestAction : KeyCode_F_Action
             Destroy(chestPrefab);
             return;
         }
-
+        if (GameManager.Instance.IsTutorial == true && type == chestPrefab.name)
+        {
+            animChest.SetBool("Openning", true);
+            Debug.Log("Monster");
+            StartCoroutine(monsterSpawnDelay());
+        }
         if (type == chestPrefab.name && GameManager.Instance.isMonsterSpawn == false)
         {
             while (ChestManager.Instance.ItemLists[randomItemIndex] == key && GameManager.Instance.isGetKey == true)
