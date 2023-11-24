@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 80.2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9154c3587d087e04f88da630423d3dcd
-      internalID: 1719058821
+      spriteID: 1338cb90a065f8440b7d19af1507158d
+      internalID: 448570798
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tilemap-Wall2_0: 1719058821
+      Tilemap-Wall2_0: 448570798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
