@@ -6767,9 +6767,9 @@ MonoBehaviour:
   IsTutorial: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
-  playerBaseAttackDamage: 5
-  playerBaseHealth: 100
-  playerBaseMana: 100
+  playerBaseAttackDamage: 2
+  playerBaseHealth: 50
+  playerBaseMana: 120
   maxPlayerLevelExperiencePerLevel: 100
   currentWeapon_Lefthand: 
   currentWeapon_Righthand: 

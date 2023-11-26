@@ -15509,7 +15509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 7
-  damage: 12
+  damage: 11
   rb: {fileID: 468247738}
   effectShowTime: 5
   currentDisplaytime: 0
@@ -16180,9 +16180,9 @@ MonoBehaviour:
   IsTutorial: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
-  playerBaseAttackDamage: 5
-  playerBaseHealth: 100
-  playerBaseMana: 100
+  playerBaseAttackDamage: 2
+  playerBaseHealth: 50
+  playerBaseMana: 120
   maxPlayerLevelExperiencePerLevel: 100
   currentWeapon_Lefthand: 
   currentWeapon_Righthand: 
@@ -22970,8 +22970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e67474d8c1f1f45bab7e4aebc25078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectSpeed: 5
-  damage: 8
+  effectSpeed: 4
+  damage: 7
   rb: {fileID: 957206945}
   effectShowTime: 0.1
   currentDisplaytime: 0
@@ -24116,7 +24116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 10
-  damage: 15
+  damage: 13
   rb: {fileID: 1054269228}
   effectShowTime: 0.2
   currentDisplaytime: 0
@@ -25414,7 +25414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 50
   currentHealth: 0
   player: {fileID: 2132808493}
   thisMonsterObject: {fileID: 1108363738}
@@ -25438,7 +25438,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 2132808496}
   spriteRenderer: {fileID: 1108363743}
-  monsterSpeed: 20
+  monsterSpeed: 18
   numberOfExperience: 12
 --- !u!114 &1108363746
 MonoBehaviour:
@@ -26997,7 +26997,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 2132808496}
   spriteRenderer: {fileID: 1251032768}
-  monsterSpeed: 25
+  monsterSpeed: 30
   numberOfExperience: 8
 --- !u!114 &1251032771
 MonoBehaviour:
@@ -34029,7 +34029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 5
-  damage: 5
+  damage: 10
   rb: {fileID: 1789580720}
   effectShowTime: 0.2
   currentDisplaytime: 0

@@ -4294,7 +4294,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 1982223312}
   spriteRenderer: {fileID: 299745825}
-  monsterSpeed: 25
+  monsterSpeed: 30
   numberOfExperience: 8
 --- !u!114 &299745828
 MonoBehaviour:
@@ -4650,7 +4650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 7
-  damage: 12
+  damage: 11
   rb: {fileID: 317881428}
   effectShowTime: 5
   currentDisplaytime: 0
@@ -5211,7 +5211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 5
-  damage: 5
+  damage: 10
   rb: {fileID: 336298544}
   effectShowTime: 0.2
   currentDisplaytime: 0
@@ -6352,7 +6352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 40
+  maxHealth: 50
   currentHealth: 0
   player: {fileID: 1982223311}
   thisMonsterObject: {fileID: 488235232}
@@ -6376,7 +6376,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 1982223312}
   spriteRenderer: {fileID: 488235237}
-  monsterSpeed: 20
+  monsterSpeed: 18
   numberOfExperience: 12
 --- !u!114 &488235240
 MonoBehaviour:
@@ -6535,7 +6535,7 @@ RectTransform:
   m_Father: {fileID: 2003480926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10719,7 +10719,7 @@ RectTransform:
   m_Father: {fileID: 399575526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11493,9 +11493,9 @@ MonoBehaviour:
   IsTutorial: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
-  playerBaseAttackDamage: 5
-  playerBaseHealth: 100
-  playerBaseMana: 100
+  playerBaseAttackDamage: 2
+  playerBaseHealth: 50
+  playerBaseMana: 120
   maxPlayerLevelExperiencePerLevel: 100
   currentWeapon_Lefthand: 
   currentWeapon_Righthand: 
@@ -12006,7 +12006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &871918943
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14633,7 +14633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectSpeed: 10
-  damage: 15
+  damage: 13
   rb: {fileID: 1137508417}
   effectShowTime: 0.2
   currentDisplaytime: 0
@@ -23684,8 +23684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e67474d8c1f1f45bab7e4aebc25078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectSpeed: 5
-  damage: 8
+  effectSpeed: 4
+  damage: 7
   rb: {fileID: 1507296131}
   effectShowTime: 0.1
   currentDisplaytime: 0
@@ -46253,7 +46253,7 @@ RectTransform:
   m_Father: {fileID: 598933778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
