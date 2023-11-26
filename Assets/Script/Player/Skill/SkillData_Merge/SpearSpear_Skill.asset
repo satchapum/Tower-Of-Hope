@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d11e59e64a752a45b0744ec02cb71fd, type: 3}
   m_Name: SpearSpear_Skill
   m_EditorClassIdentifier: 
-  damage: 5
-  manaCost: 20
-  CoolDownTime: 5
+  damage: 11
+  manaCost: 15
+  CoolDownTime: 4

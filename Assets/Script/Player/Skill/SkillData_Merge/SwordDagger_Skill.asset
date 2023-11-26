@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordDagger_Skill
   m_EditorClassIdentifier: 
   damage: 0
-  manaCost: 20
-  CoolDownTime: 5
+  manaCost: 12
+  CoolDownTime: 7

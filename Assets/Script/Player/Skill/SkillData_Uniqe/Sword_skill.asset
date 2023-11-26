@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sword_skill
   m_EditorClassIdentifier: 
   damage: 2
-  manaCost: 10
+  manaCost: 12
   CoolDownTime: 7
