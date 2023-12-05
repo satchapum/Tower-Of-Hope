@@ -45,6 +45,7 @@ public class MagicWandSpear_Skill : SkillManager
         {
             if (FindAnyObjectByType<Monster>())
             {
+                AudioManager.Instance.magicWandSpear_Sound_SFX();
                 Vector3 MonsterPostion = FindAnyObjectByType<Monster>().GetComponent<Transform>().position;
                 GameObject arrow = Instantiate(spearForCreate, MonsterPostion, Quaternion.identity);
                 arrow.SetActive(true);

@@ -44,7 +44,7 @@ public class SwordSpear_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("SwordSpear Skill");
-        
+        AudioManager.Instance.swordSpear_Sound_SFX();
         if (FindAnyObjectByType<Monster>())
         {
             isSkilluse = true;

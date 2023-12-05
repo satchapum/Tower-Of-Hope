@@ -42,6 +42,7 @@ public class SpearSpear_Skill : SkillManager
 
     void CreateSpear()
     {
+        AudioManager.Instance.spearSpear_Sound_SFX();
         GameObject create_Arrow = Instantiate(Spear, AttackPosition.position, AttackPosition.transform.rotation);
         create_Arrow.SetActive(true);
     }

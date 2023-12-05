@@ -32,6 +32,7 @@ public class Sword_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("Sword Skill");
+        AudioManager.Instance.sword_Sound_SFX();
         StartCoroutine(SkillTime());
     }
 

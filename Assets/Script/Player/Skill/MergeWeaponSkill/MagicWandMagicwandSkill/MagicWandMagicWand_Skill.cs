@@ -35,6 +35,7 @@ public class MagicWandMagicWand_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("MagicWand skill");
+        AudioManager.Instance.magicWandMagicwand_Sound_SFX();
         StartCoroutine(SkillTime());
     }
     IEnumerator SkillTime()

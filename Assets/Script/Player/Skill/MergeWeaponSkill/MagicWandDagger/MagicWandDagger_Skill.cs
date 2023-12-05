@@ -48,6 +48,7 @@ public class MagicWandDagger_Skill : SkillManager
     }
     void CreateDagger()
     {
+        AudioManager.Instance.magicWandDagger_Sound_SFX();
         GameObject create_Arrow = Instantiate(daggerForCreate, AttackPosition.position, AttackPosition.transform.rotation);
         create_Arrow.SetActive(true);
     }

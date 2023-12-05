@@ -35,6 +35,7 @@ public class ArrowDagger_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("ArrowDagger Skill");
+        AudioManager.Instance.arrowDagger_Sound_SFX();
         CreateDagger();
     }
     void CreateDagger()

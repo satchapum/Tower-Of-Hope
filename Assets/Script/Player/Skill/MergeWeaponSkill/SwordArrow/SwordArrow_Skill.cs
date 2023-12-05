@@ -35,6 +35,7 @@ public class SwordArrow_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("SwordArrow Skill");
+        AudioManager.Instance.swordArrow_Sound_SFX();
         CreateDagger();
     }
     void CreateDagger()

@@ -48,6 +48,7 @@ public class ArrowMagicWand_Skill : SkillManager
             int randomNUmber = Random.Range(0, 2);
             Debug.Log(randomNUmber);
             GameObject randomArrow = arrow_List[randomNUmber];
+            AudioManager.Instance.arrowMagicWand_Sound_SFX();
 
             if (randomArrow == ArrowFrostCreate)
             {

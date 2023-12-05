@@ -38,6 +38,7 @@ public class SwordMagicWand_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("SwordMagicWand skill");
+        AudioManager.Instance.swordMagicWand_Sound_SFX();
         StartCoroutine(SkillTime());
     }
     IEnumerator SkillTime()
@@ -56,6 +57,7 @@ public class SwordMagicWand_Skill : SkillManager
         swordForRotate_4.transform.parent = AttackPosition;
 
         yield return new WaitForSeconds(skillEffectTime);
+        AudioManager.Instance.stop_swordMagicWand_Sound_SFX();
         Destroy(swordForRotate_1);
         Destroy(swordForRotate_2);
         Destroy(swordForRotate_3);

@@ -36,6 +36,7 @@ public class MagicWand_Skill : SkillManager
     IEnumerator SkillTime()
     {
         GameObject laserbeamCreate = Instantiate(fireEffect, AttackPosition.position, AttackPosition.transform.rotation);
+        AudioManager.Instance.magicWand_Sound_SFX();
         laserbeamCreate.SetActive(true);
         yield return new WaitForSeconds(skillEffectTime);
         Destroy(laserbeamCreate);

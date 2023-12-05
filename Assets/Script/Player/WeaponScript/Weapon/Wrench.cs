@@ -17,6 +17,7 @@ public class Wrench : WeaponManager
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
+        AudioManager.Instance.wrench_Sound_SFX();
         StartCoroutine("effectDestroy");
     }
     private void OnCollisionEnter2D(Collision2D collision)

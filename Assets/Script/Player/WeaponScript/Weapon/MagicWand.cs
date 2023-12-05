@@ -17,6 +17,7 @@ public class MagicWand : WeaponManager
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
+        AudioManager.Instance.magicWand_Sound_SFX();
         StartCoroutine("effectDestroy");
     }
     private void OnTriggerEnter2D(Collider2D collision)

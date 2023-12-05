@@ -35,8 +35,8 @@ public class SwordDagger_Skill : SkillManager
     }
     public override void CreateSkill()
     {
-        
         Debug.Log("SwordDagger Skill ");
+        AudioManager.Instance.sworddagger_Sound_SFX();
         StartCoroutine(DoSkill());
     }
     IEnumerator DoSkill()

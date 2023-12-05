@@ -66,19 +66,27 @@ public class Player_Movement : Singleton<Player_Movement>
 
         if (movementDirection.x < 0)
         {
+            AudioManager.Instance.walk_Sound_SFX();
             FlipLeft();
         }
         else if (movementDirection.x > 0)
         {
+            AudioManager.Instance.walk_Sound_SFX();
             FlipRight();
         }
         else if (movementDirection.y < 0)
         {
+            AudioManager.Instance.walk_Sound_SFX();
             FlipDown();
         }
         else if (movementDirection.y > 0)
         {
+            AudioManager.Instance.walk_Sound_SFX();
             FlipUp();
+        }
+        else if (movementDirection.x == 0 && movementDirection.y == 0)
+        {
+            AudioManager.Instance.stop_walk_Sound_SFX();
         }
     }
 

@@ -35,6 +35,7 @@ public class ArrowSpear_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("ArrowSpear Skill");
+        AudioManager.Instance.arrowSpear_Sound_SFX();
         CreateDagger();
     }
     void CreateDagger()

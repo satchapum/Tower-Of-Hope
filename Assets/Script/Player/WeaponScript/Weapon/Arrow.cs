@@ -18,6 +18,7 @@ public class Arrow : WeaponManager
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
+        AudioManager.Instance.arrow_Sound_SFX();
         StartCoroutine("effectDestroy");
     }
     private void OnTriggerEnter2D(Collider2D collision)

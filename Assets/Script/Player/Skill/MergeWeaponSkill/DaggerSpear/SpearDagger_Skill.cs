@@ -40,7 +40,7 @@ public class SpearDagger_Skill : SkillManager
     public override void CreateSkill()
     {
         Debug.Log("SpearDagger Skill ");
-
+        AudioManager.Instance.spearDagger_Sound_SFX();
         StartCoroutine(CreateDagger());
         
     }
@@ -64,6 +64,5 @@ public class SpearDagger_Skill : SkillManager
         yield return new WaitForSeconds(delayImmute);
         player.GetComponent<Collider2D>().enabled = true;
         player.GetComponent<Player_Movement>().moveSpeed = speedTemp;
-
     }
 }

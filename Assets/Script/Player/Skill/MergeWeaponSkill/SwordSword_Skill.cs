@@ -46,6 +46,7 @@ public class SwordSword_Skill : SkillManager
         swordForRotate.GetComponent<RotateSword>().enabled = false;
         yield return new WaitForSeconds(whenSpawnDelay);
         swordForRotate.GetComponent<RotateSword>().enabled = true;
+        AudioManager.Instance.swordSword_Sound_SFX();
         yield return new WaitForSeconds(skillEffectTime);
         Destroy(swordForRotate);
     }

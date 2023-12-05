@@ -17,6 +17,7 @@ public class Spear : WeaponManager
     void Start()
     {
         rb.velocity = transform.right * effectSpeed;
+        AudioManager.Instance.spear_Sound_SFX();
         StartCoroutine("effectDestroy");
     }
     private void OnTriggerEnter2D(Collider2D collision)

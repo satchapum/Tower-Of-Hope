@@ -53,7 +53,8 @@ public class DaggerDagger_Skill : SkillManager
 
     void CreateDagger()
     {
-        GameObject create_Arrow = Instantiate(dagger, AttackPosition.position, AttackPosition.transform.rotation);
-        create_Arrow.SetActive(true);
+        AudioManager.Instance.daggerDagger_Sound_SFX();
+        GameObject create_Dagger = Instantiate(dagger, AttackPosition.position, AttackPosition.transform.rotation);
+        create_Dagger.SetActive(true);
     }
 }
