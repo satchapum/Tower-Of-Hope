@@ -45,7 +45,7 @@ public class MonsterBehavior : MonoBehaviour
         isTargetPlayer = false;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         WhenMonsterSetting();
 

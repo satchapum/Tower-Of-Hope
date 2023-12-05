@@ -29,7 +29,7 @@ public class Dagger_Skill : SkillManager
     }
     public override void CreateSkill()
     {
-        AudioManager.Instance.dagger_Sound_SFX();
+        AudioManager.Instance.dagger_Skill_Sound_SFX();
         StartCoroutine(Player_Movement.Instance.DoDash());
         Debug.Log("Dagger skill");
     }

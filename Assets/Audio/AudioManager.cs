@@ -16,6 +16,13 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] AudioClip arrow_Sound;
     [SerializeField] AudioClip wrench_Sound;
 
+    [Header("SoundEffect_Unique")]
+    [SerializeField] AudioClip sword_Skill_Sound;
+    [SerializeField] AudioClip spear_Skill_Sound;
+    [SerializeField] AudioClip magicWand_Skill_Sound;
+    [SerializeField] AudioClip dagger_Skill_Sound;
+    [SerializeField] AudioClip arrow_Skill_Sound;
+
     [Header("SoundEffect_Skill")]
     [SerializeField] AudioClip swordSword_Sound;
     [SerializeField] AudioClip swordArrow_Sound;
@@ -85,6 +92,26 @@ public class AudioManager : Singleton<AudioManager>
     public void wrench_Sound_SFX()
     {
         SFX_AudioSource.PlayOneShot(wrench_Sound);
+    }
+    public void sword_Skill_Sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(sword_Skill_Sound);
+    }
+    public void spear_Skill_Sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(spear_Skill_Sound);
+    }
+    public void magicWand_Skill_Sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(magicWand_Skill_Sound);
+    }
+    public void dagger_Skill_Sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(dagger_Skill_Sound);
+    }
+    public void arrow_Skill_Sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(arrow_Skill_Sound);
     }
     public void swordSword_Sound_SFX()
     {

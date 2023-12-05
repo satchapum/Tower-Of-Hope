@@ -32,7 +32,7 @@ public class Spear_Skill : SkillManager
     public override void CreateSkill()
     {
         GameObject createSpear = Instantiate(spear, AttackPosition.position, AttackPosition.transform.rotation);
-        AudioManager.Instance.spear_Sound_SFX();
+        AudioManager.Instance.spear_Skill_Sound_SFX();
         createSpear.transform.parent = playerAttackParent.transform;
         createSpear.SetActive(true);
         Debug.Log("Spear skill");

@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1202505501392127284, guid: dfad2b3c1c10e8d47a1d22cac0f1e22a, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cacf896ecf44ac74f88522a15a93f3fa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -177,26 +177,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SFX_AudioSource: {fileID: 322729099342383152}
   SFX_Walk: {fileID: 3619597916271046266}
-  sword_Sound: {fileID: 0}
+  sword_Sound: {fileID: 8300000, guid: 99f2816baabd0464f80cff5d9016d778, type: 3}
   spear_Sound: {fileID: 0}
-  magicWand_Sound: {fileID: 0}
-  dagger_Sound: {fileID: 0}
-  arrow_Sound: {fileID: 0}
-  wrench_Sound: {fileID: 8300000, guid: 5fec8f5752caf724bb64b823e0530a5a, type: 3}
+  magicWand_Sound: {fileID: 8300000, guid: abd63db75a8ea674ead8bf74a31af5a4, type: 3}
+  dagger_Sound: {fileID: 8300000, guid: 998368c9878cbe04899d422d9c762215, type: 3}
+  arrow_Sound: {fileID: 8300000, guid: f47b5b86481510d4596292267f251e95, type: 3}
+  wrench_Sound: {fileID: 8300000, guid: f62198e4099476441b13c4fa69194622, type: 3}
+  sword_Skill_Sound: {fileID: 8300000, guid: ac9120cd84a1a254896c42a5aeac74f7, type: 3}
+  spear_Skill_Sound: {fileID: 0}
+  magicWand_Skill_Sound: {fileID: 8300000, guid: f6e63b1e42a4471438d00344f62fca48, type: 3}
+  dagger_Skill_Sound: {fileID: 8300000, guid: baa2456006f1bc640bfe59957e6a398c, type: 3}
+  arrow_Skill_Sound: {fileID: 8300000, guid: f47b5b86481510d4596292267f251e95, type: 3}
   swordSword_Sound: {fileID: 0}
   swordArrow_Sound: {fileID: 0}
   swordMagicWand_Sound: {fileID: 8042593328631489346}
-  swordSpear_Sound: {fileID: 0}
+  swordSpear_Sound: {fileID: 8300000, guid: 1975b51baf44a3d44892232e994e641f, type: 3}
   sworddagger_Sound: {fileID: 0}
-  arrowArrow_Sound: {fileID: 0}
+  arrowArrow_Sound: {fileID: 8300000, guid: 933ed53e8ac0d3b4cb6b5ee21b4f9071, type: 3}
   arrowMagicWand_Sound: {fileID: 0}
-  arrowSpear_Sound: {fileID: 0}
+  arrowSpear_Sound: {fileID: 8300000, guid: 9ab3eb305fc0c82488c35d24e0cbb02d, type: 3}
   arrowDagger_Sound: {fileID: 0}
-  magicWandMagicwand_Sound: {fileID: 0}
-  magicWandSpear_Sound: {fileID: 0}
+  magicWandMagicwand_Sound: {fileID: 8300000, guid: 9ab3eb305fc0c82488c35d24e0cbb02d, type: 3}
+  magicWandSpear_Sound: {fileID: 8300000, guid: 83b0295e65847ed4f905778c43b7dc32, type: 3}
   magicWandDagger_Sound: {fileID: 0}
   spearSpear_Sound: {fileID: 0}
-  spearDagger_Sound: {fileID: 0}
+  spearDagger_Sound: {fileID: 8300000, guid: 4883b0c1242686d4098fc2578881ac24, type: 3}
   daggerDagger_Sound: {fileID: 0}
   mixer: {fileID: 24100000, guid: dfad2b3c1c10e8d47a1d22cac0f1e22a, type: 2}
 --- !u!82 &322729099342383152
@@ -337,7 +342,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1202505501392127284, guid: dfad2b3c1c10e8d47a1d22cac0f1e22a, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 58da7909747220e4db19efd35b51f6c4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c24957237decb2149bcf2d7c17feab9b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

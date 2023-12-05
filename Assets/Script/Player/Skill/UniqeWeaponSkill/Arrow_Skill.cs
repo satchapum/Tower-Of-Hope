@@ -45,7 +45,7 @@ public class Arrow_Skill : SkillManager
     void CreateArrow(Transform ArrowPositon)
     {
         GameObject create_Arrow = Instantiate(Arrow, ArrowPositon.position, ArrowPositon.transform.rotation);
-        AudioManager.Instance.arrow_Sound_SFX();
+        AudioManager.Instance.arrow_Skill_Sound_SFX();
         create_Arrow.SetActive(true);
     }
 }
