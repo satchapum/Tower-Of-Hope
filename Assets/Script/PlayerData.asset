@@ -15,7 +15,7 @@ MonoBehaviour:
   currentFloor: 1
   currentplayerLevel: 1
   currentLevelExperience: 0
-  playerBaseAttackDamage: 2
+  playerBaseAttackDamage: 5
   maxPlayerLevelExperiencePerLevel: 100
   currentWeapon_Lefthand: 
   currentWeapon_Righthand: 

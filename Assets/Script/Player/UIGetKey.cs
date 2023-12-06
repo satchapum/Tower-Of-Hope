@@ -5,15 +5,15 @@ using TMPro;
 
 public class UIGetKey : Singleton<UIGetKey>
 {
-    [SerializeField] TMP_Text getKeyText;
+    [SerializeField] GameObject getKeyText;
     public void GetKeyText()
     {
         StartCoroutine(textGetKeyShow());
     }
     IEnumerator textGetKeyShow()
     {
-        getKeyText.text = "Get Key Alr!!!";
+        getKeyText.SetActive(true);
         yield return new WaitForSeconds(2);
-        getKeyText.text = "";
+        getKeyText.SetActive(false);
     }
 }

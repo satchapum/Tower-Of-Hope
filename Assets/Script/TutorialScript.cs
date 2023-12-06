@@ -7,6 +7,7 @@ public class TutorialScript : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] TMP_Text tutorialText;
+    [SerializeField] GameObject textBox;
 
     [Header("Status")]
     [SerializeField] int numberOfAdvice = 0;
@@ -17,7 +18,7 @@ public class TutorialScript : MonoBehaviour
         GameManager.Instance.IsTutorial = true;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (GameManager.Instance.currentWeapon_Lefthand == "Wrench" && numberOfAdvice == 1)
         {
@@ -38,16 +39,19 @@ public class TutorialScript : MonoBehaviour
         if (numberOfAdvice == 1 && IsAdvice == false)
         {
             IsAdvice = true;
+            textBox.SetActive(true);
             StartCoroutine(PickSystemAdvice());
         }
         else if (numberOfAdvice == 2 && IsAdvice == false)
         {
             IsAdvice = true;
+            textBox.SetActive(true);
             StartCoroutine(WeaponSystemAdvice());
         }
         else if (numberOfAdvice == 3 && IsAdvice == false)
         {
             IsAdvice = true;
+            textBox.SetActive(true);
             StartCoroutine(FightingAdvice());
         }
         else if (numberOfAdvice == 4 && IsAdvice == false)
@@ -55,6 +59,7 @@ public class TutorialScript : MonoBehaviour
             if (GameManager.Instance.currentMonsterCount <= 0)
             {
                 IsAdvice = true;
+                textBox.SetActive(true);
                 StartCoroutine(MonsterDropSystemAdvice());
             }
         }
@@ -63,6 +68,7 @@ public class TutorialScript : MonoBehaviour
             if (GameManager.Instance.currentMonsterCount <= 0)
             {
                 IsAdvice = true;
+                textBox.SetActive(true);
                 StartCoroutine(ChangeFloorAdvice());
             }
         }
@@ -78,12 +84,14 @@ public class TutorialScript : MonoBehaviour
         yield return new WaitForSeconds(4);
         numberOfAdvice++;
         IsAdvice = false;
+        textBox.SetActive(false);
     }
     IEnumerator PickSystemAdvice()
     {
         tutorialText.text = "You can go to the Wrench and pick it by pressing 'F' key.";
         yield return new WaitForSeconds(4);
         tutorialText.text = "";
+        textBox.SetActive(false);
     }
     IEnumerator WeaponSystemAdvice()
     {
@@ -100,6 +108,7 @@ public class TutorialScript : MonoBehaviour
         tutorialText.text = "You can go to the chest and open it by pressing 'F' button.";
         yield return new WaitForSeconds(4);
         tutorialText.text = "";
+        textBox.SetActive(false);
 
     }
     IEnumerator FightingAdvice()
@@ -109,6 +118,7 @@ public class TutorialScript : MonoBehaviour
         tutorialText.text = "But don't be sad, you can use this opportunity to practice.";
         yield return new WaitForSeconds(4);
         tutorialText.text = "";
+        textBox.SetActive(false);
     } 
 
     IEnumerator MonsterDropSystemAdvice()
@@ -128,6 +138,7 @@ public class TutorialScript : MonoBehaviour
         tutorialText.text = "";
         numberOfAdvice++;
         IsAdvice = false;
+        textBox.SetActive(false);
     }
     IEnumerator ChangeFloorAdvice()
     {
@@ -148,6 +159,7 @@ public class TutorialScript : MonoBehaviour
         tutorialText.text = "Good Luck!!!!";
         yield return new WaitForSeconds(3);
         tutorialText.text = "";
+        textBox.SetActive(false);
         GameManager.Instance.IsTutorial = false;
     }
 }

@@ -6,7 +6,6 @@ public class Player_Movement : Singleton<Player_Movement>
 {
     [Header("Player Setting")]
     [SerializeField] public float moveSpeed;
-    [SerializeField] float playerRotationSpeed;
 
     [Header("Setup")] 
     [SerializeField] Vector2 movementDirection;
