@@ -11,9 +11,6 @@ public class ChestAction : KeyCode_F_Action
     [SerializeField] KeyCode_F_Action thisChestAction;
     [SerializeField] ChestManager chestManager;
 
-    [Header("For test")]
-    [SerializeField] GameObject getkeyText;
-
     [Header("item list")]
     [SerializeField] itemSO key;
     [SerializeField] itemSO monster;
