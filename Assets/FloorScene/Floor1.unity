@@ -1664,7 +1664,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 488402336}
   spriteRenderer: {fileID: 143264390}
-  monsterSpeed: 30
+  monsterSpeed: 6
   numberOfExperience: 8
 --- !u!114 &143264393
 MonoBehaviour:
@@ -4404,7 +4404,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 488402336}
   spriteRenderer: {fileID: 338876621}
-  monsterSpeed: 18
+  monsterSpeed: 4
   numberOfExperience: 12
 --- !u!114 &338876624
 MonoBehaviour:
@@ -7041,7 +7041,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 488402336}
   spriteRenderer: {fileID: 527043122}
-  monsterSpeed: 20
+  monsterSpeed: 3
   numberOfExperience: 8
 --- !u!114 &527043125
 MonoBehaviour:

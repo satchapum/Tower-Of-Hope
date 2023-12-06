@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
         playerData.currentFloor = 1;
         playerData.currentplayerLevel = 1;
         playerData.currentLevelExperience = 0;
-        playerData.playerBaseAttackDamage = 5;
+        playerData.playerBaseAttackDamage = 2;
         playerData.playerBaseHealth = 100;
         playerData.playerBaseMana = 100;
         playerData.maxPlayerLevelExperiencePerLevel = 100;

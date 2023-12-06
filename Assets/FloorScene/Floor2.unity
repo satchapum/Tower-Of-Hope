@@ -3754,7 +3754,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 577878190}
   spriteRenderer: {fileID: 240557567}
-  monsterSpeed: 20
+  monsterSpeed: 3
   numberOfExperience: 8
 --- !u!114 &240557570
 MonoBehaviour:
@@ -3798,7 +3798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterGameobject: {fileID: 240557562}
   monsterAttack: {fileID: 240557570}
-  minAmount: 2
+  minAmount: 4
   maxAmount: 6
   speedWhenAttack: 0
   delayTime: 3
@@ -4025,7 +4025,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 577878190}
   spriteRenderer: {fileID: 260286157}
-  monsterSpeed: 18
+  monsterSpeed: 4
   numberOfExperience: 12
 --- !u!114 &260286160
 MonoBehaviour:
@@ -4069,7 +4069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterGameobject: {fileID: 260286152}
   monsterAttack: {fileID: 260286160}
-  minAmount: 2
+  minAmount: 3
   maxAmount: 6
   speedWhenAttack: 0
   delayTime: 2
@@ -5460,7 +5460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterGameobject: {fileID: 401117979}
   monsterAttack: {fileID: 401117981}
-  minAmount: 4
+  minAmount: 6
   maxAmount: 10
   speedWhenAttack: 0
   delayTime: 1
@@ -5661,7 +5661,7 @@ MonoBehaviour:
   isTargetPlayer: 0
   playerSetting: {fileID: 577878190}
   spriteRenderer: {fileID: 401117985}
-  monsterSpeed: 30
+  monsterSpeed: 6
   numberOfExperience: 8
 --- !u!114 &401117988
 MonoBehaviour:
@@ -15782,7 +15782,7 @@ MonoBehaviour:
   IsTutorial: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
-  playerBaseAttackDamage: 2
+  playerBaseAttackDamage: 0
   playerBaseHealth: 50
   playerBaseMana: 120
   maxPlayerLevelExperiencePerLevel: 100
