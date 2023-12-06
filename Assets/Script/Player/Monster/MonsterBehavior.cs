@@ -13,8 +13,10 @@ public class MonsterBehavior : MonoBehaviour
     [SerializeField] int numberOfExperience = 10;
 
     Rigidbody2D thisMonsterRb;
+    Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
         thisMonsterRb = Monster.GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         WhenMonsterSetting();
@@ -50,10 +52,18 @@ public class MonsterBehavior : MonoBehaviour
         WhenMonsterSetting();
 
         if (isTargetPlayer)
+        {
             MonsterFollowObject(Player);
+            anim.SetBool("Walk", true);
+        }
+            
 
         else if (!isTargetPlayer)
+        {
+            anim.SetBool("Walk", false);
             return;
+        }
+            
       
     }
 
