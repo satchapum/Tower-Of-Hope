@@ -6,7 +6,7 @@ public class PlayerSO : ScriptableObject
     [SerializeField] public int currentFloor = 1;
     [SerializeField] public int currentplayerLevel = 1;
     [SerializeField] public int currentLevelExperience;
-    [SerializeField] public int playerBaseAttackDamage = 5;
+    [SerializeField] public int playerBaseAttackDamage = 2;
     [SerializeField] public int maxPlayerLevelExperiencePerLevel = 100;
     [SerializeField] public string currentWeapon_Lefthand;
     [SerializeField] public string currentWeapon_Righthand;

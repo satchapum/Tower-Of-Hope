@@ -800,7 +800,6 @@ MonoBehaviour:
   thisChest: {fileID: 151609425}
   thisChestAction: {fileID: 151609424}
   chestManager: {fileID: 1645423696}
-  getkeyText: {fileID: 0}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -8367,7 +8366,6 @@ MonoBehaviour:
   thisChest: {fileID: 1367062615}
   thisChestAction: {fileID: 1367062614}
   chestManager: {fileID: 1645423696}
-  getkeyText: {fileID: 0}
   key: {fileID: 11400000, guid: 50fe4dde0eee05a4a9b2b455636b2c90, type: 2}
   monster: {fileID: 11400000, guid: 56795f607714b364c8cd3a24ad2add58, type: 2}
   weapon: {fileID: 11400000, guid: 200759b5c2624984b9e4b415a4a9821b, type: 2}
@@ -17343,6 +17341,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 964363112780481717, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964363112780481717, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -17418,6 +17420,10 @@ PrefabInstance:
       propertyPath: skillMagicWandMagicWand
       value: 
       objectReference: {fileID: 1802769230}
+    - target: {fileID: 1775973853083549872, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1775973853083549872, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
