@@ -41,7 +41,7 @@ public class DoorAction : KeyCode_F_Action
     IEnumerator LoadSceneDelay()
     {
         loadSceneCanvas.SetActive(true);
-        loadText.text = "Load New Scene";
+        loadText.text = "FLOOR : " + (GameManager.Instance.currentFloor - 1);
         checkOtherCollider.gameObjectType.Remove(thisDoor);
         checkOtherCollider.keyCode_F_Actions.Remove(thisDoorAction);
         yield return new WaitForSeconds(delayLoadTime);
@@ -51,7 +51,7 @@ public class DoorAction : KeyCode_F_Action
     IEnumerator DeleteDelay()
     {
         loadSceneCanvas.SetActive(true);
-        loadText.text = "No key!!";
+        loadText.text = "No keyas";
         yield return new WaitForSeconds(delayCloseTime);
         loadSceneCanvas.SetActive(false);
     }

@@ -10,7 +10,18 @@ public class WeaponUI : Singleton<WeaponUI>
 
     private void Start()
     {
-        
+        if (leftHandUI.color.a == 0 && GameManager.Instance.weaponIcon_Left != null)
+        {
+            var tempColor = leftHandUI.color;
+            tempColor.a = 1f;
+            leftHandUI.color = tempColor;
+        }
+        if (rightHandUI.color.a == 0 && GameManager.Instance.weaponIcon_Right != null)
+        {
+            var tempColor = rightHandUI.color;
+            tempColor.a = 1f;
+            rightHandUI.color = tempColor;
+        }
         leftHandUI.sprite = GameManager.Instance.weaponIcon_Left;
         rightHandUI.sprite = GameManager.Instance.weaponIcon_Right;
     }
