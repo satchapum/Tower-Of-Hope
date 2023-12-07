@@ -5548,6 +5548,7 @@ MonoBehaviour:
   thisDoorAction: {fileID: 811097431}
   loadSceneCanvas: {fileID: 2011250709}
   loadText: {fileID: 1390078446}
+  nokeyText: {fileID: 1043022002}
   delayCloseTime: 1
   delayLoadTime: 3
 --- !u!114 &811097432
@@ -7064,6 +7065,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1043022002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7065166094581816678, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+  m_PrefabInstance: {fileID: 1343117772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1048694807
 GameObject:
   m_ObjectHideFlags: 0
@@ -8147,6 +8153,10 @@ PrefabInstance:
     - target: {fileID: 530403968710416813, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599820018445740305, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.108032
       objectReference: {fileID: 0}
     - target: {fileID: 964363112780481717, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.x

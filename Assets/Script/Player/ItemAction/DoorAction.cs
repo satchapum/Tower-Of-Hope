@@ -12,6 +12,7 @@ public class DoorAction : KeyCode_F_Action
     [SerializeField] KeyCode_F_Action thisDoorAction;
     [SerializeField] GameObject loadSceneCanvas;
     [SerializeField] TMP_Text loadText;
+    [SerializeField] GameObject nokeyText;
 
     [SerializeField] float delayCloseTime = 1;
     [SerializeField] float delayLoadTime = 1;
@@ -50,9 +51,8 @@ public class DoorAction : KeyCode_F_Action
     }
     IEnumerator DeleteDelay()
     {
-        loadSceneCanvas.SetActive(true);
-        loadText.text = "No keyas";
+        nokeyText.SetActive(true);
         yield return new WaitForSeconds(delayCloseTime);
-        loadSceneCanvas.SetActive(false);
+        nokeyText.SetActive(false);
     }
 }
