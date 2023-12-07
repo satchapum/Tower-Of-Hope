@@ -12,6 +12,10 @@ public class MainMenuScript : MonoBehaviour
         int numberOfFirstScene = 1;
         SceneManager.LoadScene(numberOfFirstScene);
     }
+    public void WhenButtonQuitClick()
+    {
+        Application.Quit();
+    }
     public void WhenOptionButtonClick()
     {
         mainmenuCanvas.SetActive(false);
