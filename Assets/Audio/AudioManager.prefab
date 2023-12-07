@@ -203,6 +203,15 @@ MonoBehaviour:
   spearSpear_Sound: {fileID: 0}
   spearDagger_Sound: {fileID: 8300000, guid: 4883b0c1242686d4098fc2578881ac24, type: 3}
   daggerDagger_Sound: {fileID: 0}
+  playerTakeDamage_Sound: {fileID: 0}
+  mimicTakeDamage_Sound: {fileID: 0}
+  batTakeDamage_Sound: {fileID: 0}
+  golemTakeDamage_Sound: {fileID: 0}
+  bossTakeDamage_Sound: {fileID: 0}
+  mimic_Name: Mimic
+  golem_Name: Golem
+  bat_Name: Bat
+  boss_Name: Boss
   mixer: {fileID: 24100000, guid: dfad2b3c1c10e8d47a1d22cac0f1e22a, type: 2}
 --- !u!82 &322729099342383152
 AudioSource:

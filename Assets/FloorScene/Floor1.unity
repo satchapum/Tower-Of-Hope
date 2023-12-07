@@ -1695,6 +1695,7 @@ MonoBehaviour:
   monsterBehavior: {fileID: 143264392}
   damageText: {fileID: 326854154}
   amountOfHealtWhenChangeFloor: 10
+  monsterName: Bat
 --- !u!114 &143264392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3845,6 +3846,7 @@ MonoBehaviour:
   monsterBehavior: {fileID: 338876623}
   damageText: {fileID: 1738296931}
   amountOfHealtWhenChangeFloor: 20
+  monsterName: Golem
 --- !u!114 &338876623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5077,7 +5079,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -5089,8 +5091,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 0.20754719, g: 0, b: 0, a: 0.6392157}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5114,7 +5116,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -5344,6 +5346,7 @@ MonoBehaviour:
   monsterBehavior: {fileID: 527043124}
   damageText: {fileID: 1278484185}
   amountOfHealtWhenChangeFloor: 10
+  monsterName: Mimic
 --- !u!114 &527043124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5470,6 +5473,7 @@ MonoBehaviour:
   thisDoorAction: {fileID: 536854295}
   loadSceneCanvas: {fileID: 1060001098}
   loadText: {fileID: 810435872}
+  nokeyText: {fileID: 0}
   delayCloseTime: 1
   delayLoadTime: 3
 --- !u!114 &536854296
@@ -11328,6 +11332,63 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &1241489315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 257.1553
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 164.5043
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.057077527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044544930685157538, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_Name
+      value: BG_sound_in_Floor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
 --- !u!114 &1247051255 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 769725517898587350, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
@@ -33324,3 +33385,4 @@ SceneRoots:
   - {fileID: 747802955}
   - {fileID: 1906788589}
   - {fileID: 130215703}
+  - {fileID: 1241489315}

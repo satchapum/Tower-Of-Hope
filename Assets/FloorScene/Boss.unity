@@ -6435,7 +6435,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -6447,8 +6447,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0, a: 1}
+      key1: {r: 0.20754719, g: 0, b: 0, a: 0.6392157}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -6472,7 +6472,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -13295,6 +13295,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1241489315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 257.1553
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 164.5043
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.057077527
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339016462585217070, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044544930685157538, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
+      propertyPath: m_Name
+      value: BG_sound_in_Floor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eec5191c375114b4495b3f95ee8644dc, type: 3}
 --- !u!1 &1244749677
 GameObject:
   m_ObjectHideFlags: 0
@@ -14478,6 +14535,7 @@ MonoBehaviour:
   thisDoorAction: {fileID: 1520501947}
   loadSceneCanvas: {fileID: 1771537162}
   loadText: {fileID: 1771537161}
+  nokeyText: {fileID: 0}
   delayCloseTime: 1
   delayLoadTime: 3
 --- !u!114 &1520501948
@@ -15659,6 +15717,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 964363112780481717, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 964363112780481717, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -15746,6 +15808,10 @@ PrefabInstance:
       propertyPath: skillMagicWandMagicWand
       value: 
       objectReference: {fileID: 666570966}
+    - target: {fileID: 1775973853083549872, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1775973853083549872, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -19051,3 +19117,4 @@ SceneRoots:
   - {fileID: 30685633}
   - {fileID: 1906788589}
   - {fileID: 1771537157}
+  - {fileID: 1241489315}

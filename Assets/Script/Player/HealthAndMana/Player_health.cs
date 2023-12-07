@@ -25,6 +25,7 @@ public class Player_health : Singleton<Player_health>
 
     public void TakeDamage(int damage)
     {
+        AudioManager.Instance.Player_TakeDamage_Sound_SFX();
         if (GameManager.Instance.currentHealth <= 0)
             return;
 

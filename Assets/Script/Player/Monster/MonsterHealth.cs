@@ -14,6 +14,7 @@ public class MonsterHealth : MonoBehaviour
     [SerializeField] MonsterBehavior monsterBehavior;
     [SerializeField] TMP_Text damageText;
     [SerializeField] int amountOfHealtWhenChangeFloor = 2;
+    [SerializeField] string monsterName;
 
     private void Update()
     {
@@ -42,6 +43,7 @@ public class MonsterHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        AudioManager.Instance.Monster_TakeDamage_Sound_SFX(monsterName);
         if (currentHealth <= 0)
             return;
         

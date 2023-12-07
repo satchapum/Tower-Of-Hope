@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : Singleton<AudioManager>
 {
@@ -40,6 +41,18 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] AudioClip spearDagger_Sound;
     [SerializeField] AudioClip daggerDagger_Sound;
 
+    [Header("Take DamageSound")]
+    [SerializeField] AudioClip playerTakeDamage_Sound;
+    [SerializeField] AudioClip mimicTakeDamage_Sound;
+    [SerializeField] AudioClip batTakeDamage_Sound;
+    [SerializeField] AudioClip golemTakeDamage_Sound;
+    [SerializeField] AudioClip bossTakeDamage_Sound;
+
+    [Header("Monster Name")]
+    [SerializeField] string mimic_Name;
+    [SerializeField] string golem_Name;
+    [SerializeField] string bat_Name;
+    [SerializeField] string boss_Name;
 
     [Header("Setting")]
     [SerializeField] AudioMixer mixer;
@@ -51,6 +64,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         LoadVolume();
     }
+
     void LoadVolume()
     {
         float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
@@ -61,14 +75,39 @@ public class AudioManager : Singleton<AudioManager>
         mixer.SetFloat(VolumeSetting.MIXER_SFX, Mathf.Log10(sfxVolume) * 20);
         mixer.SetFloat(VolumeSetting.MIXER_MASTER, Mathf.Log10(masterVolume) * 20);
     }
+
     public void walk_Sound_SFX()
     {
         SFX_Walk.enabled = true;
     }
     public void stop_walk_Sound_SFX()
     {
-            SFX_Walk.enabled = false;
+        SFX_Walk.enabled = false;
     }
+    public void Player_TakeDamage_Sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(playerTakeDamage_Sound);
+    }
+    public void Monster_TakeDamage_Sound_SFX(string monsterName)
+    {
+        if (monsterName == mimic_Name)
+        {
+            SFX_AudioSource.PlayOneShot(mimicTakeDamage_Sound);
+        }
+        else if (monsterName == golem_Name)
+        {
+            SFX_AudioSource.PlayOneShot(golemTakeDamage_Sound);
+        }
+        else if (monsterName == bat_Name)
+        {
+            SFX_AudioSource.PlayOneShot(batTakeDamage_Sound);
+        }
+        else if (monsterName == boss_Name)
+        {
+            SFX_AudioSource.PlayOneShot(bossTakeDamage_Sound);
+        }
+    }
+
     public void sword_Sound_SFX()
     {
         SFX_AudioSource.PlayOneShot(sword_Sound);
