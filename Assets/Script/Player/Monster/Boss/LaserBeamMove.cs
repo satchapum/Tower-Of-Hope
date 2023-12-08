@@ -19,6 +19,10 @@ public class LaserBeamMove : MonoBehaviour
 
     void Update()
     {
+        if (boss_Script == null)
+        {
+            Destroy(this.gameObject);
+        }
         transform.RotateAround(targetBoss.transform.position, Vector3.forward, rotateSpeed * Time.deltaTime);
     }
 

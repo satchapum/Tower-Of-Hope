@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] public float monsterDelaySpawn = 2;
     [SerializeField] public bool isMonsterSpawn = false;
     [SerializeField] public bool IsTutorial = false;
+    [SerializeField] public bool IsFinalBossDie = false;
 
     [Header("Player Setting")]
     [SerializeField] public int currentplayerLevel;

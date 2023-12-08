@@ -28,6 +28,11 @@ public class MonsterHealth : MonoBehaviour
     {
         monsterBehavior.WhenMonsterDestroy();
         GameManager.Instance.currentMonsterCount = GameManager.Instance.currentMonsterCount - 1;
+        if (monsterName == "Boss")
+        {
+            GameManager.Instance.IsFinalBossDie = true;
+            Destroy(thisMonsterObject);
+        }
         if (GameManager.Instance.currentMonsterCount == 0)
         {
             ItemDrop.Instance.dropItem(gameObject.transform);

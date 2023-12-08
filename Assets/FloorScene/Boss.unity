@@ -6187,6 +6187,7 @@ MonoBehaviour:
   monsterDelaySpawn: 2
   isMonsterSpawn: 0
   IsTutorial: 0
+  IsFinalBossDie: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
   playerBaseAttackDamage: 2
@@ -14806,7 +14807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2000
+  maxHealth: 10
   currentHealth: 0
   player: {fileID: 255868445}
   thisMonsterObject: {fileID: 1257845136}
@@ -16125,11 +16126,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1520501952}
+  - component: {fileID: 1520501953}
+  - component: {fileID: 1520501948}
   - component: {fileID: 1520501951}
   - component: {fileID: 1520501950}
   - component: {fileID: 1520501949}
-  - component: {fileID: 1520501948}
-  - component: {fileID: 1520501947}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -16137,27 +16138,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1520501947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520501946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc48c19b50aa152499caaef62110ee5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorPrefab: {fileID: 1520501946}
-  checkOtherCollider: {fileID: 352436241}
-  thisDoor: {fileID: 1520501948}
-  thisDoorAction: {fileID: 1520501947}
-  loadSceneCanvas: {fileID: 1771537162}
-  loadText: {fileID: 1771537161}
-  nokeyText: {fileID: 0}
-  delayCloseTime: 1
-  delayLoadTime: 3
 --- !u!114 &1520501948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16311,6 +16291,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1520501953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520501946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768aa0185b7d0e241832132ccaa8f88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToShowKeyPic: 3
+  endCreditSceneUI: {fileID: 1527286392}
+  player: {fileID: 255868445}
+  loadSceneCanvas: {fileID: 1771537162}
+  thisDoor: {fileID: 1520501948}
+  checkOtherCollider: {fileID: 352436241}
+  thisDoorAction: {fileID: 1520501953}
+  keyPicture: {fileID: 1992057175}
+  doorPrefab: {fileID: 1520501946}
+  IsShowKey: 0
 --- !u!1 &1525532158
 GameObject:
   m_ObjectHideFlags: 0
@@ -16367,6 +16369,11 @@ MonoBehaviour:
   daggerForCreate: {fileID: 1808363868}
   stunTime: 3
   timeToDestroy: 3
+--- !u!1 &1527286392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2284778192109621614, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+  m_PrefabInstance: {fileID: 1771537157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531727364
 GameObject:
   m_ObjectHideFlags: 0
@@ -17526,6 +17533,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1412494024814733510, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412494024814733510, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412494024814733510, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412494024814733510, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1706290510678078645, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: skillList
       value: 
@@ -17742,6 +17765,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4410816963781990878, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79.8999
+      objectReference: {fileID: 0}
     - target: {fileID: 4469796338013597081, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -17774,6 +17801,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5658602428366502287, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6182368023819282793, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -17865,6 +17896,14 @@ PrefabInstance:
     - target: {fileID: 7765700503162500551, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784615602404660704, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 298.24414
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784615602404660704, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -91.8999
       objectReference: {fileID: 0}
     - target: {fileID: 8325777636212898718, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -18044,17 +18083,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1771537161 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1533765110377233047, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
-  m_PrefabInstance: {fileID: 1771537157}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1771537162 stripped
@@ -19545,6 +19573,11 @@ MonoBehaviour:
   currentDisplaytime: 0
   targetScale: 2
   skill: {fileID: 2053421174}
+--- !u!1 &1992057175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3814264229521360474, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+  m_PrefabInstance: {fileID: 1771537157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007917691
 GameObject:
   m_ObjectHideFlags: 0

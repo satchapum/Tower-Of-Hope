@@ -34,6 +34,7 @@ public class Boss_Script : Monster
     {
         cameraBoss.SetActive(true);
         cameraBoss.SetActive(false);
+        GameManager.Instance.currentMonsterCount++;
     }
 
     public override void SpawnMonster(Vector2 chestPosition)
