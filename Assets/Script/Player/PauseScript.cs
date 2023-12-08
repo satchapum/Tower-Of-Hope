@@ -23,7 +23,7 @@ public class PauseScript : MonoBehaviour
         }
         else if (InputManager.Instance.KeyESC_Down && IsPause == false)
         {
-            
+            AudioManager.Instance.stop_walk_Sound_SFX();
             pauseUI.SetActive(true);
             IsPause = true;
             Time.timeScale = numberOftimeToStopGame;

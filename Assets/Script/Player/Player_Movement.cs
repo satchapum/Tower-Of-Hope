@@ -8,7 +8,7 @@ public class Player_Movement : Singleton<Player_Movement>
     [SerializeField] public float moveSpeed;
 
     [Header("Setup")] 
-    [SerializeField] Vector2 movementDirection;
+    [SerializeField] public Vector2 movementDirection;
     [SerializeField] GameObject player;
     [SerializeField] GameObject colliderCheck;
     [SerializeField] SpriteRenderer spriteRenderer;

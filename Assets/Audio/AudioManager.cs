@@ -54,6 +54,11 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] string bat_Name;
     [SerializeField] string boss_Name;
 
+    [Header("Boss Sound")]
+    [SerializeField] AudioClip bossSkill_1_sound;
+    [SerializeField] AudioSource bossSkill_2_sound;
+    [SerializeField] AudioClip bossSkill_3_sound;
+
     [Header("Setting")]
     [SerializeField] AudioMixer mixer;
 
@@ -75,7 +80,22 @@ public class AudioManager : Singleton<AudioManager>
         mixer.SetFloat(VolumeSetting.MIXER_SFX, Mathf.Log10(sfxVolume) * 20);
         mixer.SetFloat(VolumeSetting.MIXER_MASTER, Mathf.Log10(masterVolume) * 20);
     }
-
+    public void bossSkill_1_sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(bossSkill_1_sound);
+    }
+    public void bossSkill_2_sound_SFX()
+    {
+        bossSkill_2_sound.enabled = true;
+    }
+    public void Stop_bossSkill_2_sound_SFX()
+    {
+        bossSkill_2_sound.enabled = false;
+    }
+    public void bossSkill_3_sound_SFX()
+    {
+        SFX_AudioSource.PlayOneShot(bossSkill_3_sound);
+    }
     public void walk_Sound_SFX()
     {
         SFX_Walk.enabled = true;
