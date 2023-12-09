@@ -17549,6 +17549,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1412494024814733510, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1706290510678078645, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
       propertyPath: skillList
       value: 
