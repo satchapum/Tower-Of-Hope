@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1067.3469, y: 600}
+  m_AnchoredPosition: {x: 0, y: -0}
+  m_SizeDelta: {x: 1067.7966, y: 600}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &2515418221491111301
 CanvasRenderer:
@@ -1751,8 +1751,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3038782111757709335}
-  - component: {fileID: 971224848515105856}
   - component: {fileID: 4030627087595455945}
+  - component: {fileID: 4969545457335186053}
   - component: {fileID: 6273161889055218942}
   - component: {fileID: 4021955045759507918}
   - component: {fileID: 599423663286291679}
@@ -1783,7 +1783,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &971224848515105856
+--- !u!222 &4030627087595455945
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284778192109621614}
+  m_CullTransparentMesh: 1
+--- !u!114 &4969545457335186053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1795,15 +1803,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8b43ac6c79e834bbc5a00c72f14ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endCreditText: {fileID: 5990839662580402644}
---- !u!222 &4030627087595455945
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2284778192109621614}
-  m_CullTransparentMesh: 1
+  textInstance: {fileID: 5990839662580402644}
+  speedPxPerSec: 2
+  creditDurationSec: 0
+  startRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  endRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
 --- !u!114 &6273161889055218942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,7 +1855,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2284778192109621614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -1864,7 +1878,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
