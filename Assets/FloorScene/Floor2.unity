@@ -2584,7 +2584,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 240557562}
   monsterBehavior: {fileID: 240557569}
   damageText: {fileID: 1141510190}
-  amountOfHealtWhenChangeFloor: 10
+  amountOfHealthWhenChangeFloor: 2
   monsterName: Mimic
 --- !u!114 &240557569
 MonoBehaviour:
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 260286152}
   monsterBehavior: {fileID: 260286159}
   damageText: {fileID: 1864899870}
-  amountOfHealtWhenChangeFloor: 20
+  amountOfHealthWhenChangeFloor: 2
   monsterName: Golem
 --- !u!114 &260286159
 MonoBehaviour:
@@ -4022,7 +4022,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 401117979}
   monsterBehavior: {fileID: 401117987}
   damageText: {fileID: 988887378}
-  amountOfHealtWhenChangeFloor: 10
+  amountOfHealthWhenChangeFloor: 2
   monsterName: Bat
 --- !u!114 &401117987
 MonoBehaviour:
@@ -5564,7 +5564,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12220,6 +12220,7 @@ MonoBehaviour:
   monsterDelaySpawn: 2
   isMonsterSpawn: 0
   IsTutorial: 0
+  IsFinalBossDie: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
   playerBaseAttackDamage: 0
