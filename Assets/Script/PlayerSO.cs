@@ -12,9 +12,9 @@ public class PlayerSO : ScriptableObject
     [SerializeField] public string currentWeapon_Righthand;
     [SerializeField] public Sprite weaponIcon_Left;
     [SerializeField] public Sprite weaponIcon_Right;
-    [SerializeField] public int playerBaseHealth = 100;
+    [SerializeField] public int playerBaseHealth = 50;
     [SerializeField] public int playerBaseMana = 100;
-    [SerializeField] public int currentHealth = 100;
+    [SerializeField] public int currentHealth = 50;
     [SerializeField] public int currentMana = 100;
 
 }

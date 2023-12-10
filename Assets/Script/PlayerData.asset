@@ -21,7 +21,7 @@ MonoBehaviour:
   currentWeapon_Righthand: 
   weaponIcon_Left: {fileID: 0}
   weaponIcon_Right: {fileID: 0}
-  playerBaseHealth: 100
+  playerBaseHealth: 50
   playerBaseMana: 100
-  currentHealth: 100
+  currentHealth: 50
   currentMana: 100
