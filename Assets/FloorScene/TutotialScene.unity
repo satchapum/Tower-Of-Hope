@@ -566,6 +566,7 @@ MonoBehaviour:
   monsterDelaySpawn: 2
   isMonsterSpawn: 0
   IsTutorial: 0
+  IsFinalBossDie: 0
   currentplayerLevel: 1
   currentLevelExperience: 0
   playerBaseAttackDamage: 5
@@ -6457,7 +6458,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 893239496}
   monsterBehavior: {fileID: 893239503}
   damageText: {fileID: 658188518}
-  amountOfHealtWhenChangeFloor: 10
+  amountOfHealthWhenChangeFloor: 2
   monsterName: Mimic
 --- !u!114 &893239503
 MonoBehaviour:
@@ -8607,7 +8608,8 @@ PrefabInstance:
       propertyPath: skillMagicWandMagicWand
       value: 
       objectReference: {fileID: 1802769230}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7883898932208864553, guid: 5709097e1e11e46428f871b54482f1e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

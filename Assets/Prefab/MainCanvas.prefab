@@ -2001,7 +2001,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3875497177454745461}
   - component: {fileID: 7320118988045885010}
-  - component: {fileID: 7883898932208864553}
   m_Layer: 5
   m_Name: GetLastKey_BG
   m_TagString: Untagged
@@ -2037,19 +2036,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2472804467340698938}
   m_CullTransparentMesh: 1
---- !u!114 &7883898932208864553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2472804467340698938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0abc54ac4e804e34aa8ad05d68772139, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  getKeyText: {fileID: 3814264229521360474}
 --- !u!1 &2565552328433767584
 GameObject:
   m_ObjectHideFlags: 0
