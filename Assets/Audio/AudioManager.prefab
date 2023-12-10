@@ -179,43 +179,43 @@ MonoBehaviour:
   SFX_AudioSource: {fileID: 322729099342383152}
   SFX_Walk: {fileID: 3619597916271046266}
   sword_Sound: {fileID: 8300000, guid: 99f2816baabd0464f80cff5d9016d778, type: 3}
-  spear_Sound: {fileID: 0}
+  spear_Sound: {fileID: 8300000, guid: f8324f582e18ee04181ee25a7577a3ae, type: 3}
   magicWand_Sound: {fileID: 8300000, guid: abd63db75a8ea674ead8bf74a31af5a4, type: 3}
   dagger_Sound: {fileID: 8300000, guid: 998368c9878cbe04899d422d9c762215, type: 3}
   arrow_Sound: {fileID: 8300000, guid: f47b5b86481510d4596292267f251e95, type: 3}
   wrench_Sound: {fileID: 8300000, guid: f62198e4099476441b13c4fa69194622, type: 3}
   sword_Skill_Sound: {fileID: 8300000, guid: ac9120cd84a1a254896c42a5aeac74f7, type: 3}
-  spear_Skill_Sound: {fileID: 0}
+  spear_Skill_Sound: {fileID: 8300000, guid: 4c8c0cf07ecf8ec4eb18f65730259960, type: 3}
   magicWand_Skill_Sound: {fileID: 8300000, guid: f6e63b1e42a4471438d00344f62fca48, type: 3}
   dagger_Skill_Sound: {fileID: 8300000, guid: baa2456006f1bc640bfe59957e6a398c, type: 3}
   arrow_Skill_Sound: {fileID: 8300000, guid: f47b5b86481510d4596292267f251e95, type: 3}
-  swordSword_Sound: {fileID: 0}
-  swordArrow_Sound: {fileID: 0}
+  swordSword_Sound: {fileID: 8300000, guid: 1975b51baf44a3d44892232e994e641f, type: 3}
+  swordArrow_Sound: {fileID: 8300000, guid: 8e7a0552e37353947a3aa5b85a28ab86, type: 3}
   swordMagicWand_Sound: {fileID: 8042593328631489346}
   swordSpear_Sound: {fileID: 8300000, guid: 1975b51baf44a3d44892232e994e641f, type: 3}
-  sworddagger_Sound: {fileID: 0}
+  sworddagger_Sound: {fileID: 8300000, guid: ee0f123e41a27b346a5b5e1a6432bb86, type: 3}
   arrowArrow_Sound: {fileID: 8300000, guid: 933ed53e8ac0d3b4cb6b5ee21b4f9071, type: 3}
-  arrowMagicWand_Sound: {fileID: 0}
-  arrowSpear_Sound: {fileID: 8300000, guid: 9ab3eb305fc0c82488c35d24e0cbb02d, type: 3}
-  arrowDagger_Sound: {fileID: 0}
+  arrowMagicWand_Sound: {fileID: 8300000, guid: 761f90a1c40657641936b5893f733f21, type: 3}
+  arrowSpear_Sound: {fileID: 8300000, guid: a95c21d35578ac347b14c95ac96d85e3, type: 3}
+  arrowDagger_Sound: {fileID: 8300000, guid: ba0e8f328b759844dabfed743e54e134, type: 3}
   magicWandMagicwand_Sound: {fileID: 8300000, guid: 9ab3eb305fc0c82488c35d24e0cbb02d, type: 3}
   magicWandSpear_Sound: {fileID: 8300000, guid: 83b0295e65847ed4f905778c43b7dc32, type: 3}
-  magicWandDagger_Sound: {fileID: 0}
-  spearSpear_Sound: {fileID: 0}
+  magicWandDagger_Sound: {fileID: 8300000, guid: 6d84b020509dc7f45bec7d33bdf6b285, type: 3}
+  spearSpear_Sound: {fileID: 8300000, guid: 56d040000424a654786c0b80df320990, type: 3}
   spearDagger_Sound: {fileID: 8300000, guid: 4883b0c1242686d4098fc2578881ac24, type: 3}
-  daggerDagger_Sound: {fileID: 0}
-  playerTakeDamage_Sound: {fileID: 0}
-  mimicTakeDamage_Sound: {fileID: 0}
-  batTakeDamage_Sound: {fileID: 0}
-  golemTakeDamage_Sound: {fileID: 0}
-  bossTakeDamage_Sound: {fileID: 0}
+  daggerDagger_Sound: {fileID: 8300000, guid: 798361f97f258984a95ff726b5d2d7ac, type: 3}
+  playerTakeDamage_Sound: {fileID: 8300000, guid: 43943833c1d04114b9f949c9958244ec, type: 3}
+  mimicTakeDamage_Sound: {fileID: 8300000, guid: 61d3de6329ec2a74aa2411d4ed8417c1, type: 3}
+  batTakeDamage_Sound: {fileID: 8300000, guid: d67979c547ca8894e9a08ebbf194f781, type: 3}
+  golemTakeDamage_Sound: {fileID: 8300000, guid: 04c60fe1d39787c44b4910c51d408b42, type: 3}
+  bossTakeDamage_Sound: {fileID: 8300000, guid: f5e0dccd17109d74e83d2d72fc0c1b61, type: 3}
   mimic_Name: Mimic
   golem_Name: Golem
   bat_Name: Bat
   boss_Name: Boss
-  bossSkill_1_sound: {fileID: 0}
+  bossSkill_1_sound: {fileID: 8300000, guid: 79f0cf99f6f05834f9695aac4a4be1f6, type: 3}
   bossSkill_2_sound: {fileID: 6841993398282511542}
-  bossSkill_3_sound: {fileID: 0}
+  bossSkill_3_sound: {fileID: 8300000, guid: 79f0cf99f6f05834f9695aac4a4be1f6, type: 3}
   mixer: {fileID: 24100000, guid: dfad2b3c1c10e8d47a1d22cac0f1e22a, type: 2}
 --- !u!82 &322729099342383152
 AudioSource:
@@ -483,7 +483,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1202505501392127284, guid: dfad2b3c1c10e8d47a1d22cac0f1e22a, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6e2980090eb8d9d46aa061e056cfb187, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
