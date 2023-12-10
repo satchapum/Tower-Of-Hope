@@ -8,53 +8,28 @@ public class EndCredit : MonoBehaviour
 {
     [SerializeField] TMP_Text textInstance;
 
-    [SerializeField] float speedPxPerSec;
-
-    public float creditDurationSec;
-    public Rect startRect;
-    public Rect endRect;
-    bool isEnded;
-
-    void Awake()
-    {
-        float textHeightPx = LayoutUtility.GetPreferredHeight(this.textInstance.rectTransform);
-        Debug.Log(textHeightPx);
-        this.creditDurationSec = ((textHeightPx + Screen.height) / this.speedPxPerSec) * Time.deltaTime;
-        Debug.Log(creditDurationSec);
-    }
+    [SerializeField] float speedPxPerFrame;
 
     void ResetCreditPosition()
     {
         float textHeightPx = LayoutUtility.GetPreferredHeight(this.textInstance.rectTransform);
-        Debug.Log(textHeightPx);
         this.textInstance.rectTransform.offsetMin = new Vector2(0, -textHeightPx);
         this.textInstance.rectTransform.offsetMax = new Vector2(0, -Screen.height);
     }
-
-    void Start()
+    private void Start()
     {
         RestartCredit();
     }
-
     void FixedUpdate()
     {
-        if (!this.isEnded)
+        if (this.textInstance.rectTransform.offsetMax.y <= Screen.height )
         {
-            this.textInstance.rectTransform.Translate(new Vector2(0, this.speedPxPerSec));
+            this.textInstance.rectTransform.Translate(new Vector2(0, this.speedPxPerFrame));
         }
-    }
-
-    IEnumerator MoveCredit()
-    {
-        this.isEnded = false;
-        yield return new WaitForSeconds(this.creditDurationSec);
-        this.isEnded = true;
     }
 
     public void RestartCredit()
     {
-        this.isEnded = false;
         ResetCreditPosition();
-        StartCoroutine(MoveCredit());
     }
 }

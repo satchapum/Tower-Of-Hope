@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class LastDoorAction : KeyCode_F_Action
 {
     [SerializeField] int timeToShowKeyPic;
-    [SerializeField] GameObject endCreditSceneUI;
+    [SerializeField] GameObject endCreditCanvas;
+    [SerializeField] EndCredit endCreditScript;
     [SerializeField] GameObject player;
     [SerializeField] GameObject loadSceneCanvas;
     [SerializeField] GetGameObjectType_Door thisDoor;
@@ -27,8 +28,12 @@ public class LastDoorAction : KeyCode_F_Action
         {
             if (GameManager.Instance.IsFinalBossDie == true)
             {
-                player.SetActive(false);
-                endCreditSceneUI.SetActive(true);
+                player.GetComponent<AttackSystem>().enabled = false;
+                player.GetComponent<Player_Movement>().enabled = false;
+                player.GetComponent<AttackFollowMouse>().enabled = false;
+                endCreditCanvas.SetActive(true);
+                endCreditScript.RestartCredit();
+
             }
         }
 

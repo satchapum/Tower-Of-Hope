@@ -17,11 +17,11 @@ MonoBehaviour:
   currentLevelExperience: 0
   playerBaseAttackDamage: 2
   maxPlayerLevelExperiencePerLevel: 100
-  currentWeapon_Lefthand: 
+  currentWeapon_Lefthand: Arrow
   currentWeapon_Righthand: 
   weaponIcon_Left: {fileID: 0}
   weaponIcon_Right: {fileID: 0}
-  playerBaseHealth: 50
+  playerBaseHealth: 100
   playerBaseMana: 100
-  currentHealth: 50
+  currentHealth: 100
   currentMana: 100
