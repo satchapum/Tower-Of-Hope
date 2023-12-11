@@ -13578,10 +13578,10 @@ Transform:
   - {fileID: 1844148461}
   - {fileID: 1876452105}
   - {fileID: 309786269}
-  - {fileID: 1095083260}
-  - {fileID: 1268186932}
   - {fileID: 1954705064}
   - {fileID: 1878491878}
+  - {fileID: 1268186932}
+  - {fileID: 1095083260}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &450928997
@@ -20031,7 +20031,7 @@ GameObject:
   - component: {fileID: 1095083262}
   - component: {fileID: 1095083261}
   m_Layer: 0
-  m_Name: ChestMockup (15)
+  m_Name: ChestMockup (20)
   m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21779,7 +21779,7 @@ GameObject:
   - component: {fileID: 1268186934}
   - component: {fileID: 1268186933}
   m_Layer: 0
-  m_Name: ChestMockup (16)
+  m_Name: ChestMockup (19)
   m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21794,7 +21794,7 @@ Transform:
   m_GameObject: {fileID: 1268186931}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.88, y: 39.31, z: 0.003932347}
+  m_LocalPosition: {x: 55.84, y: 39.31, z: 0.003932347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

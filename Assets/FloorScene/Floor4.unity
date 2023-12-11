@@ -3270,7 +3270,7 @@ GameObject:
   - component: {fileID: 321082771}
   - component: {fileID: 321082770}
   m_Layer: 0
-  m_Name: ChestMockup (16)
+  m_Name: ChestMockup (22)
   m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5052,7 +5052,7 @@ GameObject:
   - component: {fileID: 537643396}
   - component: {fileID: 537643395}
   m_Layer: 0
-  m_Name: ChestMockup (15)
+  m_Name: ChestMockup (21)
   m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37879,13 +37879,13 @@ Transform:
   - {fileID: 1557593728}
   - {fileID: 586120291}
   - {fileID: 73570014}
-  - {fileID: 321082769}
-  - {fileID: 537643394}
   - {fileID: 539021683}
   - {fileID: 1282107327}
   - {fileID: 2144890670}
   - {fileID: 1532135334}
   - {fileID: 543449194}
+  - {fileID: 537643394}
+  - {fileID: 321082769}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703966498
