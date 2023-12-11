@@ -3169,6 +3169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectSpeed: 7
   damage: 11
+  bunker: {fileID: 1368730566}
   rb: {fileID: 317881428}
   effectShowTime: 5
   currentDisplaytime: 0
@@ -6600,6 +6601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectSpeed: 15
   damage: 10
+  bunker: {fileID: 1368730566}
   rb: {fileID: 635728768}
   effectShowTime: 3
   currentDisplaytime: 0
