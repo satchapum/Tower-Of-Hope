@@ -3017,7 +3017,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 299745820}
   monsterBehavior: {fileID: 299745827}
   damageText: {fileID: 672687238}
-  amountOfHealthWhenChangeFloor: 2
+  amountOfHealthWhenChangeFloor: 10
   monsterName: Bat
 --- !u!114 &299745827
 MonoBehaviour:
@@ -3069,9 +3069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80270e91e5c9cdc44bbf1833e66a0bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   attackDelayTime: 1
-  damageUpgradePerFloor: 1
+  damageUpgradePerFloor: 2
 --- !u!114 &299745830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4453,7 +4453,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 488235232}
   monsterBehavior: {fileID: 488235239}
   damageText: {fileID: 862812951}
-  amountOfHealthWhenChangeFloor: 2
+  amountOfHealthWhenChangeFloor: 25
   monsterName: Golem
 --- !u!114 &488235239
 MonoBehaviour:
@@ -4507,7 +4507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   attackDelayTime: 1
-  damageUpgradePerFloor: 3
+  damageUpgradePerFloor: 6
 --- !u!114 &488235242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4725,7 +4725,7 @@ MonoBehaviour:
   thisMonsterObject: {fileID: 509460299}
   monsterBehavior: {fileID: 509460306}
   damageText: {fileID: 553729119}
-  amountOfHealthWhenChangeFloor: 2
+  amountOfHealthWhenChangeFloor: 15
   monsterName: Mimic
 --- !u!114 &509460306
 MonoBehaviour:
@@ -4779,7 +4779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   attackDelayTime: 1
-  damageUpgradePerFloor: 2
+  damageUpgradePerFloor: 4
 --- !u!114 &509460309
 MonoBehaviour:
   m_ObjectHideFlags: 0

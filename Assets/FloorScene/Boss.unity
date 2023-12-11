@@ -14050,7 +14050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1000
   currentHealth: 0
   player: {fileID: 255868445}
   thisMonsterObject: {fileID: 1257845136}
@@ -14929,15 +14929,15 @@ MonoBehaviour:
   ballObject: {fileID: 467178127}
   timeToCreate: 0.3
   numberToCreate: 30
-  timeToChangePhase_Ball: 10
+  timeToChangePhase_Ball: 11
   laserObject: {fileID: 445921276}
-  timeToChangePhase_LaserBeam: 6
-  numberTocreateBallMany: 16
+  timeToChangePhase_LaserBeam: 7
+  numberTocreateBallMany: 20
   ballManyObject: {fileID: 1657349907}
   timeToCreateManyBall: 0.1
-  numberOfWave: 20
+  numberOfWave: 30
   offsetAngle: 0.1
-  timeToChangePhase_BallMany: 3
+  timeToChangePhase_BallMany: 5
 --- !u!1 &1422243988
 GameObject:
   m_ObjectHideFlags: 0
