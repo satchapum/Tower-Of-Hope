@@ -6,6 +6,7 @@ public class MagicWand : WeaponManager
 {
     [SerializeField] float effectSpeed;
     [SerializeField] public int damage = 2;
+    [SerializeField] GameObject bunker;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float effectShowTime;
     [SerializeField] float currentDisplaytime;
@@ -24,7 +25,11 @@ public class MagicWand : WeaponManager
     {
         foreach (var monster in GameObject.FindObjectsOfType<Monster>())
         {
-            if (collision.gameObject == monster.gameObject)
+            if (collision.gameObject == bunker)
+            {
+                Destroy(this.gameObject);
+            }
+            else if (collision.gameObject == monster.gameObject)
             {
                 collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage + GameManager.Instance.playerBaseAttackDamage);
                 Destroy(this.gameObject);

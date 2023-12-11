@@ -30,6 +30,9 @@ public class Boss_Script : Monster
     [SerializeField] public int numberOfSkillPattern;
     [SerializeField] public bool isSkillAlrFinish = true;
 
+    [Header("Boss Setting")]
+    [SerializeField] Collider2D bossCollider;
+
     private void Start()
     {
         cameraBoss.SetActive(true);
@@ -99,6 +102,7 @@ public class Boss_Script : Monster
 
         cameraMain.SetActive(true);
         cameraBoss.SetActive(false);
+        bossCollider.enabled = true;
         isDialogFinish = true;
     }
 }
