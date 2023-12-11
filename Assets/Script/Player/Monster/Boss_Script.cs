@@ -99,7 +99,6 @@ public class Boss_Script : Monster
 
         cameraMain.SetActive(true);
         cameraBoss.SetActive(false);
-        yield return new WaitForSeconds(timePerOneDialog);
         isDialogFinish = true;
     }
 }

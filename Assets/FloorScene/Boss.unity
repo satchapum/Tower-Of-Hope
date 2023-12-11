@@ -197,11 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 1257845141}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.42
+      value: 18.78
       objectReference: {fileID: 0}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13692,7 +13692,7 @@ PrefabInstance:
       objectReference: {fileID: 1257845141}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.18
+      value: -18.49
       objectReference: {fileID: 0}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14504,27 +14504,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
-
-    2
-
-    3
-
-    4
-
-    5
-
-    6
-
-    7
-
-    8
-
-    9
-
-    10
-
-'
+  m_text: "Thank you for playing\n\nGame Director\nSuraphat Phukkanasut\nNattaphak
+    Udomwasurat\n\nArtist\nNattaphak Udomwasurat \nPongphop Chuennanthachai\n\nGame
+    Dev\nSatchapum Krailertrat\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0cbda02f7ee0a394ba065df22776c1b8, type: 2}
   m_sharedMaterial: {fileID: 1967654029407892907, guid: 0cbda02f7ee0a394ba065df22776c1b8, type: 2}
@@ -14708,7 +14690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textInstance: {fileID: 1274675460}
-  speedPxPerFrame: 3
+  speedPxPerFrame: 1
 --- !u!222 &1325554130
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14739,11 +14721,11 @@ PrefabInstance:
       objectReference: {fileID: 1257845141}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.2700005
+      value: -18.74
       objectReference: {fileID: 0}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14929,15 +14911,15 @@ MonoBehaviour:
   ballObject: {fileID: 467178127}
   timeToCreate: 0.3
   numberToCreate: 30
-  timeToChangePhase_Ball: 11
+  timeToChangePhase_Ball: 13
   laserObject: {fileID: 445921276}
-  timeToChangePhase_LaserBeam: 7
+  timeToChangePhase_LaserBeam: 9
   numberTocreateBallMany: 20
   ballManyObject: {fileID: 1657349907}
-  timeToCreateManyBall: 0.1
+  timeToCreateManyBall: 0.2
   numberOfWave: 30
   offsetAngle: 0.1
-  timeToChangePhase_BallMany: 5
+  timeToChangePhase_BallMany: 10
 --- !u!1 &1422243988
 GameObject:
   m_ObjectHideFlags: 0
@@ -19647,9 +19629,13 @@ PrefabInstance:
       propertyPath: boss_Script
       value: 
       objectReference: {fileID: 1257845141}
+    - target: {fileID: 5348848972198567027, guid: eac0f915428c07848abee4be0676a11e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a15c942b4bc75f4fb2a56bafb98e157, type: 3}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.17
+      value: 18.43
       objectReference: {fileID: 0}
     - target: {fileID: 7275077878465370683, guid: eac0f915428c07848abee4be0676a11e, type: 3}
       propertyPath: m_LocalPosition.y
