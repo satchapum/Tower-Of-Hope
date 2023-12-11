@@ -28,12 +28,12 @@ public class LastDoorAction : KeyCode_F_Action
         {
             if (GameManager.Instance.IsFinalBossDie == true)
             {
+                AudioManager.Instance.stop_walk_Sound_SFX();
                 player.GetComponent<AttackSystem>().enabled = false;
                 player.GetComponent<Player_Movement>().enabled = false;
                 player.GetComponent<AttackFollowMouse>().enabled = false;
                 endCreditCanvas.SetActive(true);
                 endCreditScript.RestartCredit();
-
             }
         }
 

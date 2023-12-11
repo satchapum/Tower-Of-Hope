@@ -31,6 +31,7 @@ public class MonsterHealth : MonoBehaviour
         if (monsterName == "Boss")
         {
             GameManager.Instance.IsFinalBossDie = true;
+            AudioManager.Instance.Stop_bossSkill_2_sound_SFX();
             Destroy(thisMonsterObject);
         }
         if (GameManager.Instance.currentMonsterCount == 0)

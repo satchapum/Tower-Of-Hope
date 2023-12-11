@@ -94,11 +94,12 @@ public class Boss_Script : Monster
         attackFollowMouse.enabled = true;
         playerMovement.enabled = true;
         playerSkill.enabled = true;
-        isDialogFinish = true;
 
         checkPlayerComeToArea.SetActive(false);
 
         cameraMain.SetActive(true);
         cameraBoss.SetActive(false);
+        yield return new WaitForSeconds(timePerOneDialog);
+        isDialogFinish = true;
     }
 }
