@@ -14704,8 +14704,8 @@ MonoBehaviour:
   timeToChangePhase_LaserBeam: 9
   numberTocreateBallMany: 20
   ballManyObject: {fileID: 1657349907}
-  timeToCreateManyBall: 0.2
-  numberOfWave: 30
+  timeToCreateManyBall: 0.3
+  numberOfWave: 10
   offsetAngle: 0.1
   timeToChangePhase_BallMany: 10
 --- !u!1 &1422243988

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   targetBoss: {fileID: 0}
-  rotateSpeed: 50
+  rotateSpeed: 30
   damage: 15
   timeToDestroy: 5
   boss_Script: {fileID: 0}
