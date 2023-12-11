@@ -30404,8 +30404,8 @@ MonoBehaviour:
   maxPlayerLevelExperiencePerLevel: 0
   currentLevelShowText: {fileID: 1099337580}
   amountBaseHealthUpgradePerLevel: 20
-  amountBaseManaUpgradePerLevel: 10
-  amountBaseAttackDamagePerLevel: 1
+  amountBaseManaUpgradePerLevel: 50
+  amountBaseAttackDamagePerLevel: 2
   amountMaxIncreasePerLevel: 1
   amountOflevelWhenLevelUp: 2
 --- !u!4 &2142347713

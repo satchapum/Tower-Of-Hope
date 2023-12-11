@@ -14053,7 +14053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21440bc61d8d58f4fbc0c8e806e94282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 600
   currentHealth: 0
   player: {fileID: 255868445}
   thisMonsterObject: {fileID: 1257845136}
@@ -14894,9 +14894,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayerLevelExperiencePerLevel: 0
   currentLevelShowText: {fileID: 1771537159}
-  amountBaseHealthUpgradePerLevel: 1
-  amountBaseManaUpgradePerLevel: 1
-  amountBaseAttackDamagePerLevel: 1
+  amountBaseHealthUpgradePerLevel: 20
+  amountBaseManaUpgradePerLevel: 50
+  amountBaseAttackDamagePerLevel: 2
   amountMaxIncreasePerLevel: 1
   amountOflevelWhenLevelUp: 2
 --- !u!4 &1467358566
