@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Salt
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  name: Salt
-  probabilityPercentage: 20
+  probabilityPercentage: 5

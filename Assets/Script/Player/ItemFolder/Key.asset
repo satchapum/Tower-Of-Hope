@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Key
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
-  name: key
-  probabilityPercentage: 1
+  probabilityPercentage: 5
