@@ -16360,7 +16360,7 @@ MonoBehaviour:
   player: {fileID: 255868445}
   bunker: {fileID: 1265812168}
   timeToDestroy: 5
-  damage: 25
+  damage: 10
   moveSpeed: 10
 --- !u!1 &1673125262
 GameObject:
