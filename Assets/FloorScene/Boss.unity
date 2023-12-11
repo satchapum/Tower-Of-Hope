@@ -14853,7 +14853,14 @@ MonoBehaviour:
   checkPlayerComeToArea: {fileID: 384288233}
   bossDialogText: {fileID: 632076434}
   timePerOneDialog: 2
-  bossDialog: []
+  bossDialog:
+  - Congratulations on being able to come up and meet me.
+  - There are many people like you who are trying to take the treasure from my tower.
+  - But had to meet a pitiful end
+  - You are probably no different from those
+  - ..........
+  - who will die at my hands.
+  - HaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHaHa.
   player: {fileID: 255868445}
   attackFollowMouse: {fileID: 255868450}
   playerAttack: {fileID: 255868455}
