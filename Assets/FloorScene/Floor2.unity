@@ -9495,7 +9495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: MagicWand
-  probabilityPercentage: 50
+  probabilityPercentage: 20
   iconWeapon: {fileID: 21300000, guid: 1d6789372fd19d04f9b0310a26dec4ec, type: 3}
 --- !u!70 &696530358
 CapsuleCollider2D:
@@ -9865,7 +9865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Spear
-  probabilityPercentage: 0
+  probabilityPercentage: 20
   iconWeapon: {fileID: 21300000, guid: 72a50c21428ca86428e0c4b8abc35ad0, type: 3}
 --- !u!70 &716342044
 CapsuleCollider2D:
@@ -10814,7 +10814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Dagger
-  probabilityPercentage: 0
+  probabilityPercentage: 20
   iconWeapon: {fileID: 21300000, guid: 236aa127b4cfbb34caa4a6e7d3808a80, type: 3}
 --- !u!70 &792138152
 CapsuleCollider2D:
@@ -31085,7 +31085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Arrow
-  probabilityPercentage: 0
+  probabilityPercentage: 20
   iconWeapon: {fileID: 21300000, guid: f72d44dcb77fc4f4fa8047eb47776d54, type: 3}
 --- !u!70 &1801788605
 CapsuleCollider2D:
@@ -33000,7 +33000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Sword
-  probabilityPercentage: 50
+  probabilityPercentage: 20
   iconWeapon: {fileID: 21300000, guid: 3667de4ead7245041a24a27af7d17de0, type: 3}
 --- !u!70 &2085128786
 CapsuleCollider2D:
