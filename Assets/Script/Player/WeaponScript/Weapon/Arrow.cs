@@ -24,13 +24,14 @@ public class Arrow : WeaponManager
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (var monster in GameObject.FindObjectsOfType<Monster>())
+        if (collision.gameObject == bunker)
         {
-            if (collision.gameObject == bunker)
-            {
-                Destroy(this.gameObject);
-            }
-            else if (collision.gameObject == monster.gameObject)
+            Destroy(this.gameObject);
+        }
+
+        foreach (var monster in GameObject.FindObjectsOfType<Monster>())
+        {  
+            if (collision.gameObject == monster.gameObject)
             {
                 collision.gameObject.GetComponent<MonsterHealth>().TakeDamage(damage + GameManager.Instance.playerBaseAttackDamage);
                 Destroy(this.gameObject);
