@@ -126,13 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e67474d8c1f1f45bab7e4aebc25078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectSpeed: 5
+  effectSpeed: 4
   damage: 7
   rb: {fileID: 2074370046471853372}
   effectShowTime: 0.1
   currentDisplaytime: 0
   targetScale: 1
-  AttackCooldown: 0.25
+  AttackCooldown: 0.6
 --- !u!70 &581751435865848914
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

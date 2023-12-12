@@ -167,4 +167,4 @@ MonoBehaviour:
   effectShowTime: 0.2
   currentDisplaytime: 0
   targetScale: 1
-  AttackCooldown: 1.5
+  AttackCooldown: 2
