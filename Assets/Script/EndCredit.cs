@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndCredit : MonoBehaviour
 {
@@ -22,10 +23,22 @@ public class EndCredit : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (this.textInstance.rectTransform.offsetMax.y <= Screen.height )
+        if (this.textInstance.rectTransform.offsetMax.y <= Screen.height)
         {
             this.textInstance.rectTransform.Translate(new Vector2(0, this.speedPxPerFrame));
         }
+        else if (this.textInstance.rectTransform.offsetMax.y > Screen.height)
+        {
+            GameManager.Instance.ResetData();
+            StartCoroutine(EndUIDelay());
+        }
+
+    }
+
+    IEnumerator EndUIDelay()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(0);
     }
 
     public void RestartCredit()

@@ -133,7 +133,7 @@ public class TutorialScript : MonoBehaviour
         yield return new WaitForSeconds(3);
         tutorialText.text = "All weapon is having the uniqe skill so you can use by pressing the 'Q' and 'E' button.";
         yield return new WaitForSeconds(5);
-        tutorialText.text = "But if you have two weapon you will have one more skill that combine from two weapon. So you can use by pressing the 'Z' button.";
+        tutorialText.text = "But if you have two weapon you will have one more skill that combine from two weapon. So you can use by pressing the 'X' button.";
         yield return new WaitForSeconds(6);
         tutorialText.text = "";
         numberOfAdvice++;
