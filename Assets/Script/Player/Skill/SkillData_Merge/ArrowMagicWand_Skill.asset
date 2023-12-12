@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ArrowMagicWand_Skill
   m_EditorClassIdentifier: 
   damage: 12
-  manaCost: 15
-  CoolDownTime: 1
+  manaCost: 25
+  CoolDownTime: 12
