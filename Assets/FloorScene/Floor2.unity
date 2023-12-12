@@ -3888,6 +3888,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1788354714}
     m_Modifications:
+    - target: {fileID: 1189595674669780654, guid: 320e6bc2c0d0f2a44a6c16ab196a4728, type: 3}
+      propertyPath: attackSystem
+      value: 
+      objectReference: {fileID: 577878193}
+    - target: {fileID: 1189595674669780654, guid: 320e6bc2c0d0f2a44a6c16ab196a4728, type: 3}
+      propertyPath: selectReplaceSlot
+      value: 
+      objectReference: {fileID: 1689652812}
+    - target: {fileID: 1189595674669780654, guid: 320e6bc2c0d0f2a44a6c16ab196a4728, type: 3}
+      propertyPath: checkOtherCollider
+      value: 
+      objectReference: {fileID: 351280229}
     - target: {fileID: 5928484105138519619, guid: 320e6bc2c0d0f2a44a6c16ab196a4728, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5168
@@ -3932,6 +3944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: health potion
       objectReference: {fileID: 0}
+    - target: {fileID: 7329667267036803702, guid: 320e6bc2c0d0f2a44a6c16ab196a4728, type: 3}
+      propertyPath: checkOtherCollider
+      value: 
+      objectReference: {fileID: 351280229}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26513,6 +26529,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5409724936688161350, guid: 95807fa39454a8f40ae0258da2b371d1, type: 3}
+      propertyPath: attackSystem
+      value: 
+      objectReference: {fileID: 577878193}
+    - target: {fileID: 5409724936688161350, guid: 95807fa39454a8f40ae0258da2b371d1, type: 3}
+      propertyPath: selectReplaceSlot
+      value: 
+      objectReference: {fileID: 1689652812}
+    - target: {fileID: 5409724936688161350, guid: 95807fa39454a8f40ae0258da2b371d1, type: 3}
+      propertyPath: checkOtherCollider
+      value: 
+      objectReference: {fileID: 351280229}
+    - target: {fileID: 6125081858387995977, guid: 95807fa39454a8f40ae0258da2b371d1, type: 3}
+      propertyPath: checkOtherCollider
+      value: 
+      objectReference: {fileID: 351280229}
     - target: {fileID: 6433547680047344656, guid: 95807fa39454a8f40ae0258da2b371d1, type: 3}
       propertyPath: m_Name
       value: mana potion
