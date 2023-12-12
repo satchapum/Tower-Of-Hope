@@ -7361,6 +7361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow
       objectReference: {fileID: 0}
+    - target: {fileID: 838651804876458420, guid: a6afa7dbe246e8a4d938e670592c662b, type: 3}
+      propertyPath: bunker
+      value: 
+      objectReference: {fileID: 769311408}
     - target: {fileID: 2368728843169140152, guid: a6afa7dbe246e8a4d938e670592c662b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.29
@@ -13913,6 +13917,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8402287702539411854, guid: 38fd0bfa88ad4e44d9df87194f03ba3f, type: 3}
+      propertyPath: bunker
+      value: 
+      objectReference: {fileID: 769311408}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
