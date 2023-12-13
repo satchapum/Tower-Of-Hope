@@ -31,7 +31,7 @@ public class ChestAction : KeyCode_F_Action
     {
         int numberOfLastChest = 1;
         int randomItemIndex = ChestManager.Instance.GetRandomItem();
-        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && GameManager.Instance.isMonsterSpawn == false && type == chestPrefab.name)
+        if (chestManager.maxAmountOfChest == numberOfLastChest && GameManager.Instance.isGetKey == false && type == chestPrefab.name)
         {
             animChest.SetBool("Openning", true);
             GameManager.Instance.isGetKey = true;
@@ -46,7 +46,7 @@ public class ChestAction : KeyCode_F_Action
             Debug.Log("Monster");
             StartCoroutine(monsterSpawnDelay());
         }
-        if (type == chestPrefab.name && GameManager.Instance.isMonsterSpawn == false)
+        if (type == chestPrefab.name)
         {
             while (ChestManager.Instance.ItemLists[randomItemIndex] == key && GameManager.Instance.isGetKey == true)
             {
@@ -59,7 +59,6 @@ public class ChestAction : KeyCode_F_Action
                 GameManager.Instance.isGetKey = true;
                 UIGetKey.Instance.GetKeyText();
                 Debug.Log("getKey Alr");
-                GameManager.Instance.isMonsterSpawn = false;
                 Destroy(chestPrefab);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == monster)
@@ -74,14 +73,12 @@ public class ChestAction : KeyCode_F_Action
                 animChest.SetBool("Openning", true);
                 Debug.Log("Weapon");
                 WeaponDrop.Instance.dropWeapon(gameObject.transform);
-                GameManager.Instance.isMonsterSpawn = false;
                 Destroy(chestPrefab);
             }
             else if (ChestManager.Instance.ItemLists[randomItemIndex] == salt)
             {
                 animChest.SetBool("Openning", true);
                 Debug.Log("getSalt");
-                GameManager.Instance.isMonsterSpawn = false;
                 Destroy(chestPrefab);
             }
         }
@@ -96,13 +93,11 @@ public class ChestAction : KeyCode_F_Action
 
     IEnumerator monsterSpawnDelay()
     {
-        GameManager.Instance.isMonsterSpawn = true;
         yield return new WaitForSeconds(GameManager.Instance.monsterDelaySpawn);
         float minAmountOfMonsterIndex = 0;
         float maxAmountOfMonsterIndex = monsterSpawn.Count;
         float randomMonsterIndex = Random.Range(minAmountOfMonsterIndex, maxAmountOfMonsterIndex);
         monsterSpawn[(int)randomMonsterIndex].SpawnMonster(chestPrefab.transform.position);
-        GameManager.Instance.isMonsterSpawn = false;
         Destroy(chestPrefab);
     }
 }
